@@ -27,16 +27,16 @@
 
 namespace Evolia\SDK;
 
+use Evolia\ApiException;
+use Evolia\Configuration;
+use Evolia\HeaderSelector;
+use Evolia\ObjectSerializer;
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Evolia\ApiException;
-use Evolia\Configuration;
-use Evolia\HeaderSelector;
-use Evolia\ObjectSerializer;
 
 /**
  * ImportApi Class Doc Comment
@@ -148,7 +148,7 @@ class ImportApi
                 $content = $responseBody; //stream goes to serializer
             } else {
                 $content = $responseBody->getContents();
-                if (!in_array($returnType, ['string','integer','bool'])) {
+                if (!in_array($returnType, ['string','integer','bool'], true)) {
                     $content = json_decode($content);
                 }
             }
@@ -401,7 +401,7 @@ class ImportApi
                 $content = $responseBody; //stream goes to serializer
             } else {
                 $content = $responseBody->getContents();
-                if (!in_array($returnType, ['string','integer','bool'])) {
+                if (!in_array($returnType, ['string','integer','bool'], true)) {
                     $content = json_decode($content);
                 }
             }

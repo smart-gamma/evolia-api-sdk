@@ -39,7 +39,6 @@ use \Exception;
  */
 class HeaderSelector
 {
-
     /**
      * @param string[] $accept
      * @param string[] $contentTypes
@@ -83,9 +82,9 @@ class HeaderSelector
             return null;
         } elseif (preg_grep("/application\/json/i", $accept)) {
             return 'application/json';
-        } else {
+        }  
             return implode(',', $accept);
-        }
+        
     }
 
     /**
@@ -101,9 +100,9 @@ class HeaderSelector
             return 'application/json';
         } elseif (preg_grep("/application\/json/i", $contentType)) {
             return 'application/json';
-        } else {
+        }  
             return implode(',', $contentType);
-        }
+        
     }
 }
 
