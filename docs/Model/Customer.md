@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 **tVAClef** | **string** |  | [optional] 
 **sIREN** | **string** |  | [optional] 
 **nIC** | **string** |  | [optional] 
+**listeAgencesSemiColon** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

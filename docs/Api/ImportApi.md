@@ -4,11 +4,11 @@ All URIs are relative to *https://virtserver.swaggerhub.com/smartgammadev/Evolia
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**troopsEvoliaApiCandidateAddCandidatApiPost**](ImportApi.md#troopsEvoliaApiCandidateAddCandidatApiPost) | **POST** /TroopsEvolia/api/Candidate/AddCandidatApi | 
-[**troopsEvoliaApiCustomerAddClientApiPost**](ImportApi.md#troopsEvoliaApiCustomerAddClientApiPost) | **POST** /TroopsEvolia/api/Customer/AddClientApi | 
+[**addCandidatApi**](ImportApi.md#addCandidatApi) | **POST** /TroopsEvolia/api/Candidate/AddCandidatApi | 
+[**addClientApi**](ImportApi.md#addClientApi) | **POST** /TroopsEvolia/api/Customer/AddClientApi | 
 
-# **troopsEvoliaApiCandidateAddCandidatApiPost**
-> \Evolia\Model\CandidateResponseStatus troopsEvoliaApiCandidateAddCandidatApiPost($body)
+# **addCandidatApi**
+> \Evolia\Model\CandidateResponseStatus addCandidatApi($body)
 
 
 
@@ -27,10 +27,10 @@ $apiInstance = new Evolia\SDK\ImportApi(
 $body = new \Evolia\Model\Candidate(); // \Evolia\Model\Candidate | 
 
 try {
-    $result = $apiInstance->troopsEvoliaApiCandidateAddCandidatApiPost($body);
+    $result = $apiInstance->addCandidatApi($body);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ImportApi->troopsEvoliaApiCandidateAddCandidatApiPost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ImportApi->addCandidatApi: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -56,8 +56,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **troopsEvoliaApiCustomerAddClientApiPost**
-> \Evolia\Model\CustomerResponseStatus troopsEvoliaApiCustomerAddClientApiPost($body)
+# **addClientApi**
+> \Evolia\Model\CustomerResponseStatus addClientApi($body)
 
 
 
@@ -76,10 +76,10 @@ $apiInstance = new Evolia\SDK\ImportApi(
 $body = new \Evolia\Model\Customer(); // \Evolia\Model\Customer | 
 
 try {
-    $result = $apiInstance->troopsEvoliaApiCustomerAddClientApiPost($body);
+    $result = $apiInstance->addClientApi($body);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ImportApi->troopsEvoliaApiCustomerAddClientApiPost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ImportApi->addClientApi: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

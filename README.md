@@ -65,10 +65,10 @@ $apiInstance = new Evolia\SDK\ImportApi(
 $body = new \Evolia\Model\Candidate(); // \Evolia\Model\Candidate | 
 
 try {
-    $result = $apiInstance->troopsEvoliaApiCandidateAddCandidatApiPost($body);
+    $result = $apiInstance->addCandidatApi($body);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ImportApi->troopsEvoliaApiCandidateAddCandidatApiPost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ImportApi->addCandidatApi: ', $e->getMessage(), PHP_EOL;
 }
 
 $apiInstance = new Evolia\SDK\ImportApi(
@@ -79,10 +79,10 @@ $apiInstance = new Evolia\SDK\ImportApi(
 $body = new \Evolia\Model\Customer(); // \Evolia\Model\Customer | 
 
 try {
-    $result = $apiInstance->troopsEvoliaApiCustomerAddClientApiPost($body);
+    $result = $apiInstance->addClientApi($body);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ImportApi->troopsEvoliaApiCustomerAddClientApiPost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ImportApi->addClientApi: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -93,8 +93,8 @@ All URIs are relative to *https://virtserver.swaggerhub.com/smartgammadev/Evolia
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*ImportApi* | [**troopsEvoliaApiCandidateAddCandidatApiPost**](docs/Api/ImportApi.md#troopsevoliaapicandidateaddcandidatapipost) | **POST** /TroopsEvolia/api/Candidate/AddCandidatApi | 
-*ImportApi* | [**troopsEvoliaApiCustomerAddClientApiPost**](docs/Api/ImportApi.md#troopsevoliaapicustomeraddclientapipost) | **POST** /TroopsEvolia/api/Customer/AddClientApi | 
+*ImportApi* | [**addCandidatApi**](docs/Api/ImportApi.md#addcandidatapi) | **POST** /TroopsEvolia/api/Candidate/AddCandidatApi | 
+*ImportApi* | [**addClientApi**](docs/Api/ImportApi.md#addclientapi) | **POST** /TroopsEvolia/api/Customer/AddClientApi | 
 
 ## Documentation For Models
 
