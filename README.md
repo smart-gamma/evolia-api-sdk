@@ -84,6 +84,20 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling ImportApi->addClientApi: ', $e->getMessage(), PHP_EOL;
 }
+
+$apiInstance = new Evolia\SDK\ImportApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$body = new \Evolia\Model\Contract(); // \Evolia\Model\Contract | 
+
+try {
+    $result = $apiInstance->addContractApi($body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ImportApi->addContractApi: ', $e->getMessage(), PHP_EOL;
+}
 ?>
 ```
 
@@ -93,13 +107,15 @@ All URIs are relative to *https://virtserver.swaggerhub.com/smartgammadev/Evolia
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*ImportApi* | [**addCandidatApi**](docs/Api/ImportApi.md#addcandidatapi) | **POST** /TroopsEvolia/api/Candidate/AddCandidatApi | 
-*ImportApi* | [**addClientApi**](docs/Api/ImportApi.md#addclientapi) | **POST** /TroopsEvolia/api/Customer/AddClientApi | 
+*ImportApi* | [**addCandidatApi**](docs/Api/ImportApi.md#addcandidatapi) | **POST** /Candidate/AddCandidatApi | 
+*ImportApi* | [**addClientApi**](docs/Api/ImportApi.md#addclientapi) | **POST** /Customer/AddClientApi | 
+*ImportApi* | [**addContractApi**](docs/Api/ImportApi.md#addcontractapi) | **POST** /Contract/AddContractApi | 
 
 ## Documentation For Models
 
  - [Candidate](docs/Model/Candidate.md)
  - [CandidateResponseStatus](docs/Model/CandidateResponseStatus.md)
+ - [Contract](docs/Model/Contract.md)
  - [Customer](docs/Model/Customer.md)
  - [CustomerResponseStatus](docs/Model/CustomerResponseStatus.md)
  - [ResponseError](docs/Model/ResponseError.md)

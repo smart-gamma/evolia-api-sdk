@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**matricule** | **string** |  | 
+**matricule** | **string** |  | [optional] 
 **nom** | **string** |  | 
 **nomCourt** | **string** |  | 
 **designation** | **string** |  | [optional] 
@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 **tVAClef** | **string** |  | [optional] 
 **sIREN** | **string** |  | [optional] 
 **nIC** | **string** |  | [optional] 
-**listeAgencesSemiColon** | **string** |  | [optional] 
+**listeAgences** | **string[]** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

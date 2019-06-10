@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**titres** | **int** | Value 1 for Sir, 2 for Madam, 3 for Miss | 
+**titres** | **float** | Value 1 for Sir, 2 for Madam, 3 for Miss | 
 **nom** | **string** |  | 
-**prenom** | **string** |  | [optional] 
+**preNom** | **string** |  | 
 **idRef** | **string** |  | [optional] 
 **qualification** | **string** |  | [optional] 
 **nationalite** | **string** |  | [optional] 
@@ -37,7 +37,7 @@ Name | Type | Description | Notes
 **iBAN** | **string** |  | [optional] 
 **bIC** | **string** |  | [optional] 
 **creePar** | **string** | Indication about the creator of the interim | [optional] 
-**listeAgencesSemiColon** | **string** |  | 
+**listeAgences** | **string[]** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
