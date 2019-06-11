@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **adresse1** | **string** |  | 
 **adresse2** | **string** |  | 
 **adresse3** | **string** |  | 
-**cP** | **string** |  | [optional] 
+**cP** | **string** |  | 
 **commune** | **string** |  | 
 **insee** | **string** |  | 
 **pays** | **string** |  | 

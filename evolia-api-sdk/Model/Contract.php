@@ -646,6 +646,9 @@ self::TYPE_CONTRAT_MODIFICATION,        ];
         if ($this->container['adresse3'] === null) {
             $invalidProperties[] = "'adresse3' can't be null";
         }
+        if ($this->container['cP'] === null) {
+            $invalidProperties[] = "'cP' can't be null";
+        }
         if ($this->container['commune'] === null) {
             $invalidProperties[] = "'commune' can't be null";
         }

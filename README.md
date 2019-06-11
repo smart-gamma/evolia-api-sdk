@@ -116,6 +116,7 @@ Class | Method | HTTP request | Description
  - [Candidate](docs/Model/Candidate.md)
  - [CandidateResponseStatus](docs/Model/CandidateResponseStatus.md)
  - [Contract](docs/Model/Contract.md)
+ - [ContractResponseStatus](docs/Model/ContractResponseStatus.md)
  - [Customer](docs/Model/Customer.md)
  - [CustomerResponseStatus](docs/Model/CustomerResponseStatus.md)
  - [ResponseError](docs/Model/ResponseError.md)
