@@ -125,6 +125,7 @@ Class | Method | HTTP request | Description
 *ImportApi* | [**addClientApi**](docs/Api/ImportApi.md#addclientapi) | **POST** /Customer/AddClientApi | 
 *ImportApi* | [**addContractApi**](docs/Api/ImportApi.md#addcontractapi) | **POST** /Contract/AddContractApi | 
 *ImportApi* | [**addContractHoursApi**](docs/Api/ImportApi.md#addcontracthoursapi) | **POST** /Contract/AddContractHoursApi | 
+*PayrollApi* | [**payrollsGet**](docs/Api/PayrollApi.md#payrollsget) | **GET** /payrolls | Get Payrolls by date range
 *PayrollApi* | [**payrollsPayrollIdGet**](docs/Api/PayrollApi.md#payrollspayrollidget) | **GET** /payrolls/{payrollId} | Get Payroll by it&#x27;s id
 
 ## Documentation For Models
@@ -141,6 +142,7 @@ Class | Method | HTTP request | Description
  - [NotFound](docs/Model/NotFound.md)
  - [PayrollDetailsViewModel](docs/Model/PayrollDetailsViewModel.md)
  - [PayrollViewModel](docs/Model/PayrollViewModel.md)
+ - [PayrollViewModelList](docs/Model/PayrollViewModelList.md)
  - [ResponseError](docs/Model/ResponseError.md)
 
 ## Documentation For Authorization
