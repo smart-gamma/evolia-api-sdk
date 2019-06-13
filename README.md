@@ -98,6 +98,20 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling ImportApi->addContractApi: ', $e->getMessage(), PHP_EOL;
 }
+
+$apiInstance = new Evolia\SDK\ImportApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$body = new \Evolia\Model\ContractHours(); // \Evolia\Model\ContractHours | 
+
+try {
+    $result = $apiInstance->addContractHoursApi($body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ImportApi->addContractHoursApi: ', $e->getMessage(), PHP_EOL;
+}
 ?>
 ```
 
@@ -110,15 +124,22 @@ Class | Method | HTTP request | Description
 *ImportApi* | [**addCandidatApi**](docs/Api/ImportApi.md#addcandidatapi) | **POST** /Candidate/AddCandidatApi | 
 *ImportApi* | [**addClientApi**](docs/Api/ImportApi.md#addclientapi) | **POST** /Customer/AddClientApi | 
 *ImportApi* | [**addContractApi**](docs/Api/ImportApi.md#addcontractapi) | **POST** /Contract/AddContractApi | 
+*ImportApi* | [**addContractHoursApi**](docs/Api/ImportApi.md#addcontracthoursapi) | **POST** /Contract/AddContractHoursApi | 
+*PayrollApi* | [**payrollsPayrollIdGet**](docs/Api/PayrollApi.md#payrollspayrollidget) | **GET** /payrolls/{payrollId} | Get Payroll by it&#x27;s id
 
 ## Documentation For Models
 
  - [Candidate](docs/Model/Candidate.md)
  - [CandidateResponseStatus](docs/Model/CandidateResponseStatus.md)
  - [Contract](docs/Model/Contract.md)
+ - [ContractHours](docs/Model/ContractHours.md)
  - [ContractResponseStatus](docs/Model/ContractResponseStatus.md)
  - [Customer](docs/Model/Customer.md)
  - [CustomerResponseStatus](docs/Model/CustomerResponseStatus.md)
+ - [MissionViewModel](docs/Model/MissionViewModel.md)
+ - [NotFound](docs/Model/NotFound.md)
+ - [PayrollDetailsViewModel](docs/Model/PayrollDetailsViewModel.md)
+ - [PayrollViewModel](docs/Model/PayrollViewModel.md)
  - [ResponseError](docs/Model/ResponseError.md)
 
 ## Documentation For Authorization

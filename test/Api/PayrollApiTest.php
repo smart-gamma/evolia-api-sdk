@@ -1,6 +1,6 @@
 <?php
 /**
- * ImportApiTest
+ * PayrollApiTest
  * PHP version 5
  *
  * @category Class
@@ -32,14 +32,14 @@ use Evolia\ApiException;
 use Evolia\ObjectSerializer;
 
 /**
- * ImportApiTest Class Doc Comment
+ * PayrollApiTest Class Doc Comment
  *
  * @category Class
  * @package  Evolia
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ImportApiTest extends \PHPUnit_Framework_TestCase
+class PayrollApiTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,42 +71,12 @@ class ImportApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for addCandidatApi
+     * Test case for payrollsPayrollIdGet
      *
-     * .
-     *
-     */
-    public function testAddCandidatApi()
-    {
-    }
-
-    /**
-     * Test case for addClientApi
-     *
-     * .
+     * Get Payroll by it's id.
      *
      */
-    public function testAddClientApi()
-    {
-    }
-
-    /**
-     * Test case for addContractApi
-     *
-     * .
-     *
-     */
-    public function testAddContractApi()
-    {
-    }
-
-    /**
-     * Test case for addContractHoursApi
-     *
-     * .
-     *
-     */
-    public function testAddContractHoursApi()
+    public function testPayrollsPayrollIdGet()
     {
     }
 }
