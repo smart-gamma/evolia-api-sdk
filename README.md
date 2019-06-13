@@ -133,6 +133,7 @@ Class | Method | HTTP request | Description
  - [CandidateResponseStatus](docs/Model/CandidateResponseStatus.md)
  - [Contract](docs/Model/Contract.md)
  - [ContractHours](docs/Model/ContractHours.md)
+ - [ContractHoursResponseStatus](docs/Model/ContractHoursResponseStatus.md)
  - [ContractResponseStatus](docs/Model/ContractResponseStatus.md)
  - [Customer](docs/Model/Customer.md)
  - [CustomerResponseStatus](docs/Model/CustomerResponseStatus.md)

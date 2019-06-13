@@ -157,7 +157,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **addContractHoursApi**
-> \Evolia\Model\ContractResponseStatus addContractHoursApi($body)
+> \Evolia\Model\ContractHoursResponseStatus addContractHoursApi($body)
 
 
 
@@ -192,7 +192,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Evolia\Model\ContractResponseStatus**](../Model/ContractResponseStatus.md)
+[**\Evolia\Model\ContractHoursResponseStatus**](../Model/ContractHoursResponseStatus.md)
 
 ### Authorization
 

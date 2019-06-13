@@ -852,7 +852,7 @@ class ImportApi
      *
      * @throws \Evolia\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Evolia\Model\ContractResponseStatus
+     * @return \Evolia\Model\ContractHoursResponseStatus
      */
     public function addContractHoursApi($body)
     {
@@ -867,11 +867,11 @@ class ImportApi
      *
      * @throws \Evolia\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Evolia\Model\ContractResponseStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Evolia\Model\ContractHoursResponseStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function addContractHoursApiWithHttpInfo($body)
     {
-        $returnType = '\Evolia\Model\ContractResponseStatus';
+        $returnType = '\Evolia\Model\ContractHoursResponseStatus';
         $request = $this->addContractHoursApiRequest($body);
 
         try {
@@ -923,7 +923,7 @@ class ImportApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Evolia\Model\ContractResponseStatus',
+                        '\Evolia\Model\ContractHoursResponseStatus',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -965,7 +965,7 @@ class ImportApi
      */
     public function addContractHoursApiAsyncWithHttpInfo($body)
     {
-        $returnType = '\Evolia\Model\ContractResponseStatus';
+        $returnType = '\Evolia\Model\ContractHoursResponseStatus';
         $request = $this->addContractHoursApiRequest($body);
 
         return $this->client
