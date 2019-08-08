@@ -4,10 +4,10 @@ All URIs are relative to *https://virtserver.swaggerhub.com/smartgammadev/Evolia
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**addCandidatApi**](ImportApi.md#addCandidatApi) | **POST** /Candidate/AddCandidatApi | 
-[**addClientApi**](ImportApi.md#addClientApi) | **POST** /Customer/AddClientApi | 
-[**addContractApi**](ImportApi.md#addContractApi) | **POST** /Contract/AddContractApi | 
-[**addContractHoursApi**](ImportApi.md#addContractHoursApi) | **POST** /Contract/AddContractHoursApi | 
+[**addCandidatApi**](ImportApi.md#addcandidatapi) | **POST** /api/candidate | 
+[**addClientApi**](ImportApi.md#addclientapi) | **POST** /api/customer | 
+[**addContractApi**](ImportApi.md#addcontractapi) | **POST** /Contract/AddContractApi | 
+[**addContractHoursApi**](ImportApi.md#addcontracthoursapi) | **POST** /Contract/AddContractHoursApi | 
 
 # **addCandidatApi**
 > \Evolia\Model\CandidateResponseStatus addCandidatApi($body)
@@ -63,7 +63,7 @@ No authorization required
 
 
 
-Import of Clients
+Import of Customers
 
 ### Example
 ```php

@@ -121,8 +121,8 @@ All URIs are relative to *https://virtserver.swaggerhub.com/smartgammadev/Evolia
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*ImportApi* | [**addCandidatApi**](docs/Api/ImportApi.md#addcandidatapi) | **POST** /Candidate/AddCandidatApi | 
-*ImportApi* | [**addClientApi**](docs/Api/ImportApi.md#addclientapi) | **POST** /Customer/AddClientApi | 
+*ImportApi* | [**addCandidatApi**](docs/Api/ImportApi.md#addcandidatapi) | **POST** /api/candidate | 
+*ImportApi* | [**addClientApi**](docs/Api/ImportApi.md#addclientapi) | **POST** /api/customer | 
 *ImportApi* | [**addContractApi**](docs/Api/ImportApi.md#addcontractapi) | **POST** /Contract/AddContractApi | 
 *ImportApi* | [**addContractHoursApi**](docs/Api/ImportApi.md#addcontracthoursapi) | **POST** /Contract/AddContractHoursApi | 
 *PayrollApi* | [**payrollsGet**](docs/Api/PayrollApi.md#payrollsget) | **GET** /payrolls | Get Payrolls by date range
