@@ -4,8 +4,8 @@ All URIs are relative to *https://virtserver.swaggerhub.com/smartgammadev/Evolia
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**payrollsGet**](PayrollApi.md#payrollsGet) | **GET** /payrolls | Get Payrolls by date range
-[**payrollsPayrollIdGet**](PayrollApi.md#payrollsPayrollIdGet) | **GET** /payrolls/{payrollId} | Get Payroll by it&#x27;s id
+[**payrollsGet**](PayrollApi.md#payrollsget) | **GET** /payrolls | Get Payrolls by date range
+[**payrollsPayrollIdGet**](PayrollApi.md#payrollspayrollidget) | **GET** /payrolls/{payrollId} | Get Payroll by it&#x27;s id
 
 # **payrollsGet**
 > \Evolia\Model\PayrollViewModel payrollsGet($startDate, $endDate)

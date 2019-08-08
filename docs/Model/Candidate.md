@@ -3,14 +3,14 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**titres** | **float** | Value 1 for Sir, 2 for Madam, 3 for Miss | 
+**titres** | **int** | Value 1 for Sir, 2 for Madam, 3 for Miss | 
 **nom** | **string** |  | 
 **preNom** | **string** |  | 
 **idRef** | **string** |  | [optional] 
-**qualification** | **string** |  | [optional] 
-**nationalite** | **string** |  | [optional] 
+**qualification** | **string** |  | 
+**nationalite** | **string** | Country code | 
 **nomJF** | **string** |  | [optional] 
-**dateNaissance** | **string** | DateTime format 01/01/1970 00:00:00 | [optional] 
+**dateNaissance** | **string** | DateTime format 1970-01-01T00:00:00.000Z | 
 **telephonePortable** | **string** |  | [optional] 
 **telephoneDomicile** | **string** |  | [optional] 
 **email** | **string** |  | [optional] 
@@ -39,5 +39,5 @@ Name | Type | Description | Notes
 **creePar** | **string** | Indication about the creator of the interim | [optional] 
 **listeAgences** | **string[]** |  | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
