@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 **web** | **string** |  | [optional] 
 **aPE** | **string** |  | 
 **tVAClef** | **string** |  | 
+**tVAPays** | **string** |  | 
 **sIREN** | **string** |  | 
 **nIC** | **string** |  | 
 **listeAgences** | **string[]** |  | 

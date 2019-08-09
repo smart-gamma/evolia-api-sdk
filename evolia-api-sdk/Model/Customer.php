@@ -72,6 +72,7 @@ class Customer implements ModelInterface, ArrayAccess
 'web' => 'string',
 'aPE' => 'string',
 'tVAClef' => 'string',
+'tVAPays' => 'string',
 'sIREN' => 'string',
 'nIC' => 'string',
 'listeAgences' => 'string[]'    ];
@@ -98,6 +99,7 @@ class Customer implements ModelInterface, ArrayAccess
 'web' => null,
 'aPE' => null,
 'tVAClef' => null,
+'tVAPays' => null,
 'sIREN' => null,
 'nIC' => null,
 'listeAgences' => null    ];
@@ -145,6 +147,7 @@ class Customer implements ModelInterface, ArrayAccess
 'web' => 'Web',
 'aPE' => 'APE',
 'tVAClef' => 'TVAClef',
+'tVAPays' => 'TVAPays',
 'sIREN' => 'SIREN',
 'nIC' => 'NIC',
 'listeAgences' => 'ListeAgences'    ];
@@ -171,6 +174,7 @@ class Customer implements ModelInterface, ArrayAccess
 'web' => 'setWeb',
 'aPE' => 'setAPE',
 'tVAClef' => 'setTVAClef',
+'tVAPays' => 'setTVAPays',
 'sIREN' => 'setSIREN',
 'nIC' => 'setNIC',
 'listeAgences' => 'setListeAgences'    ];
@@ -197,6 +201,7 @@ class Customer implements ModelInterface, ArrayAccess
 'web' => 'getWeb',
 'aPE' => 'getAPE',
 'tVAClef' => 'getTVAClef',
+'tVAPays' => 'getTVAPays',
 'sIREN' => 'getSIREN',
 'nIC' => 'getNIC',
 'listeAgences' => 'getListeAgences'    ];
@@ -275,6 +280,7 @@ class Customer implements ModelInterface, ArrayAccess
         $this->container['web'] = isset($data['web']) ? $data['web'] : null;
         $this->container['aPE'] = isset($data['aPE']) ? $data['aPE'] : null;
         $this->container['tVAClef'] = isset($data['tVAClef']) ? $data['tVAClef'] : null;
+        $this->container['tVAPays'] = isset($data['tVAPays']) ? $data['tVAPays'] : null;
         $this->container['sIREN'] = isset($data['sIREN']) ? $data['sIREN'] : null;
         $this->container['nIC'] = isset($data['nIC']) ? $data['nIC'] : null;
         $this->container['listeAgences'] = isset($data['listeAgences']) ? $data['listeAgences'] : null;
@@ -318,6 +324,9 @@ class Customer implements ModelInterface, ArrayAccess
         }
         if ($this->container['tVAClef'] === null) {
             $invalidProperties[] = "'tVAClef' can't be null";
+        }
+        if ($this->container['tVAPays'] === null) {
+            $invalidProperties[] = "'tVAPays' can't be null";
         }
         if ($this->container['sIREN'] === null) {
             $invalidProperties[] = "'sIREN' can't be null";
@@ -723,6 +732,30 @@ class Customer implements ModelInterface, ArrayAccess
     public function setTVAClef($tVAClef)
     {
         $this->container['tVAClef'] = $tVAClef;
+
+        return $this;
+    }
+
+    /**
+     * Gets tVAPays
+     *
+     * @return string
+     */
+    public function getTVAPays()
+    {
+        return $this->container['tVAPays'];
+    }
+
+    /**
+     * Sets tVAPays
+     *
+     * @param string $tVAPays tVAPays
+     *
+     * @return $this
+     */
+    public function setTVAPays($tVAPays)
+    {
+        $this->container['tVAPays'] = $tVAPays;
 
         return $this;
     }
