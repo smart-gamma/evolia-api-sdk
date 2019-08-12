@@ -97,9 +97,23 @@ class ContractTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "codeMission"
+     */
+    public function testPropertyCodeMission()
+    {
+    }
+
+    /**
      * Test attribute "ordreClient"
      */
     public function testPropertyOrdreClient()
+    {
+    }
+
+    /**
+     * Test attribute "lieuxdeMission"
+     */
+    public function testPropertyLieuxdeMission()
     {
     }
 
@@ -114,20 +128,6 @@ class ContractTest extends \PHPUnit_Framework_TestCase
      * Test attribute "adresse1"
      */
     public function testPropertyAdresse1()
-    {
-    }
-
-    /**
-     * Test attribute "adresse2"
-     */
-    public function testPropertyAdresse2()
-    {
-    }
-
-    /**
-     * Test attribute "adresse3"
-     */
-    public function testPropertyAdresse3()
     {
     }
 
@@ -230,13 +230,6 @@ class ContractTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "codeMission"
-     */
-    public function testPropertyCodeMission()
-    {
-    }
-
-    /**
      * Test attribute "debut"
      */
     public function testPropertyDebut()
@@ -307,6 +300,13 @@ class ContractTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "contractOrder"
+     */
+    public function testPropertyContractOrder()
+    {
+    }
+
+    /**
      * Test attribute "typeContrat"
      */
     public function testPropertyTypeContrat()
@@ -349,9 +349,9 @@ class ContractTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "retourSignatureerimaire"
+     * Test attribute "retourSignatureInterimaire"
      */
-    public function testPropertyRetourSignatureerimaire()
+    public function testPropertyRetourSignatureInterimaire()
     {
     }
 
@@ -433,69 +433,6 @@ class ContractTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "salaireReference2"
-     */
-    public function testPropertySalaireReference2()
-    {
-    }
-
-    /**
-     * Test attribute "salaireReference3"
-     */
-    public function testPropertySalaireReference3()
-    {
-    }
-
-    /**
-     * Test attribute "salaireReference4"
-     */
-    public function testPropertySalaireReference4()
-    {
-    }
-
-    /**
-     * Test attribute "salaireReference5"
-     */
-    public function testPropertySalaireReference5()
-    {
-    }
-
-    /**
-     * Test attribute "salaireReference6"
-     */
-    public function testPropertySalaireReference6()
-    {
-    }
-
-    /**
-     * Test attribute "salaireReference7"
-     */
-    public function testPropertySalaireReference7()
-    {
-    }
-
-    /**
-     * Test attribute "salaireReference8"
-     */
-    public function testPropertySalaireReference8()
-    {
-    }
-
-    /**
-     * Test attribute "salaireReference9"
-     */
-    public function testPropertySalaireReference9()
-    {
-    }
-
-    /**
-     * Test attribute "salaireReference10"
-     */
-    public function testPropertySalaireReference10()
-    {
-    }
-
-    /**
      * Test attribute "description1"
      */
     public function testPropertyDescription1()
@@ -503,58 +440,9 @@ class ContractTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "description2"
-     */
-    public function testPropertyDescription2()
-    {
-    }
-
-    /**
-     * Test attribute "description3"
-     */
-    public function testPropertyDescription3()
-    {
-    }
-
-    /**
-     * Test attribute "protection1"
-     */
-    public function testPropertyProtection1()
-    {
-    }
-
-    /**
-     * Test attribute "protection2"
-     */
-    public function testPropertyProtection2()
-    {
-    }
-
-    /**
-     * Test attribute "protection3"
-     */
-    public function testPropertyProtection3()
-    {
-    }
-
-    /**
      * Test attribute "risque1"
      */
     public function testPropertyRisque1()
-    {
-    }
-
-    /**
-     * Test attribute "risque2"
-     */
-    public function testPropertyRisque2()
-    {
-    }
-
-    /**
-     * Test attribute "risque3"
-     */
-    public function testPropertyRisque3()
     {
     }
 

@@ -769,7 +769,7 @@ class ImportApi
             );
         }
 
-        $resourcePath = '/Contract/AddContractApi';
+        $resourcePath = '/api/contract';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

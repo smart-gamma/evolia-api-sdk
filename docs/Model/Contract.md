@@ -6,11 +6,11 @@ Name | Type | Description | Notes
 **idContrat** | **int** |  | 
 **idPersonne** | **int** |  | 
 **idClient** | **int** |  | 
+**codeMission** | **string** |  | 
 **ordreClient** | **int** |  | 
+**lieuxdeMission** | [**\Evolia\Model\LieuxdeMission**](LieuxdeMission.md) |  | [optional] 
 **designation** | **string** |  | 
 **adresse1** | **string** |  | 
-**adresse2** | **string** |  | 
-**adresse3** | **string** |  | 
 **cP** | **string** |  | 
 **commune** | **string** |  | 
 **insee** | **string** |  | 
@@ -25,24 +25,24 @@ Name | Type | Description | Notes
 **nIC** | **string** |  | 
 **referenceAnalytique** | **string** |  | 
 **agence** | **string** |  | 
-**codeMission** | **string** |  | 
 **debut** | **string** |  | 
 **finPrevue** | **string** |  | 
 **finReelle** | **string** |  | 
-**dateCreation** | **string** | DateTime format 01/01/1970 00:00:00 | 
+**dateCreation** | **string** |  | 
 **categorieSalariale** | **string** |  | 
 **motifEmbauche** | **string** |  | 
 **justification** | **string** |  | 
 **missionARisqueL23131** | **bool** |  | 
 **finDeMission** | **string** |  | 
 **heureDePresentation** | **string** |  | 
-**typeContrat** | **string** |  | 
-**dateEffet** | **string** | DateTime format 01/01/1970 00:00:00 | 
-**dateFinAvenant** | **string** | DateTime format 01/01/1970 00:00:00 | 
-**souplesseDebut** | **string** |  | 
-**souplesseFin** | **string** |  | 
+**contractOrder** | **int** |  | [optional] 
+**typeContrat** | **int** |  | 
+**dateEffet** | [**\DateTime**](\DateTime.md) |  | 
+**dateFinAvenant** | [**\DateTime**](\DateTime.md) |  | 
+**souplesseDebut** | [**\DateTime**](\DateTime.md) |  | 
+**souplesseFin** | [**\DateTime**](\DateTime.md) |  | 
 **horairesParticulier** | **string** |  | 
-**retourSignatureerimaire** | **bool** |  | 
+**retourSignatureInterimaire** | **bool** |  | [optional] 
 **retourSignatureClient** | **bool** |  | 
 **tauxPaye** | **int** |  | 
 **tauxFacture** | **int** |  | 
@@ -54,24 +54,8 @@ Name | Type | Description | Notes
 **poste** | **string** |  | 
 **seuilEtDecompte** | **string** |  | 
 **salaireReference1** | **string** |  | 
-**salaireReference2** | **string** |  | 
-**salaireReference3** | **string** |  | 
-**salaireReference4** | **string** |  | 
-**salaireReference5** | **string** |  | 
-**salaireReference6** | **string** |  | 
-**salaireReference7** | **string** |  | 
-**salaireReference8** | **string** |  | 
-**salaireReference9** | **string** |  | 
-**salaireReference10** | **string** |  | 
 **description1** | **string** |  | 
-**description2** | **string** |  | 
-**description3** | **string** |  | 
-**protection1** | **string** |  | 
-**protection2** | **string** |  | 
-**protection3** | **string** |  | 
 **risque1** | **string** |  | 
-**risque2** | **string** |  | 
-**risque3** | **string** |  | 
 **moyenAcces** | **string** |  | 
 **periodeFermeture** | **string** |  | 
 **codePCS** | **string** |  | 
