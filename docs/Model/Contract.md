@@ -15,15 +15,15 @@ Name | Type | Description | Notes
 **commune** | **string** |  | 
 **insee** | **string** |  | 
 **pays** | **string** |  | 
-**telephone** | **string** |  | 
-**fax** | **string** |  | 
-**email** | **string** |  | 
-**aPE** | **string** |  | 
-**tVAPays** | **string** |  | 
-**tVAClef** | **string** |  | 
-**sIREN** | **string** |  | 
-**nIC** | **string** |  | 
-**referenceAnalytique** | **string** |  | 
+**telephone** | **string** |  | [optional] 
+**fax** | **string** |  | [optional] 
+**email** | **string** |  | [optional] 
+**aPE** | **string** |  | [optional] 
+**tVAPays** | **string** |  | [optional] 
+**tVAClef** | **string** |  | [optional] 
+**sIREN** | **string** |  | [optional] 
+**nIC** | **string** |  | [optional] 
+**referenceAnalytique** | **string** |  | [optional] 
 **agence** | **string** |  | 
 **debut** | **string** |  | 
 **finPrevue** | **string** |  | 
@@ -31,34 +31,34 @@ Name | Type | Description | Notes
 **dateCreation** | **string** |  | 
 **categorieSalariale** | **string** |  | 
 **motifEmbauche** | **string** |  | 
-**justification** | **string** |  | 
+**justification** | **string** |  | [optional] 
 **missionARisqueL23131** | **bool** |  | 
 **finDeMission** | **string** |  | 
 **heureDePresentation** | **string** |  | 
-**contractOrder** | **int** |  | [optional] 
+**contractOrder** | **int** |  | 
 **typeContrat** | **int** |  | 
 **dateEffet** | [**\DateTime**](\DateTime.md) |  | 
 **dateFinAvenant** | [**\DateTime**](\DateTime.md) |  | 
 **souplesseDebut** | [**\DateTime**](\DateTime.md) |  | 
 **souplesseFin** | [**\DateTime**](\DateTime.md) |  | 
-**horairesParticulier** | **string** |  | 
+**horairesParticulier** | **string** |  | [optional] 
 **retourSignatureInterimaire** | **bool** |  | [optional] 
-**retourSignatureClient** | **bool** |  | 
+**retourSignatureClient** | **bool** |  | [optional] 
 **tauxPaye** | **int** |  | 
 **tauxFacture** | **int** |  | 
 **lotFacture** | **string** |  | 
 **dureeHebdo** | **string** |  | 
 **horaireCollectifMoyen** | **string** |  | 
 **idMetier** | **int** |  | 
-**metier** | **string** |  | 
-**poste** | **string** |  | 
+**metier** | **string** |  | [optional] 
+**poste** | **string** |  | [optional] 
 **seuilEtDecompte** | **string** |  | 
-**salaireReference1** | **string** |  | 
-**description1** | **string** |  | 
-**risque1** | **string** |  | 
-**moyenAcces** | **string** |  | 
-**periodeFermeture** | **string** |  | 
-**codePCS** | **string** |  | 
+**salaireReference1** | **string** |  | [optional] 
+**description1** | **string** |  | [optional] 
+**risque1** | **string** |  | [optional] 
+**moyenAcces** | **string** |  | [optional] 
+**periodeFermeture** | **string** |  | [optional] 
+**codePCS** | **string** |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

@@ -544,33 +544,6 @@ class Contract implements ModelInterface, ArrayAccess
         if ($this->container['pays'] === null) {
             $invalidProperties[] = "'pays' can't be null";
         }
-        if ($this->container['telephone'] === null) {
-            $invalidProperties[] = "'telephone' can't be null";
-        }
-        if ($this->container['fax'] === null) {
-            $invalidProperties[] = "'fax' can't be null";
-        }
-        if ($this->container['email'] === null) {
-            $invalidProperties[] = "'email' can't be null";
-        }
-        if ($this->container['aPE'] === null) {
-            $invalidProperties[] = "'aPE' can't be null";
-        }
-        if ($this->container['tVAPays'] === null) {
-            $invalidProperties[] = "'tVAPays' can't be null";
-        }
-        if ($this->container['tVAClef'] === null) {
-            $invalidProperties[] = "'tVAClef' can't be null";
-        }
-        if ($this->container['sIREN'] === null) {
-            $invalidProperties[] = "'sIREN' can't be null";
-        }
-        if ($this->container['nIC'] === null) {
-            $invalidProperties[] = "'nIC' can't be null";
-        }
-        if ($this->container['referenceAnalytique'] === null) {
-            $invalidProperties[] = "'referenceAnalytique' can't be null";
-        }
         if ($this->container['agence'] === null) {
             $invalidProperties[] = "'agence' can't be null";
         }
@@ -592,9 +565,6 @@ class Contract implements ModelInterface, ArrayAccess
         if ($this->container['motifEmbauche'] === null) {
             $invalidProperties[] = "'motifEmbauche' can't be null";
         }
-        if ($this->container['justification'] === null) {
-            $invalidProperties[] = "'justification' can't be null";
-        }
         if ($this->container['missionARisqueL23131'] === null) {
             $invalidProperties[] = "'missionARisqueL23131' can't be null";
         }
@@ -603,6 +573,9 @@ class Contract implements ModelInterface, ArrayAccess
         }
         if ($this->container['heureDePresentation'] === null) {
             $invalidProperties[] = "'heureDePresentation' can't be null";
+        }
+        if ($this->container['contractOrder'] === null) {
+            $invalidProperties[] = "'contractOrder' can't be null";
         }
         if ($this->container['typeContrat'] === null) {
             $invalidProperties[] = "'typeContrat' can't be null";
@@ -618,12 +591,6 @@ class Contract implements ModelInterface, ArrayAccess
         }
         if ($this->container['souplesseFin'] === null) {
             $invalidProperties[] = "'souplesseFin' can't be null";
-        }
-        if ($this->container['horairesParticulier'] === null) {
-            $invalidProperties[] = "'horairesParticulier' can't be null";
-        }
-        if ($this->container['retourSignatureClient'] === null) {
-            $invalidProperties[] = "'retourSignatureClient' can't be null";
         }
         if ($this->container['tauxPaye'] === null) {
             $invalidProperties[] = "'tauxPaye' can't be null";
@@ -643,32 +610,8 @@ class Contract implements ModelInterface, ArrayAccess
         if ($this->container['idMetier'] === null) {
             $invalidProperties[] = "'idMetier' can't be null";
         }
-        if ($this->container['metier'] === null) {
-            $invalidProperties[] = "'metier' can't be null";
-        }
-        if ($this->container['poste'] === null) {
-            $invalidProperties[] = "'poste' can't be null";
-        }
         if ($this->container['seuilEtDecompte'] === null) {
             $invalidProperties[] = "'seuilEtDecompte' can't be null";
-        }
-        if ($this->container['salaireReference1'] === null) {
-            $invalidProperties[] = "'salaireReference1' can't be null";
-        }
-        if ($this->container['description1'] === null) {
-            $invalidProperties[] = "'description1' can't be null";
-        }
-        if ($this->container['risque1'] === null) {
-            $invalidProperties[] = "'risque1' can't be null";
-        }
-        if ($this->container['moyenAcces'] === null) {
-            $invalidProperties[] = "'moyenAcces' can't be null";
-        }
-        if ($this->container['periodeFermeture'] === null) {
-            $invalidProperties[] = "'periodeFermeture' can't be null";
-        }
-        if ($this->container['codePCS'] === null) {
-            $invalidProperties[] = "'codePCS' can't be null";
         }
         return $invalidProperties;
     }
