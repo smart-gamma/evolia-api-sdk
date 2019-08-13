@@ -25,15 +25,15 @@ Name | Type | Description | Notes
 **nIC** | **string** |  | [optional] 
 **referenceAnalytique** | **string** |  | [optional] 
 **agence** | **string** |  | 
-**debut** | **string** |  | 
-**finPrevue** | **string** |  | 
-**finReelle** | **string** |  | 
-**dateCreation** | **string** |  | 
+**debut** | [**\DateTime**](\DateTime.md) |  | 
+**finPrevue** | [**\DateTime**](\DateTime.md) |  | 
+**finReelle** | [**\DateTime**](\DateTime.md) |  | 
+**dateCreation** | [**\DateTime**](\DateTime.md) |  | 
 **categorieSalariale** | **string** |  | 
 **motifEmbauche** | **string** |  | 
 **justification** | **string** |  | [optional] 
 **missionARisqueL23131** | **bool** |  | 
-**finDeMission** | **string** |  | 
+**finDeMission** | [**\DateTime**](\DateTime.md) |  | 
 **heureDePresentation** | **string** |  | 
 **contractOrder** | **int** |  | 
 **typeContrat** | **int** |  | 

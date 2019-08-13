@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **qualification** | **string** |  | 
 **nationalite** | **string** | Country code | 
 **nomJF** | **string** |  | [optional] 
-**dateNaissance** | **string** | DateTime format 1970-01-01T00:00:00.000Z | 
+**dateNaissance** | [**\DateTime**](\DateTime.md) | DateTime format 1970-01-01T00:00:00.000Z | 
 **telephonePortable** | **string** |  | [optional] 
 **telephoneDomicile** | **string** |  | [optional] 
 **email** | **string** |  | [optional] 

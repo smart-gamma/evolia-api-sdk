@@ -78,15 +78,15 @@ class Contract implements ModelInterface, ArrayAccess
 'nIC' => 'string',
 'referenceAnalytique' => 'string',
 'agence' => 'string',
-'debut' => 'string',
-'finPrevue' => 'string',
-'finReelle' => 'string',
-'dateCreation' => 'string',
+'debut' => '\DateTime',
+'finPrevue' => '\DateTime',
+'finReelle' => '\DateTime',
+'dateCreation' => '\DateTime',
 'categorieSalariale' => 'string',
 'motifEmbauche' => 'string',
 'justification' => 'string',
 'missionARisqueL23131' => 'bool',
-'finDeMission' => 'string',
+'finDeMission' => '\DateTime',
 'heureDePresentation' => 'string',
 'contractOrder' => 'int',
 'typeContrat' => 'int',
@@ -141,15 +141,15 @@ class Contract implements ModelInterface, ArrayAccess
 'nIC' => null,
 'referenceAnalytique' => null,
 'agence' => null,
-'debut' => null,
-'finPrevue' => null,
-'finReelle' => null,
-'dateCreation' => null,
+'debut' => 'date-time',
+'finPrevue' => 'date-time',
+'finReelle' => 'date-time',
+'dateCreation' => 'date-time',
 'categorieSalariale' => null,
 'motifEmbauche' => null,
 'justification' => null,
 'missionARisqueL23131' => null,
-'finDeMission' => null,
+'finDeMission' => 'date-time',
 'heureDePresentation' => null,
 'contractOrder' => null,
 'typeContrat' => null,
@@ -1159,7 +1159,7 @@ class Contract implements ModelInterface, ArrayAccess
     /**
      * Gets debut
      *
-     * @return string
+     * @return \DateTime
      */
     public function getDebut()
     {
@@ -1169,7 +1169,7 @@ class Contract implements ModelInterface, ArrayAccess
     /**
      * Sets debut
      *
-     * @param string $debut debut
+     * @param \DateTime $debut debut
      *
      * @return $this
      */
@@ -1183,7 +1183,7 @@ class Contract implements ModelInterface, ArrayAccess
     /**
      * Gets finPrevue
      *
-     * @return string
+     * @return \DateTime
      */
     public function getFinPrevue()
     {
@@ -1193,7 +1193,7 @@ class Contract implements ModelInterface, ArrayAccess
     /**
      * Sets finPrevue
      *
-     * @param string $finPrevue finPrevue
+     * @param \DateTime $finPrevue finPrevue
      *
      * @return $this
      */
@@ -1207,7 +1207,7 @@ class Contract implements ModelInterface, ArrayAccess
     /**
      * Gets finReelle
      *
-     * @return string
+     * @return \DateTime
      */
     public function getFinReelle()
     {
@@ -1217,7 +1217,7 @@ class Contract implements ModelInterface, ArrayAccess
     /**
      * Sets finReelle
      *
-     * @param string $finReelle finReelle
+     * @param \DateTime $finReelle finReelle
      *
      * @return $this
      */
@@ -1231,7 +1231,7 @@ class Contract implements ModelInterface, ArrayAccess
     /**
      * Gets dateCreation
      *
-     * @return string
+     * @return \DateTime
      */
     public function getDateCreation()
     {
@@ -1241,7 +1241,7 @@ class Contract implements ModelInterface, ArrayAccess
     /**
      * Sets dateCreation
      *
-     * @param string $dateCreation dateCreation
+     * @param \DateTime $dateCreation dateCreation
      *
      * @return $this
      */
@@ -1351,7 +1351,7 @@ class Contract implements ModelInterface, ArrayAccess
     /**
      * Gets finDeMission
      *
-     * @return string
+     * @return \DateTime
      */
     public function getFinDeMission()
     {
@@ -1361,7 +1361,7 @@ class Contract implements ModelInterface, ArrayAccess
     /**
      * Sets finDeMission
      *
-     * @param string $finDeMission finDeMission
+     * @param \DateTime $finDeMission finDeMission
      *
      * @return $this
      */
