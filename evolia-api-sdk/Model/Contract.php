@@ -59,11 +59,11 @@ class Contract implements ModelInterface, ArrayAccess
         'idContrat' => 'int',
 'idPersonne' => 'int',
 'idClient' => 'int',
+'codeMission' => 'string',
 'ordreClient' => 'int',
+'lieuxdeMission' => '\Evolia\Model\LieuxdeMission',
 'designation' => 'string',
 'adresse1' => 'string',
-'adresse2' => 'string',
-'adresse3' => 'string',
 'cP' => 'string',
 'commune' => 'string',
 'insee' => 'string',
@@ -78,7 +78,6 @@ class Contract implements ModelInterface, ArrayAccess
 'nIC' => 'string',
 'referenceAnalytique' => 'string',
 'agence' => 'string',
-'codeMission' => 'string',
 'debut' => 'string',
 'finPrevue' => 'string',
 'finReelle' => 'string',
@@ -89,13 +88,14 @@ class Contract implements ModelInterface, ArrayAccess
 'missionARisqueL23131' => 'bool',
 'finDeMission' => 'string',
 'heureDePresentation' => 'string',
-'typeContrat' => 'string',
-'dateEffet' => 'string',
-'dateFinAvenant' => 'string',
-'souplesseDebut' => 'string',
-'souplesseFin' => 'string',
+'contractOrder' => 'int',
+'typeContrat' => 'int',
+'dateEffet' => '\DateTime',
+'dateFinAvenant' => '\DateTime',
+'souplesseDebut' => '\DateTime',
+'souplesseFin' => '\DateTime',
 'horairesParticulier' => 'string',
-'retourSignatureerimaire' => 'bool',
+'retourSignatureInterimaire' => 'bool',
 'retourSignatureClient' => 'bool',
 'tauxPaye' => 'int',
 'tauxFacture' => 'int',
@@ -107,24 +107,8 @@ class Contract implements ModelInterface, ArrayAccess
 'poste' => 'string',
 'seuilEtDecompte' => 'string',
 'salaireReference1' => 'string',
-'salaireReference2' => 'string',
-'salaireReference3' => 'string',
-'salaireReference4' => 'string',
-'salaireReference5' => 'string',
-'salaireReference6' => 'string',
-'salaireReference7' => 'string',
-'salaireReference8' => 'string',
-'salaireReference9' => 'string',
-'salaireReference10' => 'string',
 'description1' => 'string',
-'description2' => 'string',
-'description3' => 'string',
-'protection1' => 'string',
-'protection2' => 'string',
-'protection3' => 'string',
 'risque1' => 'string',
-'risque2' => 'string',
-'risque3' => 'string',
 'moyenAcces' => 'string',
 'periodeFermeture' => 'string',
 'codePCS' => 'string'    ];
@@ -138,11 +122,11 @@ class Contract implements ModelInterface, ArrayAccess
         'idContrat' => null,
 'idPersonne' => null,
 'idClient' => null,
+'codeMission' => null,
 'ordreClient' => null,
+'lieuxdeMission' => null,
 'designation' => null,
 'adresse1' => null,
-'adresse2' => null,
-'adresse3' => null,
 'cP' => null,
 'commune' => null,
 'insee' => null,
@@ -157,7 +141,6 @@ class Contract implements ModelInterface, ArrayAccess
 'nIC' => null,
 'referenceAnalytique' => null,
 'agence' => null,
-'codeMission' => null,
 'debut' => null,
 'finPrevue' => null,
 'finReelle' => null,
@@ -168,13 +151,14 @@ class Contract implements ModelInterface, ArrayAccess
 'missionARisqueL23131' => null,
 'finDeMission' => null,
 'heureDePresentation' => null,
+'contractOrder' => null,
 'typeContrat' => null,
-'dateEffet' => null,
-'dateFinAvenant' => null,
-'souplesseDebut' => null,
-'souplesseFin' => null,
+'dateEffet' => 'date-time',
+'dateFinAvenant' => 'date-time',
+'souplesseDebut' => 'date-time',
+'souplesseFin' => 'date-time',
 'horairesParticulier' => null,
-'retourSignatureerimaire' => null,
+'retourSignatureInterimaire' => null,
 'retourSignatureClient' => null,
 'tauxPaye' => null,
 'tauxFacture' => null,
@@ -186,24 +170,8 @@ class Contract implements ModelInterface, ArrayAccess
 'poste' => null,
 'seuilEtDecompte' => null,
 'salaireReference1' => null,
-'salaireReference2' => null,
-'salaireReference3' => null,
-'salaireReference4' => null,
-'salaireReference5' => null,
-'salaireReference6' => null,
-'salaireReference7' => null,
-'salaireReference8' => null,
-'salaireReference9' => null,
-'salaireReference10' => null,
 'description1' => null,
-'description2' => null,
-'description3' => null,
-'protection1' => null,
-'protection2' => null,
-'protection3' => null,
 'risque1' => null,
-'risque2' => null,
-'risque3' => null,
 'moyenAcces' => null,
 'periodeFermeture' => null,
 'codePCS' => null    ];
@@ -238,11 +206,11 @@ class Contract implements ModelInterface, ArrayAccess
         'idContrat' => 'IdContrat',
 'idPersonne' => 'IdPersonne',
 'idClient' => 'IdClient',
+'codeMission' => 'CodeMission',
 'ordreClient' => 'OrdreClient',
+'lieuxdeMission' => 'LieuxdeMission',
 'designation' => 'Designation',
 'adresse1' => 'Adresse1',
-'adresse2' => 'Adresse2',
-'adresse3' => 'Adresse3',
 'cP' => 'CP',
 'commune' => 'Commune',
 'insee' => 'Insee',
@@ -257,7 +225,6 @@ class Contract implements ModelInterface, ArrayAccess
 'nIC' => 'NIC',
 'referenceAnalytique' => 'ReferenceAnalytique',
 'agence' => 'Agence',
-'codeMission' => 'CodeMission',
 'debut' => 'Debut',
 'finPrevue' => 'FinPrevue',
 'finReelle' => 'FinReelle',
@@ -268,13 +235,14 @@ class Contract implements ModelInterface, ArrayAccess
 'missionARisqueL23131' => 'MissionARisqueL23131',
 'finDeMission' => 'FinDeMission',
 'heureDePresentation' => 'HeureDePresentation',
+'contractOrder' => 'ContractOrder',
 'typeContrat' => 'TypeContrat',
 'dateEffet' => 'DateEffet',
 'dateFinAvenant' => 'DateFinAvenant',
 'souplesseDebut' => 'SouplesseDebut',
 'souplesseFin' => 'SouplesseFin',
 'horairesParticulier' => 'HorairesParticulier',
-'retourSignatureerimaire' => 'RetourSignatureerimaire',
+'retourSignatureInterimaire' => 'RetourSignatureInterimaire',
 'retourSignatureClient' => 'RetourSignatureClient',
 'tauxPaye' => 'TauxPaye',
 'tauxFacture' => 'TauxFacture',
@@ -286,24 +254,8 @@ class Contract implements ModelInterface, ArrayAccess
 'poste' => 'Poste',
 'seuilEtDecompte' => 'SeuilEtDecompte',
 'salaireReference1' => 'SalaireReference1',
-'salaireReference2' => 'SalaireReference2',
-'salaireReference3' => 'SalaireReference3',
-'salaireReference4' => 'SalaireReference4',
-'salaireReference5' => 'SalaireReference5',
-'salaireReference6' => 'SalaireReference6',
-'salaireReference7' => 'SalaireReference7',
-'salaireReference8' => 'SalaireReference8',
-'salaireReference9' => 'SalaireReference9',
-'salaireReference10' => 'SalaireReference10',
 'description1' => 'Description1',
-'description2' => 'Description2',
-'description3' => 'Description3',
-'protection1' => 'Protection1',
-'protection2' => 'Protection2',
-'protection3' => 'Protection3',
 'risque1' => 'Risque1',
-'risque2' => 'Risque2',
-'risque3' => 'Risque3',
 'moyenAcces' => 'MoyenAcces',
 'periodeFermeture' => 'PeriodeFermeture',
 'codePCS' => 'CodePCS'    ];
@@ -317,11 +269,11 @@ class Contract implements ModelInterface, ArrayAccess
         'idContrat' => 'setIdContrat',
 'idPersonne' => 'setIdPersonne',
 'idClient' => 'setIdClient',
+'codeMission' => 'setCodeMission',
 'ordreClient' => 'setOrdreClient',
+'lieuxdeMission' => 'setLieuxdeMission',
 'designation' => 'setDesignation',
 'adresse1' => 'setAdresse1',
-'adresse2' => 'setAdresse2',
-'adresse3' => 'setAdresse3',
 'cP' => 'setCP',
 'commune' => 'setCommune',
 'insee' => 'setInsee',
@@ -336,7 +288,6 @@ class Contract implements ModelInterface, ArrayAccess
 'nIC' => 'setNIC',
 'referenceAnalytique' => 'setReferenceAnalytique',
 'agence' => 'setAgence',
-'codeMission' => 'setCodeMission',
 'debut' => 'setDebut',
 'finPrevue' => 'setFinPrevue',
 'finReelle' => 'setFinReelle',
@@ -347,13 +298,14 @@ class Contract implements ModelInterface, ArrayAccess
 'missionARisqueL23131' => 'setMissionARisqueL23131',
 'finDeMission' => 'setFinDeMission',
 'heureDePresentation' => 'setHeureDePresentation',
+'contractOrder' => 'setContractOrder',
 'typeContrat' => 'setTypeContrat',
 'dateEffet' => 'setDateEffet',
 'dateFinAvenant' => 'setDateFinAvenant',
 'souplesseDebut' => 'setSouplesseDebut',
 'souplesseFin' => 'setSouplesseFin',
 'horairesParticulier' => 'setHorairesParticulier',
-'retourSignatureerimaire' => 'setRetourSignatureerimaire',
+'retourSignatureInterimaire' => 'setRetourSignatureInterimaire',
 'retourSignatureClient' => 'setRetourSignatureClient',
 'tauxPaye' => 'setTauxPaye',
 'tauxFacture' => 'setTauxFacture',
@@ -365,24 +317,8 @@ class Contract implements ModelInterface, ArrayAccess
 'poste' => 'setPoste',
 'seuilEtDecompte' => 'setSeuilEtDecompte',
 'salaireReference1' => 'setSalaireReference1',
-'salaireReference2' => 'setSalaireReference2',
-'salaireReference3' => 'setSalaireReference3',
-'salaireReference4' => 'setSalaireReference4',
-'salaireReference5' => 'setSalaireReference5',
-'salaireReference6' => 'setSalaireReference6',
-'salaireReference7' => 'setSalaireReference7',
-'salaireReference8' => 'setSalaireReference8',
-'salaireReference9' => 'setSalaireReference9',
-'salaireReference10' => 'setSalaireReference10',
 'description1' => 'setDescription1',
-'description2' => 'setDescription2',
-'description3' => 'setDescription3',
-'protection1' => 'setProtection1',
-'protection2' => 'setProtection2',
-'protection3' => 'setProtection3',
 'risque1' => 'setRisque1',
-'risque2' => 'setRisque2',
-'risque3' => 'setRisque3',
 'moyenAcces' => 'setMoyenAcces',
 'periodeFermeture' => 'setPeriodeFermeture',
 'codePCS' => 'setCodePCS'    ];
@@ -396,11 +332,11 @@ class Contract implements ModelInterface, ArrayAccess
         'idContrat' => 'getIdContrat',
 'idPersonne' => 'getIdPersonne',
 'idClient' => 'getIdClient',
+'codeMission' => 'getCodeMission',
 'ordreClient' => 'getOrdreClient',
+'lieuxdeMission' => 'getLieuxdeMission',
 'designation' => 'getDesignation',
 'adresse1' => 'getAdresse1',
-'adresse2' => 'getAdresse2',
-'adresse3' => 'getAdresse3',
 'cP' => 'getCP',
 'commune' => 'getCommune',
 'insee' => 'getInsee',
@@ -415,7 +351,6 @@ class Contract implements ModelInterface, ArrayAccess
 'nIC' => 'getNIC',
 'referenceAnalytique' => 'getReferenceAnalytique',
 'agence' => 'getAgence',
-'codeMission' => 'getCodeMission',
 'debut' => 'getDebut',
 'finPrevue' => 'getFinPrevue',
 'finReelle' => 'getFinReelle',
@@ -426,13 +361,14 @@ class Contract implements ModelInterface, ArrayAccess
 'missionARisqueL23131' => 'getMissionARisqueL23131',
 'finDeMission' => 'getFinDeMission',
 'heureDePresentation' => 'getHeureDePresentation',
+'contractOrder' => 'getContractOrder',
 'typeContrat' => 'getTypeContrat',
 'dateEffet' => 'getDateEffet',
 'dateFinAvenant' => 'getDateFinAvenant',
 'souplesseDebut' => 'getSouplesseDebut',
 'souplesseFin' => 'getSouplesseFin',
 'horairesParticulier' => 'getHorairesParticulier',
-'retourSignatureerimaire' => 'getRetourSignatureerimaire',
+'retourSignatureInterimaire' => 'getRetourSignatureInterimaire',
 'retourSignatureClient' => 'getRetourSignatureClient',
 'tauxPaye' => 'getTauxPaye',
 'tauxFacture' => 'getTauxFacture',
@@ -444,24 +380,8 @@ class Contract implements ModelInterface, ArrayAccess
 'poste' => 'getPoste',
 'seuilEtDecompte' => 'getSeuilEtDecompte',
 'salaireReference1' => 'getSalaireReference1',
-'salaireReference2' => 'getSalaireReference2',
-'salaireReference3' => 'getSalaireReference3',
-'salaireReference4' => 'getSalaireReference4',
-'salaireReference5' => 'getSalaireReference5',
-'salaireReference6' => 'getSalaireReference6',
-'salaireReference7' => 'getSalaireReference7',
-'salaireReference8' => 'getSalaireReference8',
-'salaireReference9' => 'getSalaireReference9',
-'salaireReference10' => 'getSalaireReference10',
 'description1' => 'getDescription1',
-'description2' => 'getDescription2',
-'description3' => 'getDescription3',
-'protection1' => 'getProtection1',
-'protection2' => 'getProtection2',
-'protection3' => 'getProtection3',
 'risque1' => 'getRisque1',
-'risque2' => 'getRisque2',
-'risque3' => 'getRisque3',
 'moyenAcces' => 'getMoyenAcces',
 'periodeFermeture' => 'getPeriodeFermeture',
 'codePCS' => 'getCodePCS'    ];
@@ -507,22 +427,7 @@ class Contract implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    const TYPE_CONTRAT_INITIAL = 'Initial';
-const TYPE_CONTRAT_PROLONGATION = 'Prolongation';
-const TYPE_CONTRAT_MODIFICATION = 'Modification';
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getTypeContratAllowableValues()
-    {
-        return [
-            self::TYPE_CONTRAT_INITIAL,
-self::TYPE_CONTRAT_PROLONGATION,
-self::TYPE_CONTRAT_MODIFICATION,        ];
-    }
+    
 
     /**
      * Associative array for storing property values
@@ -542,11 +447,11 @@ self::TYPE_CONTRAT_MODIFICATION,        ];
         $this->container['idContrat'] = isset($data['idContrat']) ? $data['idContrat'] : null;
         $this->container['idPersonne'] = isset($data['idPersonne']) ? $data['idPersonne'] : null;
         $this->container['idClient'] = isset($data['idClient']) ? $data['idClient'] : null;
+        $this->container['codeMission'] = isset($data['codeMission']) ? $data['codeMission'] : null;
         $this->container['ordreClient'] = isset($data['ordreClient']) ? $data['ordreClient'] : null;
+        $this->container['lieuxdeMission'] = isset($data['lieuxdeMission']) ? $data['lieuxdeMission'] : null;
         $this->container['designation'] = isset($data['designation']) ? $data['designation'] : null;
         $this->container['adresse1'] = isset($data['adresse1']) ? $data['adresse1'] : null;
-        $this->container['adresse2'] = isset($data['adresse2']) ? $data['adresse2'] : null;
-        $this->container['adresse3'] = isset($data['adresse3']) ? $data['adresse3'] : null;
         $this->container['cP'] = isset($data['cP']) ? $data['cP'] : null;
         $this->container['commune'] = isset($data['commune']) ? $data['commune'] : null;
         $this->container['insee'] = isset($data['insee']) ? $data['insee'] : null;
@@ -561,7 +466,6 @@ self::TYPE_CONTRAT_MODIFICATION,        ];
         $this->container['nIC'] = isset($data['nIC']) ? $data['nIC'] : null;
         $this->container['referenceAnalytique'] = isset($data['referenceAnalytique']) ? $data['referenceAnalytique'] : null;
         $this->container['agence'] = isset($data['agence']) ? $data['agence'] : null;
-        $this->container['codeMission'] = isset($data['codeMission']) ? $data['codeMission'] : null;
         $this->container['debut'] = isset($data['debut']) ? $data['debut'] : null;
         $this->container['finPrevue'] = isset($data['finPrevue']) ? $data['finPrevue'] : null;
         $this->container['finReelle'] = isset($data['finReelle']) ? $data['finReelle'] : null;
@@ -572,13 +476,14 @@ self::TYPE_CONTRAT_MODIFICATION,        ];
         $this->container['missionARisqueL23131'] = isset($data['missionARisqueL23131']) ? $data['missionARisqueL23131'] : null;
         $this->container['finDeMission'] = isset($data['finDeMission']) ? $data['finDeMission'] : null;
         $this->container['heureDePresentation'] = isset($data['heureDePresentation']) ? $data['heureDePresentation'] : null;
+        $this->container['contractOrder'] = isset($data['contractOrder']) ? $data['contractOrder'] : null;
         $this->container['typeContrat'] = isset($data['typeContrat']) ? $data['typeContrat'] : null;
         $this->container['dateEffet'] = isset($data['dateEffet']) ? $data['dateEffet'] : null;
         $this->container['dateFinAvenant'] = isset($data['dateFinAvenant']) ? $data['dateFinAvenant'] : null;
         $this->container['souplesseDebut'] = isset($data['souplesseDebut']) ? $data['souplesseDebut'] : null;
         $this->container['souplesseFin'] = isset($data['souplesseFin']) ? $data['souplesseFin'] : null;
         $this->container['horairesParticulier'] = isset($data['horairesParticulier']) ? $data['horairesParticulier'] : null;
-        $this->container['retourSignatureerimaire'] = isset($data['retourSignatureerimaire']) ? $data['retourSignatureerimaire'] : null;
+        $this->container['retourSignatureInterimaire'] = isset($data['retourSignatureInterimaire']) ? $data['retourSignatureInterimaire'] : null;
         $this->container['retourSignatureClient'] = isset($data['retourSignatureClient']) ? $data['retourSignatureClient'] : null;
         $this->container['tauxPaye'] = isset($data['tauxPaye']) ? $data['tauxPaye'] : null;
         $this->container['tauxFacture'] = isset($data['tauxFacture']) ? $data['tauxFacture'] : null;
@@ -590,24 +495,8 @@ self::TYPE_CONTRAT_MODIFICATION,        ];
         $this->container['poste'] = isset($data['poste']) ? $data['poste'] : null;
         $this->container['seuilEtDecompte'] = isset($data['seuilEtDecompte']) ? $data['seuilEtDecompte'] : null;
         $this->container['salaireReference1'] = isset($data['salaireReference1']) ? $data['salaireReference1'] : null;
-        $this->container['salaireReference2'] = isset($data['salaireReference2']) ? $data['salaireReference2'] : null;
-        $this->container['salaireReference3'] = isset($data['salaireReference3']) ? $data['salaireReference3'] : null;
-        $this->container['salaireReference4'] = isset($data['salaireReference4']) ? $data['salaireReference4'] : null;
-        $this->container['salaireReference5'] = isset($data['salaireReference5']) ? $data['salaireReference5'] : null;
-        $this->container['salaireReference6'] = isset($data['salaireReference6']) ? $data['salaireReference6'] : null;
-        $this->container['salaireReference7'] = isset($data['salaireReference7']) ? $data['salaireReference7'] : null;
-        $this->container['salaireReference8'] = isset($data['salaireReference8']) ? $data['salaireReference8'] : null;
-        $this->container['salaireReference9'] = isset($data['salaireReference9']) ? $data['salaireReference9'] : null;
-        $this->container['salaireReference10'] = isset($data['salaireReference10']) ? $data['salaireReference10'] : null;
         $this->container['description1'] = isset($data['description1']) ? $data['description1'] : null;
-        $this->container['description2'] = isset($data['description2']) ? $data['description2'] : null;
-        $this->container['description3'] = isset($data['description3']) ? $data['description3'] : null;
-        $this->container['protection1'] = isset($data['protection1']) ? $data['protection1'] : null;
-        $this->container['protection2'] = isset($data['protection2']) ? $data['protection2'] : null;
-        $this->container['protection3'] = isset($data['protection3']) ? $data['protection3'] : null;
         $this->container['risque1'] = isset($data['risque1']) ? $data['risque1'] : null;
-        $this->container['risque2'] = isset($data['risque2']) ? $data['risque2'] : null;
-        $this->container['risque3'] = isset($data['risque3']) ? $data['risque3'] : null;
         $this->container['moyenAcces'] = isset($data['moyenAcces']) ? $data['moyenAcces'] : null;
         $this->container['periodeFermeture'] = isset($data['periodeFermeture']) ? $data['periodeFermeture'] : null;
         $this->container['codePCS'] = isset($data['codePCS']) ? $data['codePCS'] : null;
@@ -631,6 +520,9 @@ self::TYPE_CONTRAT_MODIFICATION,        ];
         if ($this->container['idClient'] === null) {
             $invalidProperties[] = "'idClient' can't be null";
         }
+        if ($this->container['codeMission'] === null) {
+            $invalidProperties[] = "'codeMission' can't be null";
+        }
         if ($this->container['ordreClient'] === null) {
             $invalidProperties[] = "'ordreClient' can't be null";
         }
@@ -639,12 +531,6 @@ self::TYPE_CONTRAT_MODIFICATION,        ];
         }
         if ($this->container['adresse1'] === null) {
             $invalidProperties[] = "'adresse1' can't be null";
-        }
-        if ($this->container['adresse2'] === null) {
-            $invalidProperties[] = "'adresse2' can't be null";
-        }
-        if ($this->container['adresse3'] === null) {
-            $invalidProperties[] = "'adresse3' can't be null";
         }
         if ($this->container['cP'] === null) {
             $invalidProperties[] = "'cP' can't be null";
@@ -658,38 +544,8 @@ self::TYPE_CONTRAT_MODIFICATION,        ];
         if ($this->container['pays'] === null) {
             $invalidProperties[] = "'pays' can't be null";
         }
-        if ($this->container['telephone'] === null) {
-            $invalidProperties[] = "'telephone' can't be null";
-        }
-        if ($this->container['fax'] === null) {
-            $invalidProperties[] = "'fax' can't be null";
-        }
-        if ($this->container['email'] === null) {
-            $invalidProperties[] = "'email' can't be null";
-        }
-        if ($this->container['aPE'] === null) {
-            $invalidProperties[] = "'aPE' can't be null";
-        }
-        if ($this->container['tVAPays'] === null) {
-            $invalidProperties[] = "'tVAPays' can't be null";
-        }
-        if ($this->container['tVAClef'] === null) {
-            $invalidProperties[] = "'tVAClef' can't be null";
-        }
-        if ($this->container['sIREN'] === null) {
-            $invalidProperties[] = "'sIREN' can't be null";
-        }
-        if ($this->container['nIC'] === null) {
-            $invalidProperties[] = "'nIC' can't be null";
-        }
-        if ($this->container['referenceAnalytique'] === null) {
-            $invalidProperties[] = "'referenceAnalytique' can't be null";
-        }
         if ($this->container['agence'] === null) {
             $invalidProperties[] = "'agence' can't be null";
-        }
-        if ($this->container['codeMission'] === null) {
-            $invalidProperties[] = "'codeMission' can't be null";
         }
         if ($this->container['debut'] === null) {
             $invalidProperties[] = "'debut' can't be null";
@@ -709,9 +565,6 @@ self::TYPE_CONTRAT_MODIFICATION,        ];
         if ($this->container['motifEmbauche'] === null) {
             $invalidProperties[] = "'motifEmbauche' can't be null";
         }
-        if ($this->container['justification'] === null) {
-            $invalidProperties[] = "'justification' can't be null";
-        }
         if ($this->container['missionARisqueL23131'] === null) {
             $invalidProperties[] = "'missionARisqueL23131' can't be null";
         }
@@ -721,17 +574,12 @@ self::TYPE_CONTRAT_MODIFICATION,        ];
         if ($this->container['heureDePresentation'] === null) {
             $invalidProperties[] = "'heureDePresentation' can't be null";
         }
+        if ($this->container['contractOrder'] === null) {
+            $invalidProperties[] = "'contractOrder' can't be null";
+        }
         if ($this->container['typeContrat'] === null) {
             $invalidProperties[] = "'typeContrat' can't be null";
         }
-        $allowedValues = $this->getTypeContratAllowableValues();
-        if (!is_null($this->container['typeContrat']) && !in_array($this->container['typeContrat'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'typeContrat', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
-
         if ($this->container['dateEffet'] === null) {
             $invalidProperties[] = "'dateEffet' can't be null";
         }
@@ -743,15 +591,6 @@ self::TYPE_CONTRAT_MODIFICATION,        ];
         }
         if ($this->container['souplesseFin'] === null) {
             $invalidProperties[] = "'souplesseFin' can't be null";
-        }
-        if ($this->container['horairesParticulier'] === null) {
-            $invalidProperties[] = "'horairesParticulier' can't be null";
-        }
-        if ($this->container['retourSignatureerimaire'] === null) {
-            $invalidProperties[] = "'retourSignatureerimaire' can't be null";
-        }
-        if ($this->container['retourSignatureClient'] === null) {
-            $invalidProperties[] = "'retourSignatureClient' can't be null";
         }
         if ($this->container['tauxPaye'] === null) {
             $invalidProperties[] = "'tauxPaye' can't be null";
@@ -771,80 +610,8 @@ self::TYPE_CONTRAT_MODIFICATION,        ];
         if ($this->container['idMetier'] === null) {
             $invalidProperties[] = "'idMetier' can't be null";
         }
-        if ($this->container['metier'] === null) {
-            $invalidProperties[] = "'metier' can't be null";
-        }
-        if ($this->container['poste'] === null) {
-            $invalidProperties[] = "'poste' can't be null";
-        }
         if ($this->container['seuilEtDecompte'] === null) {
             $invalidProperties[] = "'seuilEtDecompte' can't be null";
-        }
-        if ($this->container['salaireReference1'] === null) {
-            $invalidProperties[] = "'salaireReference1' can't be null";
-        }
-        if ($this->container['salaireReference2'] === null) {
-            $invalidProperties[] = "'salaireReference2' can't be null";
-        }
-        if ($this->container['salaireReference3'] === null) {
-            $invalidProperties[] = "'salaireReference3' can't be null";
-        }
-        if ($this->container['salaireReference4'] === null) {
-            $invalidProperties[] = "'salaireReference4' can't be null";
-        }
-        if ($this->container['salaireReference5'] === null) {
-            $invalidProperties[] = "'salaireReference5' can't be null";
-        }
-        if ($this->container['salaireReference6'] === null) {
-            $invalidProperties[] = "'salaireReference6' can't be null";
-        }
-        if ($this->container['salaireReference7'] === null) {
-            $invalidProperties[] = "'salaireReference7' can't be null";
-        }
-        if ($this->container['salaireReference8'] === null) {
-            $invalidProperties[] = "'salaireReference8' can't be null";
-        }
-        if ($this->container['salaireReference9'] === null) {
-            $invalidProperties[] = "'salaireReference9' can't be null";
-        }
-        if ($this->container['salaireReference10'] === null) {
-            $invalidProperties[] = "'salaireReference10' can't be null";
-        }
-        if ($this->container['description1'] === null) {
-            $invalidProperties[] = "'description1' can't be null";
-        }
-        if ($this->container['description2'] === null) {
-            $invalidProperties[] = "'description2' can't be null";
-        }
-        if ($this->container['description3'] === null) {
-            $invalidProperties[] = "'description3' can't be null";
-        }
-        if ($this->container['protection1'] === null) {
-            $invalidProperties[] = "'protection1' can't be null";
-        }
-        if ($this->container['protection2'] === null) {
-            $invalidProperties[] = "'protection2' can't be null";
-        }
-        if ($this->container['protection3'] === null) {
-            $invalidProperties[] = "'protection3' can't be null";
-        }
-        if ($this->container['risque1'] === null) {
-            $invalidProperties[] = "'risque1' can't be null";
-        }
-        if ($this->container['risque2'] === null) {
-            $invalidProperties[] = "'risque2' can't be null";
-        }
-        if ($this->container['risque3'] === null) {
-            $invalidProperties[] = "'risque3' can't be null";
-        }
-        if ($this->container['moyenAcces'] === null) {
-            $invalidProperties[] = "'moyenAcces' can't be null";
-        }
-        if ($this->container['periodeFermeture'] === null) {
-            $invalidProperties[] = "'periodeFermeture' can't be null";
-        }
-        if ($this->container['codePCS'] === null) {
-            $invalidProperties[] = "'codePCS' can't be null";
         }
         return $invalidProperties;
     }
@@ -934,6 +701,30 @@ self::TYPE_CONTRAT_MODIFICATION,        ];
     }
 
     /**
+     * Gets codeMission
+     *
+     * @return string
+     */
+    public function getCodeMission()
+    {
+        return $this->container['codeMission'];
+    }
+
+    /**
+     * Sets codeMission
+     *
+     * @param string $codeMission codeMission
+     *
+     * @return $this
+     */
+    public function setCodeMission($codeMission)
+    {
+        $this->container['codeMission'] = $codeMission;
+
+        return $this;
+    }
+
+    /**
      * Gets ordreClient
      *
      * @return int
@@ -953,6 +744,30 @@ self::TYPE_CONTRAT_MODIFICATION,        ];
     public function setOrdreClient($ordreClient)
     {
         $this->container['ordreClient'] = $ordreClient;
+
+        return $this;
+    }
+
+    /**
+     * Gets lieuxdeMission
+     *
+     * @return \Evolia\Model\LieuxdeMission
+     */
+    public function getLieuxdeMission()
+    {
+        return $this->container['lieuxdeMission'];
+    }
+
+    /**
+     * Sets lieuxdeMission
+     *
+     * @param \Evolia\Model\LieuxdeMission $lieuxdeMission lieuxdeMission
+     *
+     * @return $this
+     */
+    public function setLieuxdeMission($lieuxdeMission)
+    {
+        $this->container['lieuxdeMission'] = $lieuxdeMission;
 
         return $this;
     }
@@ -1001,54 +816,6 @@ self::TYPE_CONTRAT_MODIFICATION,        ];
     public function setAdresse1($adresse1)
     {
         $this->container['adresse1'] = $adresse1;
-
-        return $this;
-    }
-
-    /**
-     * Gets adresse2
-     *
-     * @return string
-     */
-    public function getAdresse2()
-    {
-        return $this->container['adresse2'];
-    }
-
-    /**
-     * Sets adresse2
-     *
-     * @param string $adresse2 adresse2
-     *
-     * @return $this
-     */
-    public function setAdresse2($adresse2)
-    {
-        $this->container['adresse2'] = $adresse2;
-
-        return $this;
-    }
-
-    /**
-     * Gets adresse3
-     *
-     * @return string
-     */
-    public function getAdresse3()
-    {
-        return $this->container['adresse3'];
-    }
-
-    /**
-     * Sets adresse3
-     *
-     * @param string $adresse3 adresse3
-     *
-     * @return $this
-     */
-    public function setAdresse3($adresse3)
-    {
-        $this->container['adresse3'] = $adresse3;
 
         return $this;
     }
@@ -1390,30 +1157,6 @@ self::TYPE_CONTRAT_MODIFICATION,        ];
     }
 
     /**
-     * Gets codeMission
-     *
-     * @return string
-     */
-    public function getCodeMission()
-    {
-        return $this->container['codeMission'];
-    }
-
-    /**
-     * Sets codeMission
-     *
-     * @param string $codeMission codeMission
-     *
-     * @return $this
-     */
-    public function setCodeMission($codeMission)
-    {
-        $this->container['codeMission'] = $codeMission;
-
-        return $this;
-    }
-
-    /**
      * Gets debut
      *
      * @return string
@@ -1498,7 +1241,7 @@ self::TYPE_CONTRAT_MODIFICATION,        ];
     /**
      * Sets dateCreation
      *
-     * @param string $dateCreation DateTime format 01/01/1970 00:00:00
+     * @param string $dateCreation dateCreation
      *
      * @return $this
      */
@@ -1654,9 +1397,33 @@ self::TYPE_CONTRAT_MODIFICATION,        ];
     }
 
     /**
+     * Gets contractOrder
+     *
+     * @return int
+     */
+    public function getContractOrder()
+    {
+        return $this->container['contractOrder'];
+    }
+
+    /**
+     * Sets contractOrder
+     *
+     * @param int $contractOrder contractOrder
+     *
+     * @return $this
+     */
+    public function setContractOrder($contractOrder)
+    {
+        $this->container['contractOrder'] = $contractOrder;
+
+        return $this;
+    }
+
+    /**
      * Gets typeContrat
      *
-     * @return string
+     * @return int
      */
     public function getTypeContrat()
     {
@@ -1666,21 +1433,12 @@ self::TYPE_CONTRAT_MODIFICATION,        ];
     /**
      * Sets typeContrat
      *
-     * @param string $typeContrat typeContrat
+     * @param int $typeContrat typeContrat
      *
      * @return $this
      */
     public function setTypeContrat($typeContrat)
     {
-        $allowedValues = $this->getTypeContratAllowableValues();
-        if (!in_array($typeContrat, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'typeContrat', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
         $this->container['typeContrat'] = $typeContrat;
 
         return $this;
@@ -1689,7 +1447,7 @@ self::TYPE_CONTRAT_MODIFICATION,        ];
     /**
      * Gets dateEffet
      *
-     * @return string
+     * @return \DateTime
      */
     public function getDateEffet()
     {
@@ -1699,7 +1457,7 @@ self::TYPE_CONTRAT_MODIFICATION,        ];
     /**
      * Sets dateEffet
      *
-     * @param string $dateEffet DateTime format 01/01/1970 00:00:00
+     * @param \DateTime $dateEffet dateEffet
      *
      * @return $this
      */
@@ -1713,7 +1471,7 @@ self::TYPE_CONTRAT_MODIFICATION,        ];
     /**
      * Gets dateFinAvenant
      *
-     * @return string
+     * @return \DateTime
      */
     public function getDateFinAvenant()
     {
@@ -1723,7 +1481,7 @@ self::TYPE_CONTRAT_MODIFICATION,        ];
     /**
      * Sets dateFinAvenant
      *
-     * @param string $dateFinAvenant DateTime format 01/01/1970 00:00:00
+     * @param \DateTime $dateFinAvenant dateFinAvenant
      *
      * @return $this
      */
@@ -1737,7 +1495,7 @@ self::TYPE_CONTRAT_MODIFICATION,        ];
     /**
      * Gets souplesseDebut
      *
-     * @return string
+     * @return \DateTime
      */
     public function getSouplesseDebut()
     {
@@ -1747,7 +1505,7 @@ self::TYPE_CONTRAT_MODIFICATION,        ];
     /**
      * Sets souplesseDebut
      *
-     * @param string $souplesseDebut souplesseDebut
+     * @param \DateTime $souplesseDebut souplesseDebut
      *
      * @return $this
      */
@@ -1761,7 +1519,7 @@ self::TYPE_CONTRAT_MODIFICATION,        ];
     /**
      * Gets souplesseFin
      *
-     * @return string
+     * @return \DateTime
      */
     public function getSouplesseFin()
     {
@@ -1771,7 +1529,7 @@ self::TYPE_CONTRAT_MODIFICATION,        ];
     /**
      * Sets souplesseFin
      *
-     * @param string $souplesseFin souplesseFin
+     * @param \DateTime $souplesseFin souplesseFin
      *
      * @return $this
      */
@@ -1807,25 +1565,25 @@ self::TYPE_CONTRAT_MODIFICATION,        ];
     }
 
     /**
-     * Gets retourSignatureerimaire
+     * Gets retourSignatureInterimaire
      *
      * @return bool
      */
-    public function getRetourSignatureerimaire()
+    public function getRetourSignatureInterimaire()
     {
-        return $this->container['retourSignatureerimaire'];
+        return $this->container['retourSignatureInterimaire'];
     }
 
     /**
-     * Sets retourSignatureerimaire
+     * Sets retourSignatureInterimaire
      *
-     * @param bool $retourSignatureerimaire retourSignatureerimaire
+     * @param bool $retourSignatureInterimaire retourSignatureInterimaire
      *
      * @return $this
      */
-    public function setRetourSignatureerimaire($retourSignatureerimaire)
+    public function setRetourSignatureInterimaire($retourSignatureInterimaire)
     {
-        $this->container['retourSignatureerimaire'] = $retourSignatureerimaire;
+        $this->container['retourSignatureInterimaire'] = $retourSignatureInterimaire;
 
         return $this;
     }
@@ -2095,222 +1853,6 @@ self::TYPE_CONTRAT_MODIFICATION,        ];
     }
 
     /**
-     * Gets salaireReference2
-     *
-     * @return string
-     */
-    public function getSalaireReference2()
-    {
-        return $this->container['salaireReference2'];
-    }
-
-    /**
-     * Sets salaireReference2
-     *
-     * @param string $salaireReference2 salaireReference2
-     *
-     * @return $this
-     */
-    public function setSalaireReference2($salaireReference2)
-    {
-        $this->container['salaireReference2'] = $salaireReference2;
-
-        return $this;
-    }
-
-    /**
-     * Gets salaireReference3
-     *
-     * @return string
-     */
-    public function getSalaireReference3()
-    {
-        return $this->container['salaireReference3'];
-    }
-
-    /**
-     * Sets salaireReference3
-     *
-     * @param string $salaireReference3 salaireReference3
-     *
-     * @return $this
-     */
-    public function setSalaireReference3($salaireReference3)
-    {
-        $this->container['salaireReference3'] = $salaireReference3;
-
-        return $this;
-    }
-
-    /**
-     * Gets salaireReference4
-     *
-     * @return string
-     */
-    public function getSalaireReference4()
-    {
-        return $this->container['salaireReference4'];
-    }
-
-    /**
-     * Sets salaireReference4
-     *
-     * @param string $salaireReference4 salaireReference4
-     *
-     * @return $this
-     */
-    public function setSalaireReference4($salaireReference4)
-    {
-        $this->container['salaireReference4'] = $salaireReference4;
-
-        return $this;
-    }
-
-    /**
-     * Gets salaireReference5
-     *
-     * @return string
-     */
-    public function getSalaireReference5()
-    {
-        return $this->container['salaireReference5'];
-    }
-
-    /**
-     * Sets salaireReference5
-     *
-     * @param string $salaireReference5 salaireReference5
-     *
-     * @return $this
-     */
-    public function setSalaireReference5($salaireReference5)
-    {
-        $this->container['salaireReference5'] = $salaireReference5;
-
-        return $this;
-    }
-
-    /**
-     * Gets salaireReference6
-     *
-     * @return string
-     */
-    public function getSalaireReference6()
-    {
-        return $this->container['salaireReference6'];
-    }
-
-    /**
-     * Sets salaireReference6
-     *
-     * @param string $salaireReference6 salaireReference6
-     *
-     * @return $this
-     */
-    public function setSalaireReference6($salaireReference6)
-    {
-        $this->container['salaireReference6'] = $salaireReference6;
-
-        return $this;
-    }
-
-    /**
-     * Gets salaireReference7
-     *
-     * @return string
-     */
-    public function getSalaireReference7()
-    {
-        return $this->container['salaireReference7'];
-    }
-
-    /**
-     * Sets salaireReference7
-     *
-     * @param string $salaireReference7 salaireReference7
-     *
-     * @return $this
-     */
-    public function setSalaireReference7($salaireReference7)
-    {
-        $this->container['salaireReference7'] = $salaireReference7;
-
-        return $this;
-    }
-
-    /**
-     * Gets salaireReference8
-     *
-     * @return string
-     */
-    public function getSalaireReference8()
-    {
-        return $this->container['salaireReference8'];
-    }
-
-    /**
-     * Sets salaireReference8
-     *
-     * @param string $salaireReference8 salaireReference8
-     *
-     * @return $this
-     */
-    public function setSalaireReference8($salaireReference8)
-    {
-        $this->container['salaireReference8'] = $salaireReference8;
-
-        return $this;
-    }
-
-    /**
-     * Gets salaireReference9
-     *
-     * @return string
-     */
-    public function getSalaireReference9()
-    {
-        return $this->container['salaireReference9'];
-    }
-
-    /**
-     * Sets salaireReference9
-     *
-     * @param string $salaireReference9 salaireReference9
-     *
-     * @return $this
-     */
-    public function setSalaireReference9($salaireReference9)
-    {
-        $this->container['salaireReference9'] = $salaireReference9;
-
-        return $this;
-    }
-
-    /**
-     * Gets salaireReference10
-     *
-     * @return string
-     */
-    public function getSalaireReference10()
-    {
-        return $this->container['salaireReference10'];
-    }
-
-    /**
-     * Sets salaireReference10
-     *
-     * @param string $salaireReference10 salaireReference10
-     *
-     * @return $this
-     */
-    public function setSalaireReference10($salaireReference10)
-    {
-        $this->container['salaireReference10'] = $salaireReference10;
-
-        return $this;
-    }
-
-    /**
      * Gets description1
      *
      * @return string
@@ -2335,126 +1877,6 @@ self::TYPE_CONTRAT_MODIFICATION,        ];
     }
 
     /**
-     * Gets description2
-     *
-     * @return string
-     */
-    public function getDescription2()
-    {
-        return $this->container['description2'];
-    }
-
-    /**
-     * Sets description2
-     *
-     * @param string $description2 description2
-     *
-     * @return $this
-     */
-    public function setDescription2($description2)
-    {
-        $this->container['description2'] = $description2;
-
-        return $this;
-    }
-
-    /**
-     * Gets description3
-     *
-     * @return string
-     */
-    public function getDescription3()
-    {
-        return $this->container['description3'];
-    }
-
-    /**
-     * Sets description3
-     *
-     * @param string $description3 description3
-     *
-     * @return $this
-     */
-    public function setDescription3($description3)
-    {
-        $this->container['description3'] = $description3;
-
-        return $this;
-    }
-
-    /**
-     * Gets protection1
-     *
-     * @return string
-     */
-    public function getProtection1()
-    {
-        return $this->container['protection1'];
-    }
-
-    /**
-     * Sets protection1
-     *
-     * @param string $protection1 protection1
-     *
-     * @return $this
-     */
-    public function setProtection1($protection1)
-    {
-        $this->container['protection1'] = $protection1;
-
-        return $this;
-    }
-
-    /**
-     * Gets protection2
-     *
-     * @return string
-     */
-    public function getProtection2()
-    {
-        return $this->container['protection2'];
-    }
-
-    /**
-     * Sets protection2
-     *
-     * @param string $protection2 protection2
-     *
-     * @return $this
-     */
-    public function setProtection2($protection2)
-    {
-        $this->container['protection2'] = $protection2;
-
-        return $this;
-    }
-
-    /**
-     * Gets protection3
-     *
-     * @return string
-     */
-    public function getProtection3()
-    {
-        return $this->container['protection3'];
-    }
-
-    /**
-     * Sets protection3
-     *
-     * @param string $protection3 protection3
-     *
-     * @return $this
-     */
-    public function setProtection3($protection3)
-    {
-        $this->container['protection3'] = $protection3;
-
-        return $this;
-    }
-
-    /**
      * Gets risque1
      *
      * @return string
@@ -2474,54 +1896,6 @@ self::TYPE_CONTRAT_MODIFICATION,        ];
     public function setRisque1($risque1)
     {
         $this->container['risque1'] = $risque1;
-
-        return $this;
-    }
-
-    /**
-     * Gets risque2
-     *
-     * @return string
-     */
-    public function getRisque2()
-    {
-        return $this->container['risque2'];
-    }
-
-    /**
-     * Sets risque2
-     *
-     * @param string $risque2 risque2
-     *
-     * @return $this
-     */
-    public function setRisque2($risque2)
-    {
-        $this->container['risque2'] = $risque2;
-
-        return $this;
-    }
-
-    /**
-     * Gets risque3
-     *
-     * @return string
-     */
-    public function getRisque3()
-    {
-        return $this->container['risque3'];
-    }
-
-    /**
-     * Sets risque3
-     *
-     * @param string $risque3 risque3
-     *
-     * @return $this
-     */
-    public function setRisque3($risque3)
-    {
-        $this->container['risque3'] = $risque3;
 
         return $this;
     }

@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**addCandidatApi**](ImportApi.md#addcandidatapi) | **POST** /api/candidate | 
 [**addClientApi**](ImportApi.md#addclientapi) | **POST** /api/customer | 
-[**addContractApi**](ImportApi.md#addcontractapi) | **POST** /Contract/AddContractApi | 
+[**addContractApi**](ImportApi.md#addcontractapi) | **POST** /api/contract | 
 [**addContractHoursApi**](ImportApi.md#addcontracthoursapi) | **POST** /Contract/AddContractHoursApi | 
 
 # **addCandidatApi**
