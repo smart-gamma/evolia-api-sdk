@@ -63,7 +63,7 @@ class Candidate implements ModelInterface, ArrayAccess
 'qualification' => 'string',
 'nationalite' => 'string',
 'nomJF' => 'string',
-'dateNaissance' => 'string',
+'dateNaissance' => '\DateTime',
 'telephonePortable' => 'string',
 'telephoneDomicile' => 'string',
 'email' => 'string',
@@ -105,7 +105,7 @@ class Candidate implements ModelInterface, ArrayAccess
 'qualification' => null,
 'nationalite' => null,
 'nomJF' => null,
-'dateNaissance' => null,
+'dateNaissance' => 'date-time',
 'telephonePortable' => null,
 'telephoneDomicile' => null,
 'email' => null,
@@ -624,7 +624,7 @@ self::TITRES_3,        ];
     /**
      * Gets dateNaissance
      *
-     * @return string
+     * @return \DateTime
      */
     public function getDateNaissance()
     {
@@ -634,7 +634,7 @@ self::TITRES_3,        ];
     /**
      * Sets dateNaissance
      *
-     * @param string $dateNaissance DateTime format 1970-01-01T00:00:00.000Z
+     * @param \DateTime $dateNaissance DateTime format 1970-01-01T00:00:00.000Z
      *
      * @return $this
      */
