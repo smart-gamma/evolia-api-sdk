@@ -97,8 +97,8 @@ class Contract implements ModelInterface, ArrayAccess
 'horairesParticulier' => 'string',
 'retourSignatureInterimaire' => 'bool',
 'retourSignatureClient' => 'bool',
-'tauxPaye' => 'int',
-'tauxFacture' => 'int',
+'tauxPaye' => 'double',
+'tauxFacture' => 'double',
 'lotFacture' => 'string',
 'dureeHebdo' => 'string',
 'horaireCollectifMoyen' => 'string',
@@ -160,8 +160,8 @@ class Contract implements ModelInterface, ArrayAccess
 'horairesParticulier' => null,
 'retourSignatureInterimaire' => null,
 'retourSignatureClient' => null,
-'tauxPaye' => null,
-'tauxFacture' => null,
+'tauxPaye' => 'double',
+'tauxFacture' => 'double',
 'lotFacture' => null,
 'dureeHebdo' => null,
 'horaireCollectifMoyen' => null,
@@ -1615,7 +1615,7 @@ class Contract implements ModelInterface, ArrayAccess
     /**
      * Gets tauxPaye
      *
-     * @return int
+     * @return double
      */
     public function getTauxPaye()
     {
@@ -1625,7 +1625,7 @@ class Contract implements ModelInterface, ArrayAccess
     /**
      * Sets tauxPaye
      *
-     * @param int $tauxPaye tauxPaye
+     * @param double $tauxPaye tauxPaye
      *
      * @return $this
      */
@@ -1639,7 +1639,7 @@ class Contract implements ModelInterface, ArrayAccess
     /**
      * Gets tauxFacture
      *
-     * @return int
+     * @return double
      */
     public function getTauxFacture()
     {
@@ -1649,7 +1649,7 @@ class Contract implements ModelInterface, ArrayAccess
     /**
      * Sets tauxFacture
      *
-     * @param int $tauxFacture tauxFacture
+     * @param double $tauxFacture tauxFacture
      *
      * @return $this
      */
