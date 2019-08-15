@@ -44,8 +44,8 @@ Name | Type | Description | Notes
 **horairesParticulier** | **string** |  | [optional] 
 **retourSignatureInterimaire** | **bool** |  | [optional] 
 **retourSignatureClient** | **bool** |  | [optional] 
-**tauxPaye** | **int** |  | 
-**tauxFacture** | **int** |  | 
+**tauxPaye** | **double** |  | 
+**tauxFacture** | **double** |  | 
 **lotFacture** | **string** |  | 
 **dureeHebdo** | **string** |  | 
 **horaireCollectifMoyen** | **string** |  | 
