@@ -63,9 +63,10 @@ $apiInstance = new Evolia\SDK\ImportApi(
     new GuzzleHttp\Client()
 );
 $body = new \Evolia\Model\Candidate(); // \Evolia\Model\Candidate | 
+$authorization = "authorization_example"; // string | 
 
 try {
-    $result = $apiInstance->addCandidatApi($body);
+    $result = $apiInstance->addCandidatApi($body, $authorization);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ImportApi->addCandidatApi: ', $e->getMessage(), PHP_EOL;
@@ -77,9 +78,10 @@ $apiInstance = new Evolia\SDK\ImportApi(
     new GuzzleHttp\Client()
 );
 $body = new \Evolia\Model\Customer(); // \Evolia\Model\Customer | 
+$authorization = "authorization_example"; // string | 
 
 try {
-    $result = $apiInstance->addClientApi($body);
+    $result = $apiInstance->addClientApi($body, $authorization);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ImportApi->addClientApi: ', $e->getMessage(), PHP_EOL;
@@ -91,9 +93,10 @@ $apiInstance = new Evolia\SDK\ImportApi(
     new GuzzleHttp\Client()
 );
 $body = new \Evolia\Model\Contract(); // \Evolia\Model\Contract | 
+$authorization = "authorization_example"; // string | 
 
 try {
-    $result = $apiInstance->addContractApi($body);
+    $result = $apiInstance->addContractApi($body, $authorization);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ImportApi->addContractApi: ', $e->getMessage(), PHP_EOL;
@@ -112,6 +115,20 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling ImportApi->addContractHoursApi: ', $e->getMessage(), PHP_EOL;
 }
+
+$apiInstance = new Evolia\SDK\ImportApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$body = new \Evolia\Model\AuthRequest(); // \Evolia\Model\AuthRequest | 
+
+try {
+    $result = $apiInstance->getAccessToken($body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ImportApi->getAccessToken: ', $e->getMessage(), PHP_EOL;
+}
 ?>
 ```
 
@@ -125,11 +142,14 @@ Class | Method | HTTP request | Description
 *ImportApi* | [**addClientApi**](docs/Api/ImportApi.md#addclientapi) | **POST** /api/customer | 
 *ImportApi* | [**addContractApi**](docs/Api/ImportApi.md#addcontractapi) | **POST** /api/contract | 
 *ImportApi* | [**addContractHoursApi**](docs/Api/ImportApi.md#addcontracthoursapi) | **POST** /Contract/AddContractHoursApi | 
+*ImportApi* | [**getAccessToken**](docs/Api/ImportApi.md#getaccesstoken) | **POST** /GetAccessToken | 
 *PayrollApi* | [**payrollsGet**](docs/Api/PayrollApi.md#payrollsget) | **GET** /payrolls | Get Payrolls by date range
 *PayrollApi* | [**payrollsPayrollIdGet**](docs/Api/PayrollApi.md#payrollspayrollidget) | **GET** /payrolls/{payrollId} | Get Payroll by it&#x27;s id
 
 ## Documentation For Models
 
+ - [AuthRequest](docs/Model/AuthRequest.md)
+ - [AuthResponse](docs/Model/AuthResponse.md)
  - [Candidate](docs/Model/Candidate.md)
  - [CandidateResponseStatus](docs/Model/CandidateResponseStatus.md)
  - [Contract](docs/Model/Contract.md)

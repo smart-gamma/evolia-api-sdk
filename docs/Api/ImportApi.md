@@ -8,9 +8,10 @@ Method | HTTP request | Description
 [**addClientApi**](ImportApi.md#addclientapi) | **POST** /api/customer | 
 [**addContractApi**](ImportApi.md#addcontractapi) | **POST** /api/contract | 
 [**addContractHoursApi**](ImportApi.md#addcontracthoursapi) | **POST** /Contract/AddContractHoursApi | 
+[**getAccessToken**](ImportApi.md#getaccesstoken) | **POST** /GetAccessToken | 
 
 # **addCandidatApi**
-> \Evolia\Model\CandidateResponseStatus addCandidatApi($body)
+> \Evolia\Model\CandidateResponseStatus addCandidatApi($body, $authorization)
 
 
 
@@ -27,9 +28,10 @@ $apiInstance = new Evolia\SDK\ImportApi(
     new GuzzleHttp\Client()
 );
 $body = new \Evolia\Model\Candidate(); // \Evolia\Model\Candidate | 
+$authorization = "authorization_example"; // string | 
 
 try {
-    $result = $apiInstance->addCandidatApi($body);
+    $result = $apiInstance->addCandidatApi($body, $authorization);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ImportApi->addCandidatApi: ', $e->getMessage(), PHP_EOL;
@@ -42,6 +44,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\Evolia\Model\Candidate**](../Model/Candidate.md)|  |
+ **authorization** | **string**|  |
 
 ### Return type
 
@@ -59,7 +62,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **addClientApi**
-> \Evolia\Model\CustomerResponseStatus addClientApi($body)
+> \Evolia\Model\CustomerResponseStatus addClientApi($body, $authorization)
 
 
 
@@ -76,9 +79,10 @@ $apiInstance = new Evolia\SDK\ImportApi(
     new GuzzleHttp\Client()
 );
 $body = new \Evolia\Model\Customer(); // \Evolia\Model\Customer | 
+$authorization = "authorization_example"; // string | 
 
 try {
-    $result = $apiInstance->addClientApi($body);
+    $result = $apiInstance->addClientApi($body, $authorization);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ImportApi->addClientApi: ', $e->getMessage(), PHP_EOL;
@@ -91,6 +95,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\Evolia\Model\Customer**](../Model/Customer.md)|  |
+ **authorization** | **string**|  |
 
 ### Return type
 
@@ -108,7 +113,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **addContractApi**
-> \Evolia\Model\ContractResponseStatus addContractApi($body)
+> \Evolia\Model\ContractResponseStatus addContractApi($body, $authorization)
 
 
 
@@ -125,9 +130,10 @@ $apiInstance = new Evolia\SDK\ImportApi(
     new GuzzleHttp\Client()
 );
 $body = new \Evolia\Model\Contract(); // \Evolia\Model\Contract | 
+$authorization = "authorization_example"; // string | 
 
 try {
-    $result = $apiInstance->addContractApi($body);
+    $result = $apiInstance->addContractApi($body, $authorization);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ImportApi->addContractApi: ', $e->getMessage(), PHP_EOL;
@@ -140,6 +146,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\Evolia\Model\Contract**](../Model/Contract.md)|  |
+ **authorization** | **string**|  |
 
 ### Return type
 
@@ -193,6 +200,55 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Evolia\Model\ContractHoursResponseStatus**](../Model/ContractHoursResponseStatus.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **getAccessToken**
+> \Evolia\Model\AuthResponse getAccessToken($body)
+
+
+
+Get Access Token
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$apiInstance = new Evolia\SDK\ImportApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$body = new \Evolia\Model\AuthRequest(); // \Evolia\Model\AuthRequest | 
+
+try {
+    $result = $apiInstance->getAccessToken($body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ImportApi->getAccessToken: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\Evolia\Model\AuthRequest**](../Model/AuthRequest.md)|  |
+
+### Return type
+
+[**\Evolia\Model\AuthResponse**](../Model/AuthResponse.md)
 
 ### Authorization
 

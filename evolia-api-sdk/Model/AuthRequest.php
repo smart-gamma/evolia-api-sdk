@@ -1,6 +1,6 @@
 <?php
 /**
- * PayrollViewModelList
+ * AuthRequest
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \Evolia\ObjectSerializer;
 
 /**
- * PayrollViewModelList Class Doc Comment
+ * AuthRequest Class Doc Comment
  *
  * @category Class
  * @package  Evolia
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class PayrollViewModelList implements ModelInterface, ArrayAccess
+class AuthRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class PayrollViewModelList implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'PayrollViewModelList';
+    protected static $swaggerModelName = 'AuthRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,7 +56,8 @@ class PayrollViewModelList implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'items' => '\Evolia\Model\PayrollViewModel[]'    ];
+        'appId' => 'string',
+'appSecret' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -64,7 +65,8 @@ class PayrollViewModelList implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'items' => null    ];
+        'appId' => null,
+'appSecret' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -93,7 +95,8 @@ class PayrollViewModelList implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'items' => 'items'    ];
+        'appId' => 'AppId',
+'appSecret' => 'AppSecret'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -101,7 +104,8 @@ class PayrollViewModelList implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'items' => 'setItems'    ];
+        'appId' => 'setAppId',
+'appSecret' => 'setAppSecret'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -109,7 +113,8 @@ class PayrollViewModelList implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'items' => 'getItems'    ];
+        'appId' => 'getAppId',
+'appSecret' => 'getAppSecret'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -169,7 +174,8 @@ class PayrollViewModelList implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['items'] = isset($data['items']) ? $data['items'] : null;
+        $this->container['appId'] = isset($data['appId']) ? $data['appId'] : null;
+        $this->container['appSecret'] = isset($data['appSecret']) ? $data['appSecret'] : null;
     }
 
     /**
@@ -181,6 +187,12 @@ class PayrollViewModelList implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['appId'] === null) {
+            $invalidProperties[] = "'appId' can't be null";
+        }
+        if ($this->container['appSecret'] === null) {
+            $invalidProperties[] = "'appSecret' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -197,25 +209,49 @@ class PayrollViewModelList implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets items
+     * Gets appId
      *
-     * @return \Evolia\Model\PayrollViewModel[]
+     * @return string
      */
-    public function getItems()
+    public function getAppId()
     {
-        return $this->container['items'];
+        return $this->container['appId'];
     }
 
     /**
-     * Sets items
+     * Sets appId
      *
-     * @param \Evolia\Model\PayrollViewModel[] $items items
+     * @param string $appId appId
      *
      * @return $this
      */
-    public function setItems($items)
+    public function setAppId($appId)
     {
-        $this->container['items'] = $items;
+        $this->container['appId'] = $appId;
+
+        return $this;
+    }
+
+    /**
+     * Gets appSecret
+     *
+     * @return string
+     */
+    public function getAppSecret()
+    {
+        return $this->container['appSecret'];
+    }
+
+    /**
+     * Sets appSecret
+     *
+     * @param string $appSecret appSecret
+     *
+     * @return $this
+     */
+    public function setAppSecret($appSecret)
+    {
+        $this->container['appSecret'] = $appSecret;
 
         return $this;
     }

@@ -1,6 +1,6 @@
 <?php
 /**
- * PayrollViewModelList
+ * AuthResponse
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \Evolia\ObjectSerializer;
 
 /**
- * PayrollViewModelList Class Doc Comment
+ * AuthResponse Class Doc Comment
  *
  * @category Class
  * @package  Evolia
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class PayrollViewModelList implements ModelInterface, ArrayAccess
+class AuthResponse implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class PayrollViewModelList implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'PayrollViewModelList';
+    protected static $swaggerModelName = 'AuthResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,7 +56,10 @@ class PayrollViewModelList implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'items' => '\Evolia\Model\PayrollViewModel[]'    ];
+        'accessToken' => 'string',
+'expiresIn' => 'string',
+'refreshToken' => 'string',
+'tokenType' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -64,7 +67,10 @@ class PayrollViewModelList implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'items' => null    ];
+        'accessToken' => null,
+'expiresIn' => null,
+'refreshToken' => null,
+'tokenType' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -93,7 +99,10 @@ class PayrollViewModelList implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'items' => 'items'    ];
+        'accessToken' => 'access_token',
+'expiresIn' => 'expires_in',
+'refreshToken' => 'refresh_token',
+'tokenType' => 'token_type'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -101,7 +110,10 @@ class PayrollViewModelList implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'items' => 'setItems'    ];
+        'accessToken' => 'setAccessToken',
+'expiresIn' => 'setExpiresIn',
+'refreshToken' => 'setRefreshToken',
+'tokenType' => 'setTokenType'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -109,7 +121,10 @@ class PayrollViewModelList implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'items' => 'getItems'    ];
+        'accessToken' => 'getAccessToken',
+'expiresIn' => 'getExpiresIn',
+'refreshToken' => 'getRefreshToken',
+'tokenType' => 'getTokenType'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -169,7 +184,10 @@ class PayrollViewModelList implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['items'] = isset($data['items']) ? $data['items'] : null;
+        $this->container['accessToken'] = isset($data['accessToken']) ? $data['accessToken'] : null;
+        $this->container['expiresIn'] = isset($data['expiresIn']) ? $data['expiresIn'] : null;
+        $this->container['refreshToken'] = isset($data['refreshToken']) ? $data['refreshToken'] : null;
+        $this->container['tokenType'] = isset($data['tokenType']) ? $data['tokenType'] : null;
     }
 
     /**
@@ -197,25 +215,97 @@ class PayrollViewModelList implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets items
+     * Gets accessToken
      *
-     * @return \Evolia\Model\PayrollViewModel[]
+     * @return string
      */
-    public function getItems()
+    public function getAccessToken()
     {
-        return $this->container['items'];
+        return $this->container['accessToken'];
     }
 
     /**
-     * Sets items
+     * Sets accessToken
      *
-     * @param \Evolia\Model\PayrollViewModel[] $items items
+     * @param string $accessToken accessToken
      *
      * @return $this
      */
-    public function setItems($items)
+    public function setAccessToken($accessToken)
     {
-        $this->container['items'] = $items;
+        $this->container['accessToken'] = $accessToken;
+
+        return $this;
+    }
+
+    /**
+     * Gets expiresIn
+     *
+     * @return string
+     */
+    public function getExpiresIn()
+    {
+        return $this->container['expiresIn'];
+    }
+
+    /**
+     * Sets expiresIn
+     *
+     * @param string $expiresIn expiresIn
+     *
+     * @return $this
+     */
+    public function setExpiresIn($expiresIn)
+    {
+        $this->container['expiresIn'] = $expiresIn;
+
+        return $this;
+    }
+
+    /**
+     * Gets refreshToken
+     *
+     * @return string
+     */
+    public function getRefreshToken()
+    {
+        return $this->container['refreshToken'];
+    }
+
+    /**
+     * Sets refreshToken
+     *
+     * @param string $refreshToken refreshToken
+     *
+     * @return $this
+     */
+    public function setRefreshToken($refreshToken)
+    {
+        $this->container['refreshToken'] = $refreshToken;
+
+        return $this;
+    }
+
+    /**
+     * Gets tokenType
+     *
+     * @return string
+     */
+    public function getTokenType()
+    {
+        return $this->container['tokenType'];
+    }
+
+    /**
+     * Sets tokenType
+     *
+     * @param string $tokenType tokenType
+     *
+     * @return $this
+     */
+    public function setTokenType($tokenType)
+    {
+        $this->container['tokenType'] = $tokenType;
 
         return $this;
     }
