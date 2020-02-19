@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**titres** | **int** | Value 1 for Sir, 2 for Madam, 3 for Miss | 
+**titre** | **int** | Value 1 for Sir, 2 for Madam, 3 for Miss | 
 **nom** | **string** |  | 
 **preNom** | **string** |  | 
 **idRef** | **string** |  | [optional] 

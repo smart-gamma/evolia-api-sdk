@@ -56,7 +56,7 @@ class Candidate implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'titres' => 'int',
+        'titre' => 'int',
 'nom' => 'string',
 'preNom' => 'string',
 'idRef' => 'string',
@@ -98,7 +98,7 @@ class Candidate implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'titres' => null,
+        'titre' => null,
 'nom' => null,
 'preNom' => null,
 'idRef' => null,
@@ -161,7 +161,7 @@ class Candidate implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'titres' => 'Titres',
+        'titre' => 'Titre',
 'nom' => 'Nom',
 'preNom' => 'PreNom',
 'idRef' => 'IdRef',
@@ -203,7 +203,7 @@ class Candidate implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'titres' => 'setTitres',
+        'titre' => 'setTitre',
 'nom' => 'setNom',
 'preNom' => 'setPreNom',
 'idRef' => 'setIdRef',
@@ -245,7 +245,7 @@ class Candidate implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'titres' => 'getTitres',
+        'titre' => 'getTitre',
 'nom' => 'getNom',
 'preNom' => 'getPreNom',
 'idRef' => 'getIdRef',
@@ -322,21 +322,21 @@ class Candidate implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    const TITRES_1 = 1;
-const TITRES_2 = 2;
-const TITRES_3 = 3;
+    const TITRE_1 = 1;
+const TITRE_2 = 2;
+const TITRE_3 = 3;
 
     /**
      * Gets allowable values of the enum
      *
      * @return string[]
      */
-    public function getTitresAllowableValues()
+    public function getTitreAllowableValues()
     {
         return [
-            self::TITRES_1,
-self::TITRES_2,
-self::TITRES_3,        ];
+            self::TITRE_1,
+self::TITRE_2,
+self::TITRE_3,        ];
     }
 
     /**
@@ -354,7 +354,7 @@ self::TITRES_3,        ];
      */
     public function __construct(array $data = null)
     {
-        $this->container['titres'] = isset($data['titres']) ? $data['titres'] : null;
+        $this->container['titre'] = isset($data['titre']) ? $data['titre'] : null;
         $this->container['nom'] = isset($data['nom']) ? $data['nom'] : null;
         $this->container['preNom'] = isset($data['preNom']) ? $data['preNom'] : null;
         $this->container['idRef'] = isset($data['idRef']) ? $data['idRef'] : null;
@@ -400,13 +400,13 @@ self::TITRES_3,        ];
     {
         $invalidProperties = [];
 
-        if ($this->container['titres'] === null) {
-            $invalidProperties[] = "'titres' can't be null";
+        if ($this->container['titre'] === null) {
+            $invalidProperties[] = "'titre' can't be null";
         }
-        $allowedValues = $this->getTitresAllowableValues();
-        if (!is_null($this->container['titres']) && !in_array($this->container['titres'], $allowedValues, true)) {
+        $allowedValues = $this->getTitreAllowableValues();
+        if (!is_null($this->container['titre']) && !in_array($this->container['titre'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
-                "invalid value for 'titres', must be one of '%s'",
+                "invalid value for 'titre', must be one of '%s'",
                 implode("', '", $allowedValues)
             );
         }
@@ -445,34 +445,34 @@ self::TITRES_3,        ];
 
 
     /**
-     * Gets titres
+     * Gets titre
      *
      * @return int
      */
-    public function getTitres()
+    public function getTitre()
     {
-        return $this->container['titres'];
+        return $this->container['titre'];
     }
 
     /**
-     * Sets titres
+     * Sets titre
      *
-     * @param int $titres Value 1 for Sir, 2 for Madam, 3 for Miss
+     * @param int $titre Value 1 for Sir, 2 for Madam, 3 for Miss
      *
      * @return $this
      */
-    public function setTitres($titres)
+    public function setTitre($titre)
     {
-        $allowedValues = $this->getTitresAllowableValues();
-        if (!in_array($titres, $allowedValues, true)) {
+        $allowedValues = $this->getTitreAllowableValues();
+        if (!in_array($titre, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
-                    "Invalid value for 'titres', must be one of '%s'",
+                    "Invalid value for 'titre', must be one of '%s'",
                     implode("', '", $allowedValues)
                 )
             );
         }
-        $this->container['titres'] = $titres;
+        $this->container['titre'] = $titre;
 
         return $this;
     }
