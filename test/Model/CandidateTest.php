@@ -76,9 +76,9 @@ class CandidateTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "titres"
+     * Test attribute "titre"
      */
-    public function testPropertyTitres()
+    public function testPropertyTitre()
     {
     }
 
