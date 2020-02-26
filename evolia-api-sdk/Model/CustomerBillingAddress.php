@@ -1,6 +1,6 @@
 <?php
 /**
- * Customer
+ * CustomerBillingAddress
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \Evolia\ObjectSerializer;
 
 /**
- * Customer Class Doc Comment
+ * CustomerBillingAddress Class Doc Comment
  *
  * @category Class
  * @package  Evolia
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class Customer implements ModelInterface, ArrayAccess
+class CustomerBillingAddress implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class Customer implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'Customer';
+    protected static $swaggerModelName = 'CustomerBillingAddress';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,10 +56,7 @@ class Customer implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'matricule' => 'string',
-'nom' => 'string',
-'nomCourt' => 'string',
-'designation' => 'string',
+        'designation' => 'string',
 'adresse1' => 'string',
 'adresse2' => 'string',
 'adresse3' => 'string',
@@ -74,9 +71,7 @@ class Customer implements ModelInterface, ArrayAccess
 'tVAClef' => 'string',
 'tVAPays' => 'string',
 'sIREN' => 'string',
-'nIC' => 'string',
-'listeAgences' => 'string[]',
-'adresseFacturation' => '\Evolia\Model\CustomerBillingAddress'    ];
+'nIC' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -84,10 +79,7 @@ class Customer implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'matricule' => null,
-'nom' => null,
-'nomCourt' => null,
-'designation' => null,
+        'designation' => null,
 'adresse1' => null,
 'adresse2' => null,
 'adresse3' => null,
@@ -102,9 +94,7 @@ class Customer implements ModelInterface, ArrayAccess
 'tVAClef' => null,
 'tVAPays' => null,
 'sIREN' => null,
-'nIC' => null,
-'listeAgences' => null,
-'adresseFacturation' => null    ];
+'nIC' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -133,10 +123,7 @@ class Customer implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'matricule' => 'Matricule',
-'nom' => 'Nom',
-'nomCourt' => 'NomCourt',
-'designation' => 'Designation',
+        'designation' => 'Designation',
 'adresse1' => 'Adresse1',
 'adresse2' => 'Adresse2',
 'adresse3' => 'Adresse3',
@@ -151,9 +138,7 @@ class Customer implements ModelInterface, ArrayAccess
 'tVAClef' => 'TVAClef',
 'tVAPays' => 'TVAPays',
 'sIREN' => 'SIREN',
-'nIC' => 'NIC',
-'listeAgences' => 'ListeAgences',
-'adresseFacturation' => 'AdresseFacturation'    ];
+'nIC' => 'NIC'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -161,10 +146,7 @@ class Customer implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'matricule' => 'setMatricule',
-'nom' => 'setNom',
-'nomCourt' => 'setNomCourt',
-'designation' => 'setDesignation',
+        'designation' => 'setDesignation',
 'adresse1' => 'setAdresse1',
 'adresse2' => 'setAdresse2',
 'adresse3' => 'setAdresse3',
@@ -179,9 +161,7 @@ class Customer implements ModelInterface, ArrayAccess
 'tVAClef' => 'setTVAClef',
 'tVAPays' => 'setTVAPays',
 'sIREN' => 'setSIREN',
-'nIC' => 'setNIC',
-'listeAgences' => 'setListeAgences',
-'adresseFacturation' => 'setAdresseFacturation'    ];
+'nIC' => 'setNIC'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -189,10 +169,7 @@ class Customer implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'matricule' => 'getMatricule',
-'nom' => 'getNom',
-'nomCourt' => 'getNomCourt',
-'designation' => 'getDesignation',
+        'designation' => 'getDesignation',
 'adresse1' => 'getAdresse1',
 'adresse2' => 'getAdresse2',
 'adresse3' => 'getAdresse3',
@@ -207,9 +184,7 @@ class Customer implements ModelInterface, ArrayAccess
 'tVAClef' => 'getTVAClef',
 'tVAPays' => 'getTVAPays',
 'sIREN' => 'getSIREN',
-'nIC' => 'getNIC',
-'listeAgences' => 'getListeAgences',
-'adresseFacturation' => 'getAdresseFacturation'    ];
+'nIC' => 'getNIC'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -269,9 +244,6 @@ class Customer implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['matricule'] = isset($data['matricule']) ? $data['matricule'] : null;
-        $this->container['nom'] = isset($data['nom']) ? $data['nom'] : null;
-        $this->container['nomCourt'] = isset($data['nomCourt']) ? $data['nomCourt'] : null;
         $this->container['designation'] = isset($data['designation']) ? $data['designation'] : null;
         $this->container['adresse1'] = isset($data['adresse1']) ? $data['adresse1'] : null;
         $this->container['adresse2'] = isset($data['adresse2']) ? $data['adresse2'] : null;
@@ -288,8 +260,6 @@ class Customer implements ModelInterface, ArrayAccess
         $this->container['tVAPays'] = isset($data['tVAPays']) ? $data['tVAPays'] : null;
         $this->container['sIREN'] = isset($data['sIREN']) ? $data['sIREN'] : null;
         $this->container['nIC'] = isset($data['nIC']) ? $data['nIC'] : null;
-        $this->container['listeAgences'] = isset($data['listeAgences']) ? $data['listeAgences'] : null;
-        $this->container['adresseFacturation'] = isset($data['adresseFacturation']) ? $data['adresseFacturation'] : null;
     }
 
     /**
@@ -301,51 +271,6 @@ class Customer implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['nom'] === null) {
-            $invalidProperties[] = "'nom' can't be null";
-        }
-        if ($this->container['nomCourt'] === null) {
-            $invalidProperties[] = "'nomCourt' can't be null";
-        }
-        if ($this->container['adresse1'] === null) {
-            $invalidProperties[] = "'adresse1' can't be null";
-        }
-        if ($this->container['adresse2'] === null) {
-            $invalidProperties[] = "'adresse2' can't be null";
-        }
-        if ($this->container['adresse3'] === null) {
-            $invalidProperties[] = "'adresse3' can't be null";
-        }
-        if ($this->container['cP'] === null) {
-            $invalidProperties[] = "'cP' can't be null";
-        }
-        if ($this->container['commune'] === null) {
-            $invalidProperties[] = "'commune' can't be null";
-        }
-        if ($this->container['pays'] === null) {
-            $invalidProperties[] = "'pays' can't be null";
-        }
-        if ($this->container['aPE'] === null) {
-            $invalidProperties[] = "'aPE' can't be null";
-        }
-        if ($this->container['tVAClef'] === null) {
-            $invalidProperties[] = "'tVAClef' can't be null";
-        }
-        if ($this->container['tVAPays'] === null) {
-            $invalidProperties[] = "'tVAPays' can't be null";
-        }
-        if ($this->container['sIREN'] === null) {
-            $invalidProperties[] = "'sIREN' can't be null";
-        }
-        if ($this->container['nIC'] === null) {
-            $invalidProperties[] = "'nIC' can't be null";
-        }
-        if ($this->container['listeAgences'] === null) {
-            $invalidProperties[] = "'listeAgences' can't be null";
-        }
-        if ($this->container['adresseFacturation'] === null) {
-            $invalidProperties[] = "'adresseFacturation' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -360,78 +285,6 @@ class Customer implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets matricule
-     *
-     * @return string
-     */
-    public function getMatricule()
-    {
-        return $this->container['matricule'];
-    }
-
-    /**
-     * Sets matricule
-     *
-     * @param string $matricule matricule
-     *
-     * @return $this
-     */
-    public function setMatricule($matricule)
-    {
-        $this->container['matricule'] = $matricule;
-
-        return $this;
-    }
-
-    /**
-     * Gets nom
-     *
-     * @return string
-     */
-    public function getNom()
-    {
-        return $this->container['nom'];
-    }
-
-    /**
-     * Sets nom
-     *
-     * @param string $nom nom
-     *
-     * @return $this
-     */
-    public function setNom($nom)
-    {
-        $this->container['nom'] = $nom;
-
-        return $this;
-    }
-
-    /**
-     * Gets nomCourt
-     *
-     * @return string
-     */
-    public function getNomCourt()
-    {
-        return $this->container['nomCourt'];
-    }
-
-    /**
-     * Sets nomCourt
-     *
-     * @param string $nomCourt nomCourt
-     *
-     * @return $this
-     */
-    public function setNomCourt($nomCourt)
-    {
-        $this->container['nomCourt'] = $nomCourt;
-
-        return $this;
-    }
 
     /**
      * Gets designation
@@ -813,54 +666,6 @@ class Customer implements ModelInterface, ArrayAccess
     public function setNIC($nIC)
     {
         $this->container['nIC'] = $nIC;
-
-        return $this;
-    }
-
-    /**
-     * Gets listeAgences
-     *
-     * @return string[]
-     */
-    public function getListeAgences()
-    {
-        return $this->container['listeAgences'];
-    }
-
-    /**
-     * Sets listeAgences
-     *
-     * @param string[] $listeAgences listeAgences
-     *
-     * @return $this
-     */
-    public function setListeAgences($listeAgences)
-    {
-        $this->container['listeAgences'] = $listeAgences;
-
-        return $this;
-    }
-
-    /**
-     * Gets adresseFacturation
-     *
-     * @return \Evolia\Model\CustomerBillingAddress
-     */
-    public function getAdresseFacturation()
-    {
-        return $this->container['adresseFacturation'];
-    }
-
-    /**
-     * Sets adresseFacturation
-     *
-     * @param \Evolia\Model\CustomerBillingAddress $adresseFacturation adresseFacturation
-     *
-     * @return $this
-     */
-    public function setAdresseFacturation($adresseFacturation)
-    {
-        $this->container['adresseFacturation'] = $adresseFacturation;
 
         return $this;
     }
