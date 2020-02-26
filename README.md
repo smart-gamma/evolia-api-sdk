@@ -157,6 +157,7 @@ Class | Method | HTTP request | Description
  - [ContractHoursResponseStatus](docs/Model/ContractHoursResponseStatus.md)
  - [ContractResponseStatus](docs/Model/ContractResponseStatus.md)
  - [Customer](docs/Model/Customer.md)
+ - [CustomerBillingAddress](docs/Model/CustomerBillingAddress.md)
  - [CustomerResponseStatus](docs/Model/CustomerResponseStatus.md)
  - [LieuxdeMission](docs/Model/LieuxdeMission.md)
  - [MissionViewModel](docs/Model/MissionViewModel.md)

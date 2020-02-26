@@ -23,6 +23,7 @@ Name | Type | Description | Notes
 **sIREN** | **string** |  | 
 **nIC** | **string** |  | 
 **listeAgences** | **string[]** |  | 
+**adresseFacturation** | [**\Evolia\Model\CustomerBillingAddress**](CustomerBillingAddress.md) |  | 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

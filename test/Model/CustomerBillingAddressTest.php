@@ -1,6 +1,6 @@
 <?php
 /**
- * CustomerTest
+ * CustomerBillingAddressTest
  *
  * PHP version 5
  *
@@ -29,15 +29,15 @@
 namespace Evolia;
 
 /**
- * CustomerTest Class Doc Comment
+ * CustomerBillingAddressTest Class Doc Comment
  *
  * @category    Class
- * @description Customer
+ * @description CustomerBillingAddress
  * @package     Evolia
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class CustomerTest extends \PHPUnit_Framework_TestCase
+class CustomerBillingAddressTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -69,30 +69,9 @@ class CustomerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "Customer"
+     * Test "CustomerBillingAddress"
      */
-    public function testCustomer()
-    {
-    }
-
-    /**
-     * Test attribute "matricule"
-     */
-    public function testPropertyMatricule()
-    {
-    }
-
-    /**
-     * Test attribute "nom"
-     */
-    public function testPropertyNom()
-    {
-    }
-
-    /**
-     * Test attribute "nomCourt"
-     */
-    public function testPropertyNomCourt()
+    public function testCustomerBillingAddress()
     {
     }
 
@@ -205,20 +184,6 @@ class CustomerTest extends \PHPUnit_Framework_TestCase
      * Test attribute "nIC"
      */
     public function testPropertyNIC()
-    {
-    }
-
-    /**
-     * Test attribute "listeAgences"
-     */
-    public function testPropertyListeAgences()
-    {
-    }
-
-    /**
-     * Test attribute "adresseFacturation"
-     */
-    public function testPropertyAdresseFacturation()
     {
     }
 }
