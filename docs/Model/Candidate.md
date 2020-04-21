@@ -21,6 +21,7 @@ Name | Type | Description | Notes
 **compVoie** | **string** |  | [optional] 
 **cP** | **string** |  | [optional] 
 **commune** | **string** |  | [optional] 
+**inseeCommune** | **string** |  | [optional] 
 **numsecu** | **string** |  | [optional] 
 **numsecuCle** | **string** |  | [optional] 
 **lieuNaiss** | **string** |  | [optional] 
