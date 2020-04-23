@@ -3,7 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**matricule** | **string** |  | [optional] 
+**matricule** | **string** | EvoliaId of Uc Branch (parent + children) | [optional] 
+**ordreClient** | **string** | EvoliaId of Uc | [optional] 
 **nom** | **string** |  | 
 **nomCourt** | **string** |  | 
 **designation** | **string** |  | [optional] 
