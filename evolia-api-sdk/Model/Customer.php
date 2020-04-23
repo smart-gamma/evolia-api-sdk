@@ -57,6 +57,7 @@ class Customer implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'matricule' => 'string',
+'ordreClient' => 'string',
 'nom' => 'string',
 'nomCourt' => 'string',
 'designation' => 'string',
@@ -85,6 +86,7 @@ class Customer implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'matricule' => null,
+'ordreClient' => null,
 'nom' => null,
 'nomCourt' => null,
 'designation' => null,
@@ -134,6 +136,7 @@ class Customer implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'matricule' => 'Matricule',
+'ordreClient' => 'OrdreClient',
 'nom' => 'Nom',
 'nomCourt' => 'NomCourt',
 'designation' => 'Designation',
@@ -162,6 +165,7 @@ class Customer implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'matricule' => 'setMatricule',
+'ordreClient' => 'setOrdreClient',
 'nom' => 'setNom',
 'nomCourt' => 'setNomCourt',
 'designation' => 'setDesignation',
@@ -190,6 +194,7 @@ class Customer implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'matricule' => 'getMatricule',
+'ordreClient' => 'getOrdreClient',
 'nom' => 'getNom',
 'nomCourt' => 'getNomCourt',
 'designation' => 'getDesignation',
@@ -270,6 +275,7 @@ class Customer implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['matricule'] = isset($data['matricule']) ? $data['matricule'] : null;
+        $this->container['ordreClient'] = isset($data['ordreClient']) ? $data['ordreClient'] : null;
         $this->container['nom'] = isset($data['nom']) ? $data['nom'] : null;
         $this->container['nomCourt'] = isset($data['nomCourt']) ? $data['nomCourt'] : null;
         $this->container['designation'] = isset($data['designation']) ? $data['designation'] : null;
@@ -374,13 +380,37 @@ class Customer implements ModelInterface, ArrayAccess
     /**
      * Sets matricule
      *
-     * @param string $matricule matricule
+     * @param string $matricule EvoliaId of Uc Branch (parent + children)
      *
      * @return $this
      */
     public function setMatricule($matricule)
     {
         $this->container['matricule'] = $matricule;
+
+        return $this;
+    }
+
+    /**
+     * Gets ordreClient
+     *
+     * @return string
+     */
+    public function getOrdreClient()
+    {
+        return $this->container['ordreClient'];
+    }
+
+    /**
+     * Sets ordreClient
+     *
+     * @param string $ordreClient EvoliaId of Uc
+     *
+     * @return $this
+     */
+    public function setOrdreClient($ordreClient)
+    {
+        $this->container['ordreClient'] = $ordreClient;
 
         return $this;
     }

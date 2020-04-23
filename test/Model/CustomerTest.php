@@ -83,6 +83,13 @@ class CustomerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "ordreClient"
+     */
+    public function testPropertyOrdreClient()
+    {
+    }
+
+    /**
      * Test attribute "nom"
      */
     public function testPropertyNom()
