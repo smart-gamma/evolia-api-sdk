@@ -62,6 +62,7 @@ class Contract implements ModelInterface, ArrayAccess
 'codeMission' => 'string',
 'ordreClient' => 'int',
 'lieuxdeMission' => '\Evolia\Model\LieuxdeMission',
+'rubriquesContractuelles' => '\Evolia\Model\PayrollElement[]',
 'designation' => 'string',
 'adresse1' => 'string',
 'cP' => 'string',
@@ -126,6 +127,7 @@ class Contract implements ModelInterface, ArrayAccess
 'codeMission' => null,
 'ordreClient' => null,
 'lieuxdeMission' => null,
+'rubriquesContractuelles' => null,
 'designation' => null,
 'adresse1' => null,
 'cP' => null,
@@ -211,6 +213,7 @@ class Contract implements ModelInterface, ArrayAccess
 'codeMission' => 'CodeMission',
 'ordreClient' => 'OrdreClient',
 'lieuxdeMission' => 'LieuxdeMission',
+'rubriquesContractuelles' => 'RubriquesContractuelles',
 'designation' => 'Designation',
 'adresse1' => 'Adresse1',
 'cP' => 'CP',
@@ -275,6 +278,7 @@ class Contract implements ModelInterface, ArrayAccess
 'codeMission' => 'setCodeMission',
 'ordreClient' => 'setOrdreClient',
 'lieuxdeMission' => 'setLieuxdeMission',
+'rubriquesContractuelles' => 'setRubriquesContractuelles',
 'designation' => 'setDesignation',
 'adresse1' => 'setAdresse1',
 'cP' => 'setCP',
@@ -339,6 +343,7 @@ class Contract implements ModelInterface, ArrayAccess
 'codeMission' => 'getCodeMission',
 'ordreClient' => 'getOrdreClient',
 'lieuxdeMission' => 'getLieuxdeMission',
+'rubriquesContractuelles' => 'getRubriquesContractuelles',
 'designation' => 'getDesignation',
 'adresse1' => 'getAdresse1',
 'cP' => 'getCP',
@@ -455,6 +460,7 @@ class Contract implements ModelInterface, ArrayAccess
         $this->container['codeMission'] = isset($data['codeMission']) ? $data['codeMission'] : null;
         $this->container['ordreClient'] = isset($data['ordreClient']) ? $data['ordreClient'] : null;
         $this->container['lieuxdeMission'] = isset($data['lieuxdeMission']) ? $data['lieuxdeMission'] : null;
+        $this->container['rubriquesContractuelles'] = isset($data['rubriquesContractuelles']) ? $data['rubriquesContractuelles'] : null;
         $this->container['designation'] = isset($data['designation']) ? $data['designation'] : null;
         $this->container['adresse1'] = isset($data['adresse1']) ? $data['adresse1'] : null;
         $this->container['cP'] = isset($data['cP']) ? $data['cP'] : null;
@@ -774,6 +780,30 @@ class Contract implements ModelInterface, ArrayAccess
     public function setLieuxdeMission($lieuxdeMission)
     {
         $this->container['lieuxdeMission'] = $lieuxdeMission;
+
+        return $this;
+    }
+
+    /**
+     * Gets rubriquesContractuelles
+     *
+     * @return \Evolia\Model\PayrollElement[]
+     */
+    public function getRubriquesContractuelles()
+    {
+        return $this->container['rubriquesContractuelles'];
+    }
+
+    /**
+     * Sets rubriquesContractuelles
+     *
+     * @param \Evolia\Model\PayrollElement[] $rubriquesContractuelles rubriquesContractuelles
+     *
+     * @return $this
+     */
+    public function setRubriquesContractuelles($rubriquesContractuelles)
+    {
+        $this->container['rubriquesContractuelles'] = $rubriquesContractuelles;
 
         return $this;
     }

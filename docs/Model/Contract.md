@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **codeMission** | **string** |  | 
 **ordreClient** | **int** |  | 
 **lieuxdeMission** | [**\Evolia\Model\LieuxdeMission**](LieuxdeMission.md) |  | [optional] 
+**rubriquesContractuelles** | [**\Evolia\Model\PayrollElement[]**](PayrollElement.md) |  | [optional] 
 **designation** | **string** |  | 
 **adresse1** | **string** |  | 
 **cP** | **string** |  | 

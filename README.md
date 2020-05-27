@@ -163,6 +163,7 @@ Class | Method | HTTP request | Description
  - [MissionViewModel](docs/Model/MissionViewModel.md)
  - [NotFound](docs/Model/NotFound.md)
  - [PayrollDetailsViewModel](docs/Model/PayrollDetailsViewModel.md)
+ - [PayrollElement](docs/Model/PayrollElement.md)
  - [PayrollViewModel](docs/Model/PayrollViewModel.md)
  - [PayrollViewModelList](docs/Model/PayrollViewModelList.md)
  - [ResponseError](docs/Model/ResponseError.md)
