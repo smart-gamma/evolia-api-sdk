@@ -118,6 +118,13 @@ class ContractTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "rubriquesContractuelles"
+     */
+    public function testPropertyRubriquesContractuelles()
+    {
+    }
+
+    /**
      * Test attribute "designation"
      */
     public function testPropertyDesignation()
