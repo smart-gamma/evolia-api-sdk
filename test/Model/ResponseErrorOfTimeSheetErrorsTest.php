@@ -1,6 +1,6 @@
 <?php
 /**
- * NotFoundTest
+ * ResponseErrorOfTimeSheetErrorsTest
  *
  * PHP version 5
  *
@@ -29,15 +29,15 @@
 namespace Evolia;
 
 /**
- * NotFoundTest Class Doc Comment
+ * ResponseErrorOfTimeSheetErrorsTest Class Doc Comment
  *
  * @category    Class
- * @description NotFound
+ * @description ResponseErrorOfTimeSheetErrors
  * @package     Evolia
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class NotFoundTest extends \PHPUnit_Framework_TestCase
+class ResponseErrorOfTimeSheetErrorsTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -69,16 +69,23 @@ class NotFoundTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "NotFound"
+     * Test "ResponseErrorOfTimeSheetErrors"
      */
-    public function testNotFound()
+    public function testResponseErrorOfTimeSheetErrors()
     {
     }
 
     /**
-     * Test attribute "message"
+     * Test attribute "errorId"
      */
-    public function testPropertyMessage()
+    public function testPropertyErrorId()
+    {
+    }
+
+    /**
+     * Test attribute "errorText"
+     */
+    public function testPropertyErrorText()
     {
     }
 }

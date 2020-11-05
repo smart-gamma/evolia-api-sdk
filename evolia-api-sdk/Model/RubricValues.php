@@ -1,6 +1,6 @@
 <?php
 /**
- * ResponseError
+ * RubricValues
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \Evolia\ObjectSerializer;
 
 /**
- * ResponseError Class Doc Comment
+ * RubricValues Class Doc Comment
  *
  * @category Class
  * @package  Evolia
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ResponseError implements ModelInterface, ArrayAccess
+class RubricValues implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class ResponseError implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'ResponseError';
+    protected static $swaggerModelName = 'RubricValues';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,8 +56,14 @@ class ResponseError implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'errorId' => 'int',
-'errorText' => 'string'    ];
+        'code' => 'string',
+'libelle' => 'string',
+'tag' => 'string',
+'commentaire' => 'string',
+'basePayee' => 'float',
+'tauxPayee' => 'float',
+'baseFacturee' => 'float',
+'tauxFacturee' => 'float'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -65,8 +71,14 @@ class ResponseError implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'errorId' => null,
-'errorText' => null    ];
+        'code' => null,
+'libelle' => null,
+'tag' => null,
+'commentaire' => null,
+'basePayee' => 'float',
+'tauxPayee' => 'float',
+'baseFacturee' => 'float',
+'tauxFacturee' => 'float'    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -95,8 +107,14 @@ class ResponseError implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'errorId' => 'ErrorId',
-'errorText' => 'ErrorText'    ];
+        'code' => 'Code',
+'libelle' => 'Libelle',
+'tag' => 'Tag',
+'commentaire' => 'Commentaire',
+'basePayee' => 'BasePayee',
+'tauxPayee' => 'TauxPayee',
+'baseFacturee' => 'BaseFacturee',
+'tauxFacturee' => 'TauxFacturee'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -104,8 +122,14 @@ class ResponseError implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'errorId' => 'setErrorId',
-'errorText' => 'setErrorText'    ];
+        'code' => 'setCode',
+'libelle' => 'setLibelle',
+'tag' => 'setTag',
+'commentaire' => 'setCommentaire',
+'basePayee' => 'setBasePayee',
+'tauxPayee' => 'setTauxPayee',
+'baseFacturee' => 'setBaseFacturee',
+'tauxFacturee' => 'setTauxFacturee'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -113,8 +137,14 @@ class ResponseError implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'errorId' => 'getErrorId',
-'errorText' => 'getErrorText'    ];
+        'code' => 'getCode',
+'libelle' => 'getLibelle',
+'tag' => 'getTag',
+'commentaire' => 'getCommentaire',
+'basePayee' => 'getBasePayee',
+'tauxPayee' => 'getTauxPayee',
+'baseFacturee' => 'getBaseFacturee',
+'tauxFacturee' => 'getTauxFacturee'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -174,8 +204,14 @@ class ResponseError implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['errorId'] = isset($data['errorId']) ? $data['errorId'] : null;
-        $this->container['errorText'] = isset($data['errorText']) ? $data['errorText'] : null;
+        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
+        $this->container['libelle'] = isset($data['libelle']) ? $data['libelle'] : null;
+        $this->container['tag'] = isset($data['tag']) ? $data['tag'] : null;
+        $this->container['commentaire'] = isset($data['commentaire']) ? $data['commentaire'] : null;
+        $this->container['basePayee'] = isset($data['basePayee']) ? $data['basePayee'] : null;
+        $this->container['tauxPayee'] = isset($data['tauxPayee']) ? $data['tauxPayee'] : null;
+        $this->container['baseFacturee'] = isset($data['baseFacturee']) ? $data['baseFacturee'] : null;
+        $this->container['tauxFacturee'] = isset($data['tauxFacturee']) ? $data['tauxFacturee'] : null;
     }
 
     /**
@@ -187,6 +223,9 @@ class ResponseError implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['code'] === null) {
+            $invalidProperties[] = "'code' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -203,49 +242,193 @@ class ResponseError implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets errorId
+     * Gets code
      *
-     * @return int
+     * @return string
      */
-    public function getErrorId()
+    public function getCode()
     {
-        return $this->container['errorId'];
+        return $this->container['code'];
     }
 
     /**
-     * Sets errorId
+     * Sets code
      *
-     * @param int $errorId errorId
+     * @param string $code code
      *
      * @return $this
      */
-    public function setErrorId($errorId)
+    public function setCode($code)
     {
-        $this->container['errorId'] = $errorId;
+        $this->container['code'] = $code;
 
         return $this;
     }
 
     /**
-     * Gets errorText
+     * Gets libelle
      *
      * @return string
      */
-    public function getErrorText()
+    public function getLibelle()
     {
-        return $this->container['errorText'];
+        return $this->container['libelle'];
     }
 
     /**
-     * Sets errorText
+     * Sets libelle
      *
-     * @param string $errorText errorText
+     * @param string $libelle libelle
      *
      * @return $this
      */
-    public function setErrorText($errorText)
+    public function setLibelle($libelle)
     {
-        $this->container['errorText'] = $errorText;
+        $this->container['libelle'] = $libelle;
+
+        return $this;
+    }
+
+    /**
+     * Gets tag
+     *
+     * @return string
+     */
+    public function getTag()
+    {
+        return $this->container['tag'];
+    }
+
+    /**
+     * Sets tag
+     *
+     * @param string $tag tag
+     *
+     * @return $this
+     */
+    public function setTag($tag)
+    {
+        $this->container['tag'] = $tag;
+
+        return $this;
+    }
+
+    /**
+     * Gets commentaire
+     *
+     * @return string
+     */
+    public function getCommentaire()
+    {
+        return $this->container['commentaire'];
+    }
+
+    /**
+     * Sets commentaire
+     *
+     * @param string $commentaire commentaire
+     *
+     * @return $this
+     */
+    public function setCommentaire($commentaire)
+    {
+        $this->container['commentaire'] = $commentaire;
+
+        return $this;
+    }
+
+    /**
+     * Gets basePayee
+     *
+     * @return float
+     */
+    public function getBasePayee()
+    {
+        return $this->container['basePayee'];
+    }
+
+    /**
+     * Sets basePayee
+     *
+     * @param float $basePayee basePayee
+     *
+     * @return $this
+     */
+    public function setBasePayee($basePayee)
+    {
+        $this->container['basePayee'] = $basePayee;
+
+        return $this;
+    }
+
+    /**
+     * Gets tauxPayee
+     *
+     * @return float
+     */
+    public function getTauxPayee()
+    {
+        return $this->container['tauxPayee'];
+    }
+
+    /**
+     * Sets tauxPayee
+     *
+     * @param float $tauxPayee tauxPayee
+     *
+     * @return $this
+     */
+    public function setTauxPayee($tauxPayee)
+    {
+        $this->container['tauxPayee'] = $tauxPayee;
+
+        return $this;
+    }
+
+    /**
+     * Gets baseFacturee
+     *
+     * @return float
+     */
+    public function getBaseFacturee()
+    {
+        return $this->container['baseFacturee'];
+    }
+
+    /**
+     * Sets baseFacturee
+     *
+     * @param float $baseFacturee baseFacturee
+     *
+     * @return $this
+     */
+    public function setBaseFacturee($baseFacturee)
+    {
+        $this->container['baseFacturee'] = $baseFacturee;
+
+        return $this;
+    }
+
+    /**
+     * Gets tauxFacturee
+     *
+     * @return float
+     */
+    public function getTauxFacturee()
+    {
+        return $this->container['tauxFacturee'];
+    }
+
+    /**
+     * Sets tauxFacturee
+     *
+     * @param float $tauxFacturee tauxFacturee
+     *
+     * @return $this
+     */
+    public function setTauxFacturee($tauxFacturee)
+    {
+        $this->container['tauxFacturee'] = $tauxFacturee;
 
         return $this;
     }
