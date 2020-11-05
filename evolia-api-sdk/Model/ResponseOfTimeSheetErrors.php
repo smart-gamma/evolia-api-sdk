@@ -1,6 +1,6 @@
 <?php
 /**
- * ResponseError
+ * ResponseOfTimeSheetErrors
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \Evolia\ObjectSerializer;
 
 /**
- * ResponseError Class Doc Comment
+ * ResponseOfTimeSheetErrors Class Doc Comment
  *
  * @category Class
  * @package  Evolia
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ResponseError implements ModelInterface, ArrayAccess
+class ResponseOfTimeSheetErrors implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class ResponseError implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'ResponseError';
+    protected static $swaggerModelName = 'ResponseOfTimeSheetErrors';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,8 +56,8 @@ class ResponseError implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'errorId' => 'int',
-'errorText' => 'string'    ];
+        'status' => 'string',
+'errors' => '\Evolia\Model\ResponseErrorOfTimeSheetErrors[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -65,8 +65,8 @@ class ResponseError implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'errorId' => null,
-'errorText' => null    ];
+        'status' => null,
+'errors' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -95,8 +95,8 @@ class ResponseError implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'errorId' => 'ErrorId',
-'errorText' => 'ErrorText'    ];
+        'status' => 'Status',
+'errors' => 'Errors'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -104,8 +104,8 @@ class ResponseError implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'errorId' => 'setErrorId',
-'errorText' => 'setErrorText'    ];
+        'status' => 'setStatus',
+'errors' => 'setErrors'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -113,8 +113,8 @@ class ResponseError implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'errorId' => 'getErrorId',
-'errorText' => 'getErrorText'    ];
+        'status' => 'getStatus',
+'errors' => 'getErrors'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -157,7 +157,22 @@ class ResponseError implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
+    const STATUS_OK = 'Ok';
+const STATUS_AVERTISSEMENT = 'Avertissement';
+const STATUS_ERROR = 'Error';
+
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getStatusAllowableValues()
+    {
+        return [
+            self::STATUS_OK,
+self::STATUS_AVERTISSEMENT,
+self::STATUS_ERROR,        ];
+    }
 
     /**
      * Associative array for storing property values
@@ -174,8 +189,8 @@ class ResponseError implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['errorId'] = isset($data['errorId']) ? $data['errorId'] : null;
-        $this->container['errorText'] = isset($data['errorText']) ? $data['errorText'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['errors'] = isset($data['errors']) ? $data['errors'] : null;
     }
 
     /**
@@ -186,6 +201,14 @@ class ResponseError implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+
+        $allowedValues = $this->getStatusAllowableValues();
+        if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value for 'status', must be one of '%s'",
+                implode("', '", $allowedValues)
+            );
+        }
 
         return $invalidProperties;
     }
@@ -203,49 +226,58 @@ class ResponseError implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets errorId
+     * Gets status
      *
-     * @return int
+     * @return string
      */
-    public function getErrorId()
+    public function getStatus()
     {
-        return $this->container['errorId'];
+        return $this->container['status'];
     }
 
     /**
-     * Sets errorId
+     * Sets status
      *
-     * @param int $errorId errorId
+     * @param string $status status
      *
      * @return $this
      */
-    public function setErrorId($errorId)
+    public function setStatus($status)
     {
-        $this->container['errorId'] = $errorId;
+        $allowedValues = $this->getStatusAllowableValues();
+        if (!is_null($status) && !in_array($status, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'status', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['status'] = $status;
 
         return $this;
     }
 
     /**
-     * Gets errorText
+     * Gets errors
      *
-     * @return string
+     * @return \Evolia\Model\ResponseErrorOfTimeSheetErrors[]
      */
-    public function getErrorText()
+    public function getErrors()
     {
-        return $this->container['errorText'];
+        return $this->container['errors'];
     }
 
     /**
-     * Sets errorText
+     * Sets errors
      *
-     * @param string $errorText errorText
+     * @param \Evolia\Model\ResponseErrorOfTimeSheetErrors[] $errors errors
      *
      * @return $this
      */
-    public function setErrorText($errorText)
+    public function setErrors($errors)
     {
-        $this->container['errorText'] = $errorText;
+        $this->container['errors'] = $errors;
 
         return $this;
     }
