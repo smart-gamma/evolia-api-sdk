@@ -107,13 +107,14 @@ $apiInstance = new Evolia\SDK\ImportApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \Evolia\Model\AuthRequest(); // \Evolia\Model\AuthRequest | 
+$body = new \Evolia\Model\TimeSheet(); // \Evolia\Model\TimeSheet | 
+$authorization = "authorization_example"; // string | 
 
 try {
-    $result = $apiInstance->getAccessToken($body);
+    $result = $apiInstance->addTimeSheetApi($body, $authorization);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ImportApi->getAccessToken: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ImportApi->addTimeSheetApi: ', $e->getMessage(), PHP_EOL;
 }
 
 $apiInstance = new Evolia\SDK\ImportApi(
@@ -121,13 +122,13 @@ $apiInstance = new Evolia\SDK\ImportApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \Evolia\Model\TimeSheet(); // \Evolia\Model\TimeSheet | 
+$body = new \Evolia\Model\AuthRequest(); // \Evolia\Model\AuthRequest | 
 
 try {
-    $result = $apiInstance->timeSheetAddTimeSheetApi($body);
+    $result = $apiInstance->getAccessToken($body);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ImportApi->timeSheetAddTimeSheetApi: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ImportApi->getAccessToken: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -141,8 +142,8 @@ Class | Method | HTTP request | Description
 *ImportApi* | [**addCandidatApi**](docs/Api/ImportApi.md#addcandidatapi) | **POST** /api/candidate | 
 *ImportApi* | [**addClientApi**](docs/Api/ImportApi.md#addclientapi) | **POST** /api/customer | 
 *ImportApi* | [**addContractApi**](docs/Api/ImportApi.md#addcontractapi) | **POST** /api/contract | 
+*ImportApi* | [**addTimeSheetApi**](docs/Api/ImportApi.md#addtimesheetapi) | **POST** /api/TimeSheet | 
 *ImportApi* | [**getAccessToken**](docs/Api/ImportApi.md#getaccesstoken) | **POST** /GetAccessToken | 
-*ImportApi* | [**timeSheetAddTimeSheetApi**](docs/Api/ImportApi.md#timesheetaddtimesheetapi) | **POST** /api/TimeSheet | 
 *PayrollApi* | [**payrollsGet**](docs/Api/PayrollApi.md#payrollsget) | **GET** /payrolls | Get Payrolls by date range
 *PayrollApi* | [**payrollsPayrollIdGet**](docs/Api/PayrollApi.md#payrollspayrollidget) | **GET** /payrolls/{payrollId} | Get Payroll by it&#x27;s id
 

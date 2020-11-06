@@ -101,22 +101,22 @@ class ImportApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for addTimeSheetApi
+     *
+     * .
+     *
+     */
+    public function testAddTimeSheetApi()
+    {
+    }
+
+    /**
      * Test case for getAccessToken
      *
      * .
      *
      */
     public function testGetAccessToken()
-    {
-    }
-
-    /**
-     * Test case for timeSheetAddTimeSheetApi
-     *
-     * .
-     *
-     */
-    public function testTimeSheetAddTimeSheetApi()
     {
     }
 }
