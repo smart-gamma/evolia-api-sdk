@@ -157,36 +157,7 @@ class ResponseErrorOfTimeSheetErrors implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    const ERROR_ID_SUCCESS = 'Success';
-const ERROR_ID_MISSION = 'Mission';
-const ERROR_ID_CLIENT = 'Client';
-const ERROR_ID_INTERIMAIRE = 'Interimaire';
-const ERROR_ID_PAYE = 'Paye';
-const ERROR_ID_FACTURE = 'Facture';
-const ERROR_ID_DATABASE_ERROR = 'DatabaseError';
-const ERROR_ID_CONNEXION_ERROR = 'ConnexionError';
-const ERROR_ID_VIDE = 'Vide';
-const ERROR_ID_UNKNOWN = 'Unknown';
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getErrorIdAllowableValues()
-    {
-        return [
-            self::ERROR_ID_SUCCESS,
-self::ERROR_ID_MISSION,
-self::ERROR_ID_CLIENT,
-self::ERROR_ID_INTERIMAIRE,
-self::ERROR_ID_PAYE,
-self::ERROR_ID_FACTURE,
-self::ERROR_ID_DATABASE_ERROR,
-self::ERROR_ID_CONNEXION_ERROR,
-self::ERROR_ID_VIDE,
-self::ERROR_ID_UNKNOWN,        ];
-    }
+    
 
     /**
      * Associative array for storing property values
@@ -215,14 +186,6 @@ self::ERROR_ID_UNKNOWN,        ];
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-
-        $allowedValues = $this->getErrorIdAllowableValues();
-        if (!is_null($this->container['errorId']) && !in_array($this->container['errorId'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'errorId', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
 
         return $invalidProperties;
     }
@@ -258,15 +221,6 @@ self::ERROR_ID_UNKNOWN,        ];
      */
     public function setErrorId($errorId)
     {
-        $allowedValues = $this->getErrorIdAllowableValues();
-        if (!is_null($errorId) && !in_array($errorId, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'errorId', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
         $this->container['errorId'] = $errorId;
 
         return $this;
