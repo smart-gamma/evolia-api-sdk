@@ -157,22 +157,7 @@ class ResponseOfTimeSheetErrors implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    const STATUS_OK = 'Ok';
-const STATUS_AVERTISSEMENT = 'Avertissement';
-const STATUS_ERROR = 'Error';
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getStatusAllowableValues()
-    {
-        return [
-            self::STATUS_OK,
-self::STATUS_AVERTISSEMENT,
-self::STATUS_ERROR,        ];
-    }
+    
 
     /**
      * Associative array for storing property values
@@ -201,14 +186,6 @@ self::STATUS_ERROR,        ];
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-
-        $allowedValues = $this->getStatusAllowableValues();
-        if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'status', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
 
         return $invalidProperties;
     }
@@ -244,15 +221,6 @@ self::STATUS_ERROR,        ];
      */
     public function setStatus($status)
     {
-        $allowedValues = $this->getStatusAllowableValues();
-        if (!is_null($status) && !in_array($status, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'status', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
         $this->container['status'] = $status;
 
         return $this;
