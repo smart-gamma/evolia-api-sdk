@@ -7,8 +7,8 @@ Method | HTTP request | Description
 [**addCandidatApi**](ImportApi.md#addcandidatapi) | **POST** /api/candidate | 
 [**addClientApi**](ImportApi.md#addclientapi) | **POST** /api/customer | 
 [**addContractApi**](ImportApi.md#addcontractapi) | **POST** /api/contract | 
+[**addTimeSheetApi**](ImportApi.md#addtimesheetapi) | **POST** /api/TimeSheet | 
 [**getAccessToken**](ImportApi.md#getaccesstoken) | **POST** /GetAccessToken | 
-[**timeSheetAddTimeSheetApi**](ImportApi.md#timesheetaddtimesheetapi) | **POST** /api/TimeSheet | 
 
 # **addCandidatApi**
 > \Evolia\Model\CandidateResponseStatus addCandidatApi($body, $authorization)
@@ -163,6 +163,55 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **addTimeSheetApi**
+> \Evolia\Model\ResponseOfTimeSheetErrors addTimeSheetApi($body, $authorization)
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$apiInstance = new Evolia\SDK\ImportApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$body = new \Evolia\Model\TimeSheet(); // \Evolia\Model\TimeSheet | 
+$authorization = "authorization_example"; // string | 
+
+try {
+    $result = $apiInstance->addTimeSheetApi($body, $authorization);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ImportApi->addTimeSheetApi: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\Evolia\Model\TimeSheet**](../Model/TimeSheet.md)|  |
+ **authorization** | **string**|  |
+
+### Return type
+
+[**\Evolia\Model\ResponseOfTimeSheetErrors**](../Model/ResponseOfTimeSheetErrors.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **getAccessToken**
 > \Evolia\Model\AuthResponse getAccessToken($body)
 
@@ -200,53 +249,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Evolia\Model\AuthResponse**](../Model/AuthResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **timeSheetAddTimeSheetApi**
-> \Evolia\Model\ResponseOfTimeSheetErrors timeSheetAddTimeSheetApi($body)
-
-
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$apiInstance = new Evolia\SDK\ImportApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
-);
-$body = new \Evolia\Model\TimeSheet(); // \Evolia\Model\TimeSheet | 
-
-try {
-    $result = $apiInstance->timeSheetAddTimeSheetApi($body);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ImportApi->timeSheetAddTimeSheetApi: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\Evolia\Model\TimeSheet**](../Model/TimeSheet.md)|  |
-
-### Return type
-
-[**\Evolia\Model\ResponseOfTimeSheetErrors**](../Model/ResponseOfTimeSheetErrors.md)
 
 ### Authorization
 
