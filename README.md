@@ -115,6 +115,20 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling ImportApi->getAccessToken: ', $e->getMessage(), PHP_EOL;
 }
+
+$apiInstance = new Evolia\SDK\ImportApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$body = new \Evolia\Model\TimeSheet(); // \Evolia\Model\TimeSheet | 
+
+try {
+    $result = $apiInstance->timeSheetAddTimeSheetApi($body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ImportApi->timeSheetAddTimeSheetApi: ', $e->getMessage(), PHP_EOL;
+}
 ?>
 ```
 
@@ -128,9 +142,9 @@ Class | Method | HTTP request | Description
 *ImportApi* | [**addClientApi**](docs/Api/ImportApi.md#addclientapi) | **POST** /api/customer | 
 *ImportApi* | [**addContractApi**](docs/Api/ImportApi.md#addcontractapi) | **POST** /api/contract | 
 *ImportApi* | [**getAccessToken**](docs/Api/ImportApi.md#getaccesstoken) | **POST** /GetAccessToken | 
+*ImportApi* | [**timeSheetAddTimeSheetApi**](docs/Api/ImportApi.md#timesheetaddtimesheetapi) | **POST** /api/TimeSheet | 
 *PayrollApi* | [**payrollsGet**](docs/Api/PayrollApi.md#payrollsget) | **GET** /payrolls | Get Payrolls by date range
 *PayrollApi* | [**payrollsPayrollIdGet**](docs/Api/PayrollApi.md#payrollspayrollidget) | **GET** /payrolls/{payrollId} | Get Payroll by it&#x27;s id
-*TimeSheetApi* | [**timeSheetAddTimeSheetApi**](docs/Api/TimeSheetApi.md#timesheetaddtimesheetapi) | **POST** /api/TimeSheet | 
 
 ## Documentation For Models
 
