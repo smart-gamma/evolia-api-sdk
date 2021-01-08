@@ -65,6 +65,8 @@ class Contract implements ModelInterface, ArrayAccess
 'rubriquesContractuelles' => '\Evolia\Model\PayrollElement[]',
 'designation' => 'string',
 'adresse1' => 'string',
+'adresse2' => 'string',
+'adresse3' => 'string',
 'cP' => 'string',
 'commune' => 'string',
 'insee' => 'string',
@@ -130,6 +132,8 @@ class Contract implements ModelInterface, ArrayAccess
 'rubriquesContractuelles' => null,
 'designation' => null,
 'adresse1' => null,
+'adresse2' => null,
+'adresse3' => null,
 'cP' => null,
 'commune' => null,
 'insee' => null,
@@ -216,6 +220,8 @@ class Contract implements ModelInterface, ArrayAccess
 'rubriquesContractuelles' => 'RubriquesContractuelles',
 'designation' => 'Designation',
 'adresse1' => 'Adresse1',
+'adresse2' => 'Adresse2',
+'adresse3' => 'Adresse3',
 'cP' => 'CP',
 'commune' => 'Commune',
 'insee' => 'Insee',
@@ -281,6 +287,8 @@ class Contract implements ModelInterface, ArrayAccess
 'rubriquesContractuelles' => 'setRubriquesContractuelles',
 'designation' => 'setDesignation',
 'adresse1' => 'setAdresse1',
+'adresse2' => 'setAdresse2',
+'adresse3' => 'setAdresse3',
 'cP' => 'setCP',
 'commune' => 'setCommune',
 'insee' => 'setInsee',
@@ -346,6 +354,8 @@ class Contract implements ModelInterface, ArrayAccess
 'rubriquesContractuelles' => 'getRubriquesContractuelles',
 'designation' => 'getDesignation',
 'adresse1' => 'getAdresse1',
+'adresse2' => 'getAdresse2',
+'adresse3' => 'getAdresse3',
 'cP' => 'getCP',
 'commune' => 'getCommune',
 'insee' => 'getInsee',
@@ -463,6 +473,8 @@ class Contract implements ModelInterface, ArrayAccess
         $this->container['rubriquesContractuelles'] = isset($data['rubriquesContractuelles']) ? $data['rubriquesContractuelles'] : null;
         $this->container['designation'] = isset($data['designation']) ? $data['designation'] : null;
         $this->container['adresse1'] = isset($data['adresse1']) ? $data['adresse1'] : null;
+        $this->container['adresse2'] = isset($data['adresse2']) ? $data['adresse2'] : null;
+        $this->container['adresse3'] = isset($data['adresse3']) ? $data['adresse3'] : null;
         $this->container['cP'] = isset($data['cP']) ? $data['cP'] : null;
         $this->container['commune'] = isset($data['commune']) ? $data['commune'] : null;
         $this->container['insee'] = isset($data['insee']) ? $data['insee'] : null;
@@ -857,6 +869,54 @@ class Contract implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets adresse2
+     *
+     * @return string
+     */
+    public function getAdresse2()
+    {
+        return $this->container['adresse2'];
+    }
+
+    /**
+     * Sets adresse2
+     *
+     * @param string $adresse2 adresse2
+     *
+     * @return $this
+     */
+    public function setAdresse2($adresse2)
+    {
+        $this->container['adresse2'] = $adresse2;
+
+        return $this;
+    }
+
+    /**
+     * Gets adresse3
+     *
+     * @return string
+     */
+    public function getAdresse3()
+    {
+        return $this->container['adresse3'];
+    }
+
+    /**
+     * Sets adresse3
+     *
+     * @param string $adresse3 adresse3
+     *
+     * @return $this
+     */
+    public function setAdresse3($adresse3)
+    {
+        $this->container['adresse3'] = $adresse3;
+
+        return $this;
+    }
+
+    /**
      * Gets cP
      *
      * @return string
@@ -1205,7 +1265,7 @@ class Contract implements ModelInterface, ArrayAccess
     /**
      * Sets debut
      *
-     * @param string $debut Date. Not using \"date\" format because it does not serialized correctly.
+     * @param string $debut debut
      *
      * @return $this
      */
@@ -1229,7 +1289,7 @@ class Contract implements ModelInterface, ArrayAccess
     /**
      * Sets finPrevue
      *
-     * @param string $finPrevue Date. Not using \"date\" format because it does not serialized correctly.
+     * @param string $finPrevue finPrevue
      *
      * @return $this
      */
@@ -1253,7 +1313,7 @@ class Contract implements ModelInterface, ArrayAccess
     /**
      * Sets finReelle
      *
-     * @param string $finReelle Date. Not using \"date\" format because it does not serialized correctly.
+     * @param string $finReelle finReelle
      *
      * @return $this
      */
@@ -1277,7 +1337,7 @@ class Contract implements ModelInterface, ArrayAccess
     /**
      * Sets dateCreation
      *
-     * @param string $dateCreation Date. Not using \"date\" format because it does not serialized correctly.
+     * @param string $dateCreation dateCreation
      *
      * @return $this
      */
@@ -1397,7 +1457,7 @@ class Contract implements ModelInterface, ArrayAccess
     /**
      * Sets finDeMission
      *
-     * @param string $finDeMission Date. Not using \"date\" format because it does not serialized correctly.
+     * @param string $finDeMission finDeMission
      *
      * @return $this
      */
@@ -1493,7 +1553,7 @@ class Contract implements ModelInterface, ArrayAccess
     /**
      * Sets dateEffet
      *
-     * @param string $dateEffet Date. Not using \"date\" format because it does not serialized correctly.
+     * @param string $dateEffet dateEffet
      *
      * @return $this
      */
@@ -1517,7 +1577,7 @@ class Contract implements ModelInterface, ArrayAccess
     /**
      * Sets dateFinAvenant
      *
-     * @param string $dateFinAvenant Date. Not using \"date\" format because it does not serialized correctly.
+     * @param string $dateFinAvenant dateFinAvenant
      *
      * @return $this
      */
@@ -1541,7 +1601,7 @@ class Contract implements ModelInterface, ArrayAccess
     /**
      * Sets souplesseDebut
      *
-     * @param string $souplesseDebut Date. Not using \"date\" format because it does not serialized correctly.
+     * @param string $souplesseDebut souplesseDebut
      *
      * @return $this
      */
@@ -1565,7 +1625,7 @@ class Contract implements ModelInterface, ArrayAccess
     /**
      * Sets souplesseFin
      *
-     * @param string $souplesseFin Date. Not using \"date\" format because it does not serialized correctly.
+     * @param string $souplesseFin souplesseFin
      *
      * @return $this
      */
