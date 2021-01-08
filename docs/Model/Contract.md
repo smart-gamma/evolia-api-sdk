@@ -12,6 +12,8 @@ Name | Type | Description | Notes
 **rubriquesContractuelles** | [**\Evolia\Model\PayrollElement[]**](PayrollElement.md) |  | [optional] 
 **designation** | **string** |  | 
 **adresse1** | **string** |  | 
+**adresse2** | **string** |  | [optional] 
+**adresse3** | **string** |  | [optional] 
 **cP** | **string** |  | 
 **commune** | **string** |  | 
 **insee** | **string** |  | 
@@ -26,22 +28,22 @@ Name | Type | Description | Notes
 **nIC** | **string** |  | [optional] 
 **referenceAnalytique** | **string** |  | [optional] 
 **agence** | **string** |  | 
-**debut** | **string** | Date. Not using \&quot;date\&quot; format because it does not serialized correctly. | 
-**finPrevue** | **string** | Date. Not using \&quot;date\&quot; format because it does not serialized correctly. | 
-**finReelle** | **string** | Date. Not using \&quot;date\&quot; format because it does not serialized correctly. | 
-**dateCreation** | **string** | Date. Not using \&quot;date\&quot; format because it does not serialized correctly. | 
+**debut** | [**\DateTime**](\DateTime.md) |  | 
+**finPrevue** | [**\DateTime**](\DateTime.md) |  | 
+**finReelle** | [**\DateTime**](\DateTime.md) |  | 
+**dateCreation** | [**\DateTime**](\DateTime.md) |  | 
 **categorieSalariale** | **string** |  | 
 **motifEmbauche** | **string** |  | 
 **justification** | **string** |  | [optional] 
 **missionARisqueL23131** | **bool** |  | 
-**finDeMission** | **string** | Date. Not using \&quot;date\&quot; format because it does not serialized correctly. | 
+**finDeMission** | [**\DateTime**](\DateTime.md) |  | 
 **heureDePresentation** | **string** |  | 
 **contractOrder** | **int** |  | 
 **typeContrat** | **int** |  | 
-**dateEffet** | **string** | Date. Not using \&quot;date\&quot; format because it does not serialized correctly. | 
-**dateFinAvenant** | **string** | Date. Not using \&quot;date\&quot; format because it does not serialized correctly. | 
-**souplesseDebut** | **string** | Date. Not using \&quot;date\&quot; format because it does not serialized correctly. | 
-**souplesseFin** | **string** | Date. Not using \&quot;date\&quot; format because it does not serialized correctly. | 
+**dateEffet** | [**\DateTime**](\DateTime.md) |  | 
+**dateFinAvenant** | [**\DateTime**](\DateTime.md) |  | 
+**souplesseDebut** | [**\DateTime**](\DateTime.md) |  | 
+**souplesseFin** | [**\DateTime**](\DateTime.md) |  | 
 **horairesParticulier** | **string** |  | [optional] 
 **retourSignatureInterimaire** | **bool** |  | [optional] 
 **retourSignatureClient** | **bool** |  | [optional] 
