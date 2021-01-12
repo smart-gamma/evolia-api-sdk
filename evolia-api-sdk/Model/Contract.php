@@ -81,22 +81,22 @@ class Contract implements ModelInterface, ArrayAccess
 'nIC' => 'string',
 'referenceAnalytique' => 'string',
 'agence' => 'string',
-'debut' => '\DateTime',
-'finPrevue' => '\DateTime',
-'finReelle' => '\DateTime',
-'dateCreation' => '\DateTime',
+'debut' => 'string',
+'finPrevue' => 'string',
+'finReelle' => 'string',
+'dateCreation' => 'string',
 'categorieSalariale' => 'string',
 'motifEmbauche' => 'string',
 'justification' => 'string',
 'missionARisqueL23131' => 'bool',
-'finDeMission' => '\DateTime',
+'finDeMission' => 'string',
 'heureDePresentation' => 'string',
 'contractOrder' => 'int',
 'typeContrat' => 'int',
-'dateEffet' => '\DateTime',
-'dateFinAvenant' => '\DateTime',
-'souplesseDebut' => '\DateTime',
-'souplesseFin' => '\DateTime',
+'dateEffet' => 'string',
+'dateFinAvenant' => 'string',
+'souplesseDebut' => 'string',
+'souplesseFin' => 'string',
 'horairesParticulier' => 'string',
 'retourSignatureInterimaire' => 'bool',
 'retourSignatureClient' => 'bool',
@@ -148,22 +148,22 @@ class Contract implements ModelInterface, ArrayAccess
 'nIC' => null,
 'referenceAnalytique' => null,
 'agence' => null,
-'debut' => 'date-time',
-'finPrevue' => 'date-time',
-'finReelle' => 'date-time',
-'dateCreation' => 'date-time',
+'debut' => null,
+'finPrevue' => null,
+'finReelle' => null,
+'dateCreation' => null,
 'categorieSalariale' => null,
 'motifEmbauche' => null,
 'justification' => null,
 'missionARisqueL23131' => null,
-'finDeMission' => 'date-time',
+'finDeMission' => null,
 'heureDePresentation' => null,
 'contractOrder' => null,
 'typeContrat' => null,
-'dateEffet' => 'date-time',
-'dateFinAvenant' => 'date-time',
-'souplesseDebut' => 'date-time',
-'souplesseFin' => 'date-time',
+'dateEffet' => null,
+'dateFinAvenant' => null,
+'souplesseDebut' => null,
+'souplesseFin' => null,
 'horairesParticulier' => null,
 'retourSignatureInterimaire' => null,
 'retourSignatureClient' => null,
@@ -1255,7 +1255,7 @@ class Contract implements ModelInterface, ArrayAccess
     /**
      * Gets debut
      *
-     * @return \DateTime
+     * @return string
      */
     public function getDebut()
     {
@@ -1265,7 +1265,7 @@ class Contract implements ModelInterface, ArrayAccess
     /**
      * Sets debut
      *
-     * @param \DateTime $debut debut
+     * @param string $debut Date. Not using \"date\" format because it does not serialized correctly.
      *
      * @return $this
      */
@@ -1279,7 +1279,7 @@ class Contract implements ModelInterface, ArrayAccess
     /**
      * Gets finPrevue
      *
-     * @return \DateTime
+     * @return string
      */
     public function getFinPrevue()
     {
@@ -1289,7 +1289,7 @@ class Contract implements ModelInterface, ArrayAccess
     /**
      * Sets finPrevue
      *
-     * @param \DateTime $finPrevue finPrevue
+     * @param string $finPrevue Date. Not using \"date\" format because it does not serialized correctly.
      *
      * @return $this
      */
@@ -1303,7 +1303,7 @@ class Contract implements ModelInterface, ArrayAccess
     /**
      * Gets finReelle
      *
-     * @return \DateTime
+     * @return string
      */
     public function getFinReelle()
     {
@@ -1313,7 +1313,7 @@ class Contract implements ModelInterface, ArrayAccess
     /**
      * Sets finReelle
      *
-     * @param \DateTime $finReelle finReelle
+     * @param string $finReelle Date. Not using \"date\" format because it does not serialized correctly.
      *
      * @return $this
      */
@@ -1327,7 +1327,7 @@ class Contract implements ModelInterface, ArrayAccess
     /**
      * Gets dateCreation
      *
-     * @return \DateTime
+     * @return string
      */
     public function getDateCreation()
     {
@@ -1337,7 +1337,7 @@ class Contract implements ModelInterface, ArrayAccess
     /**
      * Sets dateCreation
      *
-     * @param \DateTime $dateCreation dateCreation
+     * @param string $dateCreation Date. Not using \"date\" format because it does not serialized correctly.
      *
      * @return $this
      */
@@ -1447,7 +1447,7 @@ class Contract implements ModelInterface, ArrayAccess
     /**
      * Gets finDeMission
      *
-     * @return \DateTime
+     * @return string
      */
     public function getFinDeMission()
     {
@@ -1457,7 +1457,7 @@ class Contract implements ModelInterface, ArrayAccess
     /**
      * Sets finDeMission
      *
-     * @param \DateTime $finDeMission finDeMission
+     * @param string $finDeMission Date. Not using \"date\" format because it does not serialized correctly.
      *
      * @return $this
      */
@@ -1543,7 +1543,7 @@ class Contract implements ModelInterface, ArrayAccess
     /**
      * Gets dateEffet
      *
-     * @return \DateTime
+     * @return string
      */
     public function getDateEffet()
     {
@@ -1553,7 +1553,7 @@ class Contract implements ModelInterface, ArrayAccess
     /**
      * Sets dateEffet
      *
-     * @param \DateTime $dateEffet dateEffet
+     * @param string $dateEffet Date. Not using \"date\" format because it does not serialized correctly.
      *
      * @return $this
      */
@@ -1567,7 +1567,7 @@ class Contract implements ModelInterface, ArrayAccess
     /**
      * Gets dateFinAvenant
      *
-     * @return \DateTime
+     * @return string
      */
     public function getDateFinAvenant()
     {
@@ -1577,7 +1577,7 @@ class Contract implements ModelInterface, ArrayAccess
     /**
      * Sets dateFinAvenant
      *
-     * @param \DateTime $dateFinAvenant dateFinAvenant
+     * @param string $dateFinAvenant Date. Not using \"date\" format because it does not serialized correctly.
      *
      * @return $this
      */
@@ -1591,7 +1591,7 @@ class Contract implements ModelInterface, ArrayAccess
     /**
      * Gets souplesseDebut
      *
-     * @return \DateTime
+     * @return string
      */
     public function getSouplesseDebut()
     {
@@ -1601,7 +1601,7 @@ class Contract implements ModelInterface, ArrayAccess
     /**
      * Sets souplesseDebut
      *
-     * @param \DateTime $souplesseDebut souplesseDebut
+     * @param string $souplesseDebut Date. Not using \"date\" format because it does not serialized correctly.
      *
      * @return $this
      */
@@ -1615,7 +1615,7 @@ class Contract implements ModelInterface, ArrayAccess
     /**
      * Gets souplesseFin
      *
-     * @return \DateTime
+     * @return string
      */
     public function getSouplesseFin()
     {
@@ -1625,7 +1625,7 @@ class Contract implements ModelInterface, ArrayAccess
     /**
      * Sets souplesseFin
      *
-     * @param \DateTime $souplesseFin souplesseFin
+     * @param string $souplesseFin Date. Not using \"date\" format because it does not serialized correctly.
      *
      * @return $this
      */
