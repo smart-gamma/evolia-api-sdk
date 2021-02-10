@@ -130,6 +130,21 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling ImportApi->getAccessToken: ', $e->getMessage(), PHP_EOL;
 }
+
+$apiInstance = new Evolia\SDK\ImportApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$body = new \Evolia\Model\ReturnSignature(); // \Evolia\Model\ReturnSignature | 
+$authorization = "authorization_example"; // string | 
+
+try {
+    $result = $apiInstance->returnSignatureApi($body, $authorization);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ImportApi->returnSignatureApi: ', $e->getMessage(), PHP_EOL;
+}
 ?>
 ```
 
@@ -144,6 +159,7 @@ Class | Method | HTTP request | Description
 *ImportApi* | [**addContractApi**](docs/Api/ImportApi.md#addcontractapi) | **POST** /api/contract | 
 *ImportApi* | [**addTimeSheetApi**](docs/Api/ImportApi.md#addtimesheetapi) | **POST** /api/TimeSheet | 
 *ImportApi* | [**getAccessToken**](docs/Api/ImportApi.md#getaccesstoken) | **POST** /GetAccessToken | 
+*ImportApi* | [**returnSignatureApi**](docs/Api/ImportApi.md#returnsignatureapi) | **POST** /api/Contract/ReturnSignature | 
 *PayrollApi* | [**payrollsGet**](docs/Api/PayrollApi.md#payrollsget) | **GET** /payrolls | Get Payrolls by date range
 *PayrollApi* | [**payrollsPayrollIdGet**](docs/Api/PayrollApi.md#payrollspayrollidget) | **GET** /payrolls/{payrollId} | Get Payroll by it&#x27;s id
 
@@ -169,6 +185,7 @@ Class | Method | HTTP request | Description
  - [ResponseError](docs/Model/ResponseError.md)
  - [ResponseErrorOfTimeSheetErrors](docs/Model/ResponseErrorOfTimeSheetErrors.md)
  - [ResponseOfTimeSheetErrors](docs/Model/ResponseOfTimeSheetErrors.md)
+ - [ReturnSignature](docs/Model/ReturnSignature.md)
  - [RubricValues](docs/Model/RubricValues.md)
  - [TimeSheet](docs/Model/TimeSheet.md)
 

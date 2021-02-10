@@ -1,6 +1,6 @@
 <?php
 /**
- * PayrollViewModelTest
+ * ReturnSignatureTest
  *
  * PHP version 5
  *
@@ -29,15 +29,15 @@
 namespace Evolia;
 
 /**
- * PayrollViewModelTest Class Doc Comment
+ * ReturnSignatureTest Class Doc Comment
  *
  * @category    Class
- * @description PayrollViewModel
+ * @description ReturnSignature
  * @package     Evolia
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PayrollViewModelTest extends \PHPUnit_Framework_TestCase
+class ReturnSignatureTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -69,58 +69,44 @@ class PayrollViewModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "PayrollViewModel"
+     * Test "ReturnSignature"
      */
-    public function testPayrollViewModel()
+    public function testReturnSignature()
     {
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "idContract"
      */
-    public function testPropertyId()
+    public function testPropertyIdContract()
     {
     }
 
     /**
-     * Test attribute "startDate"
+     * Test attribute "idContractOrd"
      */
-    public function testPropertyStartDate()
+    public function testPropertyIdContractOrd()
     {
     }
 
     /**
-     * Test attribute "endDate"
+     * Test attribute "idPerson"
      */
-    public function testPropertyEndDate()
+    public function testPropertyIdPerson()
     {
     }
 
     /**
-     * Test attribute "customer"
+     * Test attribute "signDateCustomer"
      */
-    public function testPropertyCustomer()
+    public function testPropertySignDateCustomer()
     {
     }
 
     /**
-     * Test attribute "candidate"
+     * Test attribute "signDateCandidate"
      */
-    public function testPropertyCandidate()
-    {
-    }
-
-    /**
-     * Test attribute "documentUrl"
-     */
-    public function testPropertyDocumentUrl()
-    {
-    }
-
-    /**
-     * Test attribute "details"
-     */
-    public function testPropertyDetails()
+    public function testPropertySignDateCandidate()
     {
     }
 }
