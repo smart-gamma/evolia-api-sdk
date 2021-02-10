@@ -1,6 +1,6 @@
 <?php
 /**
- * ContractResponseStatus
+ * ReturnSignature
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \Evolia\ObjectSerializer;
 
 /**
- * ContractResponseStatus Class Doc Comment
+ * ReturnSignature Class Doc Comment
  *
  * @category Class
  * @package  Evolia
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ContractResponseStatus implements ModelInterface, ArrayAccess
+class ReturnSignature implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class ContractResponseStatus implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'ContractResponseStatus';
+    protected static $swaggerModelName = 'ReturnSignature';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,8 +56,11 @@ class ContractResponseStatus implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'status' => 'int',
-'errors' => '\Evolia\Model\ResponseError[]'    ];
+        'idContract' => 'string',
+'idContractOrd' => 'int',
+'idPerson' => 'string',
+'signDateCustomer' => '\DateTime',
+'signDateCandidate' => '\DateTime'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -65,8 +68,11 @@ class ContractResponseStatus implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'status' => null,
-'errors' => null    ];
+        'idContract' => null,
+'idContractOrd' => null,
+'idPerson' => null,
+'signDateCustomer' => 'date-time',
+'signDateCandidate' => 'date-time'    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -95,8 +101,11 @@ class ContractResponseStatus implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'status' => 'Status',
-'errors' => 'Errors'    ];
+        'idContract' => 'IdContract',
+'idContractOrd' => 'IdContractOrd',
+'idPerson' => 'IdPerson',
+'signDateCustomer' => 'SignDateCustomer',
+'signDateCandidate' => 'SignDateCandidate'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -104,8 +113,11 @@ class ContractResponseStatus implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'status' => 'setStatus',
-'errors' => 'setErrors'    ];
+        'idContract' => 'setIdContract',
+'idContractOrd' => 'setIdContractOrd',
+'idPerson' => 'setIdPerson',
+'signDateCustomer' => 'setSignDateCustomer',
+'signDateCandidate' => 'setSignDateCandidate'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -113,8 +125,11 @@ class ContractResponseStatus implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'status' => 'getStatus',
-'errors' => 'getErrors'    ];
+        'idContract' => 'getIdContract',
+'idContractOrd' => 'getIdContractOrd',
+'idPerson' => 'getIdPerson',
+'signDateCustomer' => 'getSignDateCustomer',
+'signDateCandidate' => 'getSignDateCandidate'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -174,8 +189,11 @@ class ContractResponseStatus implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
-        $this->container['errors'] = isset($data['errors']) ? $data['errors'] : null;
+        $this->container['idContract'] = isset($data['idContract']) ? $data['idContract'] : null;
+        $this->container['idContractOrd'] = isset($data['idContractOrd']) ? $data['idContractOrd'] : null;
+        $this->container['idPerson'] = isset($data['idPerson']) ? $data['idPerson'] : null;
+        $this->container['signDateCustomer'] = isset($data['signDateCustomer']) ? $data['signDateCustomer'] : null;
+        $this->container['signDateCandidate'] = isset($data['signDateCandidate']) ? $data['signDateCandidate'] : null;
     }
 
     /**
@@ -187,6 +205,15 @@ class ContractResponseStatus implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['idContract'] === null) {
+            $invalidProperties[] = "'idContract' can't be null";
+        }
+        if ($this->container['idContractOrd'] === null) {
+            $invalidProperties[] = "'idContractOrd' can't be null";
+        }
+        if ($this->container['idPerson'] === null) {
+            $invalidProperties[] = "'idPerson' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -203,49 +230,121 @@ class ContractResponseStatus implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets status
+     * Gets idContract
      *
-     * @return int
+     * @return string
      */
-    public function getStatus()
+    public function getIdContract()
     {
-        return $this->container['status'];
+        return $this->container['idContract'];
     }
 
     /**
-     * Sets status
+     * Sets idContract
      *
-     * @param int $status status
+     * @param string $idContract idContract
      *
      * @return $this
      */
-    public function setStatus($status)
+    public function setIdContract($idContract)
     {
-        $this->container['status'] = $status;
+        $this->container['idContract'] = $idContract;
 
         return $this;
     }
 
     /**
-     * Gets errors
+     * Gets idContractOrd
      *
-     * @return \Evolia\Model\ResponseError[]
+     * @return int
      */
-    public function getErrors()
+    public function getIdContractOrd()
     {
-        return $this->container['errors'];
+        return $this->container['idContractOrd'];
     }
 
     /**
-     * Sets errors
+     * Sets idContractOrd
      *
-     * @param \Evolia\Model\ResponseError[] $errors errors
+     * @param int $idContractOrd idContractOrd
      *
      * @return $this
      */
-    public function setErrors($errors)
+    public function setIdContractOrd($idContractOrd)
     {
-        $this->container['errors'] = $errors;
+        $this->container['idContractOrd'] = $idContractOrd;
+
+        return $this;
+    }
+
+    /**
+     * Gets idPerson
+     *
+     * @return string
+     */
+    public function getIdPerson()
+    {
+        return $this->container['idPerson'];
+    }
+
+    /**
+     * Sets idPerson
+     *
+     * @param string $idPerson idPerson
+     *
+     * @return $this
+     */
+    public function setIdPerson($idPerson)
+    {
+        $this->container['idPerson'] = $idPerson;
+
+        return $this;
+    }
+
+    /**
+     * Gets signDateCustomer
+     *
+     * @return \DateTime
+     */
+    public function getSignDateCustomer()
+    {
+        return $this->container['signDateCustomer'];
+    }
+
+    /**
+     * Sets signDateCustomer
+     *
+     * @param \DateTime $signDateCustomer signDateCustomer
+     *
+     * @return $this
+     */
+    public function setSignDateCustomer($signDateCustomer)
+    {
+        $this->container['signDateCustomer'] = $signDateCustomer;
+
+        return $this;
+    }
+
+    /**
+     * Gets signDateCandidate
+     *
+     * @return \DateTime
+     */
+    public function getSignDateCandidate()
+    {
+        return $this->container['signDateCandidate'];
+    }
+
+    /**
+     * Sets signDateCandidate
+     *
+     * @param \DateTime $signDateCandidate signDateCandidate
+     *
+     * @return $this
+     */
+    public function setSignDateCandidate($signDateCandidate)
+    {
+        $this->container['signDateCandidate'] = $signDateCandidate;
 
         return $this;
     }
