@@ -121,12 +121,12 @@ class ImportApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for isCandidateExists
+     * Test case for isCandidateExistsApi
      *
      * .
      *
      */
-    public function testIsCandidateExists()
+    public function testIsCandidateExistsApi()
     {
     }
 

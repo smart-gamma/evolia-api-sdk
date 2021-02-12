@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**addContractApi**](ImportApi.md#addcontractapi) | **POST** /api/contract | 
 [**addTimeSheetApi**](ImportApi.md#addtimesheetapi) | **POST** /api/TimeSheet | 
 [**getAccessToken**](ImportApi.md#getaccesstoken) | **POST** /GetAccessToken | 
-[**isCandidateExists**](ImportApi.md#iscandidateexists) | **POST** /api/candidate/exists | 
+[**isCandidateExistsApi**](ImportApi.md#iscandidateexistsapi) | **POST** /api/candidate/exists | 
 [**returnSignatureApi**](ImportApi.md#returnsignatureapi) | **POST** /api/Contract/ReturnSignature | 
 
 # **addCandidatApi**
@@ -263,8 +263,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **isCandidateExists**
-> \Evolia\Model\CandidateResponseStatus isCandidateExists($body, $authorization)
+# **isCandidateExistsApi**
+> \Evolia\Model\CandidateResponseStatus isCandidateExistsApi($body, $authorization)
 
 
 
@@ -284,10 +284,10 @@ $body = new \Evolia\Model\ExistsCandidate(); // \Evolia\Model\ExistsCandidate |
 $authorization = "authorization_example"; // string | 
 
 try {
-    $result = $apiInstance->isCandidateExists($body, $authorization);
+    $result = $apiInstance->isCandidateExistsApi($body, $authorization);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ImportApi->isCandidateExists: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ImportApi->isCandidateExistsApi: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

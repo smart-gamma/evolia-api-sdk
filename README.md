@@ -140,10 +140,10 @@ $body = new \Evolia\Model\ExistsCandidate(); // \Evolia\Model\ExistsCandidate |
 $authorization = "authorization_example"; // string | 
 
 try {
-    $result = $apiInstance->isCandidateExists($body, $authorization);
+    $result = $apiInstance->isCandidateExistsApi($body, $authorization);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ImportApi->isCandidateExists: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ImportApi->isCandidateExistsApi: ', $e->getMessage(), PHP_EOL;
 }
 
 $apiInstance = new Evolia\SDK\ImportApi(
@@ -174,7 +174,7 @@ Class | Method | HTTP request | Description
 *ImportApi* | [**addContractApi**](docs/Api/ImportApi.md#addcontractapi) | **POST** /api/contract | 
 *ImportApi* | [**addTimeSheetApi**](docs/Api/ImportApi.md#addtimesheetapi) | **POST** /api/TimeSheet | 
 *ImportApi* | [**getAccessToken**](docs/Api/ImportApi.md#getaccesstoken) | **POST** /GetAccessToken | 
-*ImportApi* | [**isCandidateExists**](docs/Api/ImportApi.md#iscandidateexists) | **POST** /api/candidate/exists | 
+*ImportApi* | [**isCandidateExistsApi**](docs/Api/ImportApi.md#iscandidateexistsapi) | **POST** /api/candidate/exists | 
 *ImportApi* | [**returnSignatureApi**](docs/Api/ImportApi.md#returnsignatureapi) | **POST** /api/Contract/ReturnSignature | 
 *PayrollApi* | [**payrollsGet**](docs/Api/PayrollApi.md#payrollsget) | **GET** /payrolls | Get Payrolls by date range
 *PayrollApi* | [**payrollsPayrollIdGet**](docs/Api/PayrollApi.md#payrollspayrollidget) | **GET** /payrolls/{payrollId} | Get Payroll by it&#x27;s id
