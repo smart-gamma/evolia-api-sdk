@@ -1412,7 +1412,7 @@ class ImportApi
     }
 
     /**
-     * Operation isCandidateExists
+     * Operation isCandidateExistsApi
      *
      * @param  \Evolia\Model\ExistsCandidate $body body (required)
      * @param  string $authorization authorization (required)
@@ -1421,14 +1421,14 @@ class ImportApi
      * @throws \InvalidArgumentException
      * @return \Evolia\Model\CandidateResponseStatus
      */
-    public function isCandidateExists($body, $authorization)
+    public function isCandidateExistsApi($body, $authorization)
     {
-        list($response) = $this->isCandidateExistsWithHttpInfo($body, $authorization);
+        list($response) = $this->isCandidateExistsApiWithHttpInfo($body, $authorization);
         return $response;
     }
 
     /**
-     * Operation isCandidateExistsWithHttpInfo
+     * Operation isCandidateExistsApiWithHttpInfo
      *
      * @param  \Evolia\Model\ExistsCandidate $body (required)
      * @param  string $authorization (required)
@@ -1437,10 +1437,10 @@ class ImportApi
      * @throws \InvalidArgumentException
      * @return array of \Evolia\Model\CandidateResponseStatus, HTTP status code, HTTP response headers (array of strings)
      */
-    public function isCandidateExistsWithHttpInfo($body, $authorization)
+    public function isCandidateExistsApiWithHttpInfo($body, $authorization)
     {
         $returnType = '\Evolia\Model\CandidateResponseStatus';
-        $request = $this->isCandidateExistsRequest($body, $authorization);
+        $request = $this->isCandidateExistsApiRequest($body, $authorization);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1502,7 +1502,7 @@ class ImportApi
     }
 
     /**
-     * Operation isCandidateExistsAsync
+     * Operation isCandidateExistsApiAsync
      *
      * 
      *
@@ -1512,9 +1512,9 @@ class ImportApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function isCandidateExistsAsync($body, $authorization)
+    public function isCandidateExistsApiAsync($body, $authorization)
     {
-        return $this->isCandidateExistsAsyncWithHttpInfo($body, $authorization)
+        return $this->isCandidateExistsApiAsyncWithHttpInfo($body, $authorization)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1523,7 +1523,7 @@ class ImportApi
     }
 
     /**
-     * Operation isCandidateExistsAsyncWithHttpInfo
+     * Operation isCandidateExistsApiAsyncWithHttpInfo
      *
      * 
      *
@@ -1533,10 +1533,10 @@ class ImportApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function isCandidateExistsAsyncWithHttpInfo($body, $authorization)
+    public function isCandidateExistsApiAsyncWithHttpInfo($body, $authorization)
     {
         $returnType = '\Evolia\Model\CandidateResponseStatus';
-        $request = $this->isCandidateExistsRequest($body, $authorization);
+        $request = $this->isCandidateExistsApiRequest($body, $authorization);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1576,7 +1576,7 @@ class ImportApi
     }
 
     /**
-     * Create request for operation 'isCandidateExists'
+     * Create request for operation 'isCandidateExistsApi'
      *
      * @param  \Evolia\Model\ExistsCandidate $body (required)
      * @param  string $authorization (required)
@@ -1584,18 +1584,18 @@ class ImportApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function isCandidateExistsRequest($body, $authorization)
+    protected function isCandidateExistsApiRequest($body, $authorization)
     {
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $body when calling isCandidateExists'
+                'Missing the required parameter $body when calling isCandidateExistsApi'
             );
         }
         // verify the required parameter 'authorization' is set
         if ($authorization === null || (is_array($authorization) && count($authorization) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $authorization when calling isCandidateExists'
+                'Missing the required parameter $authorization when calling isCandidateExistsApi'
             );
         }
 
