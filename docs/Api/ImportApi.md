@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**addContractApi**](ImportApi.md#addcontractapi) | **POST** /api/contract | 
 [**addTimeSheetApi**](ImportApi.md#addtimesheetapi) | **POST** /api/TimeSheet | 
 [**getAccessToken**](ImportApi.md#getaccesstoken) | **POST** /GetAccessToken | 
+[**isCandidateExists**](ImportApi.md#iscandidateexists) | **POST** /api/candidate/exists | 
 [**returnSignatureApi**](ImportApi.md#returnsignatureapi) | **POST** /api/Contract/ReturnSignature | 
 
 # **addCandidatApi**
@@ -250,6 +251,57 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Evolia\Model\AuthResponse**](../Model/AuthResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **isCandidateExists**
+> \Evolia\Model\CandidateResponseStatus isCandidateExists($body, $authorization)
+
+
+
+Get Candidate IDREF from NIR / Agency
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$apiInstance = new Evolia\SDK\ImportApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$body = new \Evolia\Model\ExistsCandidate(); // \Evolia\Model\ExistsCandidate | 
+$authorization = "authorization_example"; // string | 
+
+try {
+    $result = $apiInstance->isCandidateExists($body, $authorization);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ImportApi->isCandidateExists: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\Evolia\Model\ExistsCandidate**](../Model/ExistsCandidate.md)|  |
+ **authorization** | **string**|  |
+
+### Return type
+
+[**\Evolia\Model\CandidateResponseStatus**](../Model/CandidateResponseStatus.md)
 
 ### Authorization
 
