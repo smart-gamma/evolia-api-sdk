@@ -122,6 +122,21 @@ $apiInstance = new Evolia\SDK\ImportApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
+$body = new \Evolia\Model\CandidateAddDpae(); // \Evolia\Model\CandidateAddDpae | 
+$authorization = "authorization_example"; // string | 
+
+try {
+    $result = $apiInstance->candidateAddDpaeApi($body, $authorization);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ImportApi->candidateAddDpaeApi: ', $e->getMessage(), PHP_EOL;
+}
+
+$apiInstance = new Evolia\SDK\ImportApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $body = new \Evolia\Model\AuthRequest(); // \Evolia\Model\AuthRequest | 
 
 try {
@@ -173,6 +188,7 @@ Class | Method | HTTP request | Description
 *ImportApi* | [**addClientApi**](docs/Api/ImportApi.md#addclientapi) | **POST** /api/customer | 
 *ImportApi* | [**addContractApi**](docs/Api/ImportApi.md#addcontractapi) | **POST** /api/contract | 
 *ImportApi* | [**addTimeSheetApi**](docs/Api/ImportApi.md#addtimesheetapi) | **POST** /api/TimeSheet | 
+*ImportApi* | [**candidateAddDpaeApi**](docs/Api/ImportApi.md#candidateadddpaeapi) | **POST** /api/Candidate/AddDPAE | 
 *ImportApi* | [**getAccessToken**](docs/Api/ImportApi.md#getaccesstoken) | **POST** /GetAccessToken | 
 *ImportApi* | [**isCandidateExistsApi**](docs/Api/ImportApi.md#iscandidateexistsapi) | **POST** /api/candidate/exists | 
 *ImportApi* | [**returnSignatureApi**](docs/Api/ImportApi.md#returnsignatureapi) | **POST** /api/Contract/ReturnSignature | 
@@ -184,6 +200,7 @@ Class | Method | HTTP request | Description
  - [AuthRequest](docs/Model/AuthRequest.md)
  - [AuthResponse](docs/Model/AuthResponse.md)
  - [Candidate](docs/Model/Candidate.md)
+ - [CandidateAddDpae](docs/Model/CandidateAddDpae.md)
  - [CandidateResponseStatus](docs/Model/CandidateResponseStatus.md)
  - [Contract](docs/Model/Contract.md)
  - [ContractForTimeSheet](docs/Model/ContractForTimeSheet.md)

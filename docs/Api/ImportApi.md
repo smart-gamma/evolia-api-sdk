@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**addClientApi**](ImportApi.md#addclientapi) | **POST** /api/customer | 
 [**addContractApi**](ImportApi.md#addcontractapi) | **POST** /api/contract | 
 [**addTimeSheetApi**](ImportApi.md#addtimesheetapi) | **POST** /api/TimeSheet | 
+[**candidateAddDpaeApi**](ImportApi.md#candidateadddpaeapi) | **POST** /api/Candidate/AddDPAE | 
 [**getAccessToken**](ImportApi.md#getaccesstoken) | **POST** /GetAccessToken | 
 [**isCandidateExistsApi**](ImportApi.md#iscandidateexistsapi) | **POST** /api/candidate/exists | 
 [**returnSignatureApi**](ImportApi.md#returnsignatureapi) | **POST** /api/Contract/ReturnSignature | 
@@ -202,6 +203,57 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Evolia\Model\ResponseOfTimeSheetErrors**](../Model/ResponseOfTimeSheetErrors.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **candidateAddDpaeApi**
+> \Evolia\Model\CandidateResponseStatus candidateAddDpaeApi($body, $authorization)
+
+
+
+Insert / Update of candidate DPAE (Déclarations préalables à l'embauche)
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$apiInstance = new Evolia\SDK\ImportApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$body = new \Evolia\Model\CandidateAddDpae(); // \Evolia\Model\CandidateAddDpae | 
+$authorization = "authorization_example"; // string | 
+
+try {
+    $result = $apiInstance->candidateAddDpaeApi($body, $authorization);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ImportApi->candidateAddDpaeApi: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\Evolia\Model\CandidateAddDpae**](../Model/CandidateAddDpae.md)|  |
+ **authorization** | **string**|  |
+
+### Return type
+
+[**\Evolia\Model\CandidateResponseStatus**](../Model/CandidateResponseStatus.md)
 
 ### Authorization
 
