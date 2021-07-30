@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **contrat** | [**\Evolia\Model\ContractForTimeSheet**](ContractForTimeSheet.md) |  | 
 **annee** | **int** |  | [optional] 
 **semaine** | **int** |  | [optional] 
-**datePremierJourSemaine** | [**\DateTime**](\DateTime.md) |  | 
+**datePremierJourSemaine** | **string** | Date. Not using \&quot;date\&quot; format because it does not serialized correctly. | 
 **lundiJour** | **float** |  | [optional] 
 **lundiNuit** | **float** |  | [optional] 
 **mardiJour** | **float** |  | [optional] 
