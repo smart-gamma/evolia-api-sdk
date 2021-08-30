@@ -56,7 +56,7 @@ class ReferenceItem implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'reference' => 'string',
+        'ref' => 'string',
 'title' => 'string',
 'billingTerm' => 'string',
 'iso' => 'string',
@@ -69,7 +69,7 @@ class ReferenceItem implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'reference' => null,
+        'ref' => null,
 'title' => null,
 'billingTerm' => null,
 'iso' => null,
@@ -103,7 +103,7 @@ class ReferenceItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'reference' => 'reference',
+        'ref' => 'ref',
 'title' => 'title',
 'billingTerm' => 'billingTerm',
 'iso' => 'iso',
@@ -116,7 +116,7 @@ class ReferenceItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'reference' => 'setReference',
+        'ref' => 'setRef',
 'title' => 'setTitle',
 'billingTerm' => 'setBillingTerm',
 'iso' => 'setIso',
@@ -129,7 +129,7 @@ class ReferenceItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'reference' => 'getReference',
+        'ref' => 'getRef',
 'title' => 'getTitle',
 'billingTerm' => 'getBillingTerm',
 'iso' => 'getIso',
@@ -194,7 +194,7 @@ class ReferenceItem implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['reference'] = isset($data['reference']) ? $data['reference'] : null;
+        $this->container['ref'] = isset($data['ref']) ? $data['ref'] : null;
         $this->container['title'] = isset($data['title']) ? $data['title'] : null;
         $this->container['billingTerm'] = isset($data['billingTerm']) ? $data['billingTerm'] : null;
         $this->container['iso'] = isset($data['iso']) ? $data['iso'] : null;
@@ -227,25 +227,25 @@ class ReferenceItem implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets reference
+     * Gets ref
      *
      * @return string
      */
-    public function getReference()
+    public function getRef()
     {
-        return $this->container['reference'];
+        return $this->container['ref'];
     }
 
     /**
-     * Sets reference
+     * Sets ref
      *
-     * @param string $reference reference
+     * @param string $ref ref
      *
      * @return $this
      */
-    public function setReference($reference)
+    public function setRef($ref)
     {
-        $this->container['reference'] = $reference;
+        $this->container['ref'] = $ref;
 
         return $this;
     }
