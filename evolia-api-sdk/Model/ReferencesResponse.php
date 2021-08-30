@@ -109,15 +109,15 @@ class ReferencesResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'bookKeepingVariables' => 'bookKeepingVariables',
-'payrollItems' => 'payrollItems',
+        'bookKeepingVariables' => 'bookKeeping_variables',
+'payrollItems' => 'payroll_items',
 'countries' => 'countries',
-'billingTerms' => 'billingTerms',
-'employeeStatuses' => 'employeeStatuses',
+'billingTerms' => 'billing_terms',
+'employeeStatuses' => 'employee_statuses',
 'nationalities' => 'nationalities',
 'jobs' => 'jobs',
-'legalReasons' => 'legalReasons',
-'vatRates' => 'vatRates'    ];
+'legalReasons' => 'legal_reasons',
+'vatRates' => 'vat_rates'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
