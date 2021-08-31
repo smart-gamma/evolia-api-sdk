@@ -56,7 +56,7 @@ class ReferencesResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'bookKeepingVariables' => '\Evolia\Model\ReferenceItem[]',
+        'bookkeepingVariables' => '\Evolia\Model\ReferenceItem[]',
 'payrollItems' => '\Evolia\Model\ReferenceItem[]',
 'countries' => '\Evolia\Model\ReferenceItem[]',
 'billingTerms' => '\Evolia\Model\ReferenceItem[]',
@@ -72,7 +72,7 @@ class ReferencesResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'bookKeepingVariables' => null,
+        'bookkeepingVariables' => null,
 'payrollItems' => null,
 'countries' => null,
 'billingTerms' => null,
@@ -109,7 +109,7 @@ class ReferencesResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'bookKeepingVariables' => 'bookKeeping_variables',
+        'bookkeepingVariables' => 'bookkeeping_variables',
 'payrollItems' => 'payroll_items',
 'countries' => 'countries',
 'billingTerms' => 'billing_terms',
@@ -125,7 +125,7 @@ class ReferencesResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'bookKeepingVariables' => 'setBookKeepingVariables',
+        'bookkeepingVariables' => 'setBookkeepingVariables',
 'payrollItems' => 'setPayrollItems',
 'countries' => 'setCountries',
 'billingTerms' => 'setBillingTerms',
@@ -141,7 +141,7 @@ class ReferencesResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'bookKeepingVariables' => 'getBookKeepingVariables',
+        'bookkeepingVariables' => 'getBookkeepingVariables',
 'payrollItems' => 'getPayrollItems',
 'countries' => 'getCountries',
 'billingTerms' => 'getBillingTerms',
@@ -209,7 +209,7 @@ class ReferencesResponse implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['bookKeepingVariables'] = isset($data['bookKeepingVariables']) ? $data['bookKeepingVariables'] : null;
+        $this->container['bookkeepingVariables'] = isset($data['bookkeepingVariables']) ? $data['bookkeepingVariables'] : null;
         $this->container['payrollItems'] = isset($data['payrollItems']) ? $data['payrollItems'] : null;
         $this->container['countries'] = isset($data['countries']) ? $data['countries'] : null;
         $this->container['billingTerms'] = isset($data['billingTerms']) ? $data['billingTerms'] : null;
@@ -245,25 +245,25 @@ class ReferencesResponse implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets bookKeepingVariables
+     * Gets bookkeepingVariables
      *
      * @return \Evolia\Model\ReferenceItem[]
      */
-    public function getBookKeepingVariables()
+    public function getBookkeepingVariables()
     {
-        return $this->container['bookKeepingVariables'];
+        return $this->container['bookkeepingVariables'];
     }
 
     /**
-     * Sets bookKeepingVariables
+     * Sets bookkeepingVariables
      *
-     * @param \Evolia\Model\ReferenceItem[] $bookKeepingVariables bookKeepingVariables
+     * @param \Evolia\Model\ReferenceItem[] $bookkeepingVariables bookkeepingVariables
      *
      * @return $this
      */
-    public function setBookKeepingVariables($bookKeepingVariables)
+    public function setBookkeepingVariables($bookkeepingVariables)
     {
-        $this->container['bookKeepingVariables'] = $bookKeepingVariables;
+        $this->container['bookkeepingVariables'] = $bookkeepingVariables;
 
         return $this;
     }

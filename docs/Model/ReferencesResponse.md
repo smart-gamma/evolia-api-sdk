@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**bookKeepingVariables** | [**\Evolia\Model\ReferenceItem[]**](ReferenceItem.md) |  | [optional] 
+**bookkeepingVariables** | [**\Evolia\Model\ReferenceItem[]**](ReferenceItem.md) |  | [optional] 
 **payrollItems** | [**\Evolia\Model\ReferenceItem[]**](ReferenceItem.md) |  | [optional] 
 **countries** | [**\Evolia\Model\ReferenceItem[]**](ReferenceItem.md) |  | [optional] 
 **billingTerms** | [**\Evolia\Model\ReferenceItem[]**](ReferenceItem.md) |  | [optional] 
