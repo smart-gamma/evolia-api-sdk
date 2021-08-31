@@ -76,9 +76,9 @@ class ReferencesResponseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "bookKeepingVariables"
+     * Test attribute "bookkeepingVariables"
      */
-    public function testPropertyBookKeepingVariables()
+    public function testPropertyBookkeepingVariables()
     {
     }
 
