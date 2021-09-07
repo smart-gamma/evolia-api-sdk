@@ -194,7 +194,7 @@ Class | Method | HTTP request | Description
 *ImportApi* | [**returnSignatureApi**](docs/Api/ImportApi.md#returnsignatureapi) | **POST** /api/Contract/ReturnSignature | 
 *PayrollApi* | [**payrollsGet**](docs/Api/PayrollApi.md#payrollsget) | **GET** /payrolls | Get Payrolls by date range
 *PayrollApi* | [**payrollsPayrollIdGet**](docs/Api/PayrollApi.md#payrollspayrollidget) | **GET** /payrolls/{payrollId} | Get Payroll by it&#x27;s id
-*ReferencesApi* | [**getReferences**](docs/Api/ReferencesApi.md#getreferences) | **GET** /api/v3/References/List | Get all the references from the database
+*ReferencesApi* | [**getReferences**](docs/Api/ReferencesApi.md#getreferences) | **GET** /api/v3/references | Get all the references from the database
 
 ## Documentation For Models
 

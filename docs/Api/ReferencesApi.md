@@ -4,7 +4,7 @@ All URIs are relative to *https://virtserver.swaggerhub.com/smartgammadev/Evolia
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getReferences**](ReferencesApi.md#getreferences) | **GET** /api/v3/References/List | Get all the references from the database
+[**getReferences**](ReferencesApi.md#getreferences) | **GET** /api/v3/references | Get all the references from the database
 
 # **getReferences**
 > \Evolia\Model\ReferencesResponse getReferences($authorization)
