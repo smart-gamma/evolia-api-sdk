@@ -267,7 +267,7 @@ class ReferencesApi
             );
         }
 
-        $resourcePath = '/api/v3/References/List';
+        $resourcePath = '/api/v3/references';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
