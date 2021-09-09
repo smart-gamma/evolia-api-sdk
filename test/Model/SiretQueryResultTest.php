@@ -1,6 +1,6 @@
 <?php
 /**
- * ReferencesResponseTest
+ * SiretQueryResultTest
  *
  * PHP version 5
  *
@@ -29,15 +29,15 @@
 namespace Evolia;
 
 /**
- * ReferencesResponseTest Class Doc Comment
+ * SiretQueryResultTest Class Doc Comment
  *
  * @category    Class
- * @description ReferencesResponse
+ * @description SiretQueryResult
  * @package     Evolia
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ReferencesResponseTest extends \PHPUnit_Framework_TestCase
+class SiretQueryResultTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -69,72 +69,72 @@ class ReferencesResponseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "ReferencesResponse"
+     * Test "SiretQueryResult"
      */
-    public function testReferencesResponse()
+    public function testSiretQueryResult()
     {
     }
 
     /**
-     * Test attribute "bookKeepingVariables"
+     * Test attribute "clientId"
      */
-    public function testPropertyBookKeepingVariables()
+    public function testPropertyClientId()
     {
     }
 
     /**
-     * Test attribute "payrollItems"
+     * Test attribute "siteRef"
      */
-    public function testPropertyPayrollItems()
+    public function testPropertySiteRef()
     {
     }
 
     /**
-     * Test attribute "countries"
+     * Test attribute "companyName"
      */
-    public function testPropertyCountries()
+    public function testPropertyCompanyName()
     {
     }
 
     /**
-     * Test attribute "billingTerms"
+     * Test attribute "registrationNumber"
      */
-    public function testPropertyBillingTerms()
+    public function testPropertyRegistrationNumber()
     {
     }
 
     /**
-     * Test attribute "employeeStatuses"
+     * Test attribute "siteName"
      */
-    public function testPropertyEmployeeStatuses()
+    public function testPropertySiteName()
     {
     }
 
     /**
-     * Test attribute "nationalities"
+     * Test attribute "address"
      */
-    public function testPropertyNationalities()
+    public function testPropertyAddress()
     {
     }
 
     /**
-     * Test attribute "jobs"
+     * Test attribute "zipCode"
      */
-    public function testPropertyJobs()
+    public function testPropertyZipCode()
     {
     }
 
     /**
-     * Test attribute "legalReasons"
+     * Test attribute "city"
      */
-    public function testPropertyLegalReasons()
+    public function testPropertyCity()
     {
     }
 
     /**
-     * Test attribute "vatRates"
+     * Test attribute "country"
      */
-    public function testPropertyVatRates()
+    public function testPropertyCountry()
     {
     }
 }

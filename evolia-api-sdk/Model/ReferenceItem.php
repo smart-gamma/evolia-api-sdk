@@ -56,12 +56,13 @@ class ReferenceItem implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'ref' => 'string',
+        'reference' => 'string',
 'title' => 'string',
 'billingTerm' => 'string',
 'iso' => 'string',
 'iso2' => 'string',
-'iso3' => 'string'    ];
+'iso3' => 'string',
+'category' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -69,12 +70,13 @@ class ReferenceItem implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'ref' => null,
+        'reference' => null,
 'title' => null,
 'billingTerm' => null,
 'iso' => null,
 'iso2' => null,
-'iso3' => null    ];
+'iso3' => null,
+'category' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -103,12 +105,13 @@ class ReferenceItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'ref' => 'ref',
+        'reference' => 'reference',
 'title' => 'title',
 'billingTerm' => 'billingTerm',
 'iso' => 'iso',
 'iso2' => 'iso2',
-'iso3' => 'iso3'    ];
+'iso3' => 'iso3',
+'category' => 'category'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -116,12 +119,13 @@ class ReferenceItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'ref' => 'setRef',
+        'reference' => 'setReference',
 'title' => 'setTitle',
 'billingTerm' => 'setBillingTerm',
 'iso' => 'setIso',
 'iso2' => 'setIso2',
-'iso3' => 'setIso3'    ];
+'iso3' => 'setIso3',
+'category' => 'setCategory'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -129,12 +133,13 @@ class ReferenceItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'ref' => 'getRef',
+        'reference' => 'getReference',
 'title' => 'getTitle',
 'billingTerm' => 'getBillingTerm',
 'iso' => 'getIso',
 'iso2' => 'getIso2',
-'iso3' => 'getIso3'    ];
+'iso3' => 'getIso3',
+'category' => 'getCategory'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -194,12 +199,13 @@ class ReferenceItem implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['ref'] = isset($data['ref']) ? $data['ref'] : null;
+        $this->container['reference'] = isset($data['reference']) ? $data['reference'] : null;
         $this->container['title'] = isset($data['title']) ? $data['title'] : null;
         $this->container['billingTerm'] = isset($data['billingTerm']) ? $data['billingTerm'] : null;
         $this->container['iso'] = isset($data['iso']) ? $data['iso'] : null;
         $this->container['iso2'] = isset($data['iso2']) ? $data['iso2'] : null;
         $this->container['iso3'] = isset($data['iso3']) ? $data['iso3'] : null;
+        $this->container['category'] = isset($data['category']) ? $data['category'] : null;
     }
 
     /**
@@ -227,25 +233,25 @@ class ReferenceItem implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets ref
+     * Gets reference
      *
      * @return string
      */
-    public function getRef()
+    public function getReference()
     {
-        return $this->container['ref'];
+        return $this->container['reference'];
     }
 
     /**
-     * Sets ref
+     * Sets reference
      *
-     * @param string $ref ref
+     * @param string $reference reference
      *
      * @return $this
      */
-    public function setRef($ref)
+    public function setReference($reference)
     {
-        $this->container['ref'] = $ref;
+        $this->container['reference'] = $reference;
 
         return $this;
     }
@@ -366,6 +372,30 @@ class ReferenceItem implements ModelInterface, ArrayAccess
     public function setIso3($iso3)
     {
         $this->container['iso3'] = $iso3;
+
+        return $this;
+    }
+
+    /**
+     * Gets category
+     *
+     * @return string
+     */
+    public function getCategory()
+    {
+        return $this->container['category'];
+    }
+
+    /**
+     * Sets category
+     *
+     * @param string $category category
+     *
+     * @return $this
+     */
+    public function setCategory($category)
+    {
+        $this->container['category'] = $category;
 
         return $this;
     }
