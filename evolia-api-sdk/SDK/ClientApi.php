@@ -91,6 +91,7 @@ class ClientApi
      *
      * This endpoint is used to search the siret in the DB from the NIC and the Siret
      *
+     * @param  string $authorization authorization (required)
      * @param  string $registrationNumber registrationNumber (required)
      * @param  string $agencyId agencyId (required)
      *
@@ -98,9 +99,9 @@ class ClientApi
      * @throws \InvalidArgumentException
      * @return \Evolia\Model\SiretQueryResult[]
      */
-    public function searchClient($registrationNumber, $agencyId)
+    public function searchClient($authorization, $registrationNumber, $agencyId)
     {
-        list($response) = $this->searchClientWithHttpInfo($registrationNumber, $agencyId);
+        list($response) = $this->searchClientWithHttpInfo($authorization, $registrationNumber, $agencyId);
         return $response;
     }
 
@@ -109,6 +110,7 @@ class ClientApi
      *
      * This endpoint is used to search the siret in the DB from the NIC and the Siret
      *
+     * @param  string $authorization (required)
      * @param  string $registrationNumber (required)
      * @param  string $agencyId (required)
      *
@@ -116,10 +118,10 @@ class ClientApi
      * @throws \InvalidArgumentException
      * @return array of \Evolia\Model\SiretQueryResult[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function searchClientWithHttpInfo($registrationNumber, $agencyId)
+    public function searchClientWithHttpInfo($authorization, $registrationNumber, $agencyId)
     {
         $returnType = '\Evolia\Model\SiretQueryResult[]';
-        $request = $this->searchClientRequest($registrationNumber, $agencyId);
+        $request = $this->searchClientRequest($authorization, $registrationNumber, $agencyId);
 
         try {
             $options = $this->createHttpClientOption();
@@ -185,15 +187,16 @@ class ClientApi
      *
      * This endpoint is used to search the siret in the DB from the NIC and the Siret
      *
+     * @param  string $authorization (required)
      * @param  string $registrationNumber (required)
      * @param  string $agencyId (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function searchClientAsync($registrationNumber, $agencyId)
+    public function searchClientAsync($authorization, $registrationNumber, $agencyId)
     {
-        return $this->searchClientAsyncWithHttpInfo($registrationNumber, $agencyId)
+        return $this->searchClientAsyncWithHttpInfo($authorization, $registrationNumber, $agencyId)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -206,16 +209,17 @@ class ClientApi
      *
      * This endpoint is used to search the siret in the DB from the NIC and the Siret
      *
+     * @param  string $authorization (required)
      * @param  string $registrationNumber (required)
      * @param  string $agencyId (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function searchClientAsyncWithHttpInfo($registrationNumber, $agencyId)
+    public function searchClientAsyncWithHttpInfo($authorization, $registrationNumber, $agencyId)
     {
         $returnType = '\Evolia\Model\SiretQueryResult[]';
-        $request = $this->searchClientRequest($registrationNumber, $agencyId);
+        $request = $this->searchClientRequest($authorization, $registrationNumber, $agencyId);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -257,14 +261,21 @@ class ClientApi
     /**
      * Create request for operation 'searchClient'
      *
+     * @param  string $authorization (required)
      * @param  string $registrationNumber (required)
      * @param  string $agencyId (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function searchClientRequest($registrationNumber, $agencyId)
+    protected function searchClientRequest($authorization, $registrationNumber, $agencyId)
     {
+        // verify the required parameter 'authorization' is set
+        if ($authorization === null || (is_array($authorization) && count($authorization) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $authorization when calling searchClient'
+            );
+        }
         // verify the required parameter 'registrationNumber' is set
         if ($registrationNumber === null || (is_array($registrationNumber) && count($registrationNumber) === 0)) {
             throw new \InvalidArgumentException(
@@ -285,6 +296,10 @@ class ClientApi
         $httpBody = '';
         $multipart = false;
 
+        // header params
+        if ($authorization !== null) {
+            $headerParams['Authorization'] = ObjectSerializer::toHeaderValue($authorization);
+        }
 
         // path params
         if ($registrationNumber !== null) {

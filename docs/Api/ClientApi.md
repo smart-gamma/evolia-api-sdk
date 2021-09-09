@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**searchClient**](ClientApi.md#searchclient) | **GET** /api/v3/client/{registrationNumber}/{agencyId} | This endpoint is used to search the siret in the DB from the NIC and the Siret
 
 # **searchClient**
-> \Evolia\Model\SiretQueryResult[] searchClient($registrationNumber, $agencyId)
+> \Evolia\Model\SiretQueryResult[] searchClient($authorization, $registrationNumber, $agencyId)
 
 This endpoint is used to search the siret in the DB from the NIC and the Siret
 
@@ -21,11 +21,12 @@ $apiInstance = new Evolia\SDK\ClientApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
+$authorization = "authorization_example"; // string | 
 $registrationNumber = "registrationNumber_example"; // string | 
 $agencyId = "agencyId_example"; // string | 
 
 try {
-    $result = $apiInstance->searchClient($registrationNumber, $agencyId);
+    $result = $apiInstance->searchClient($authorization, $registrationNumber, $agencyId);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ClientApi->searchClient: ', $e->getMessage(), PHP_EOL;
@@ -37,6 +38,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **authorization** | **string**|  |
  **registrationNumber** | **string**|  |
  **agencyId** | **string**|  |
 
