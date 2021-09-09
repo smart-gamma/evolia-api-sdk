@@ -1,6 +1,6 @@
 <?php
 /**
- * ReferencesResponse
+ * SiretQueryResult
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \Evolia\ObjectSerializer;
 
 /**
- * ReferencesResponse Class Doc Comment
+ * SiretQueryResult Class Doc Comment
  *
  * @category Class
  * @package  Evolia
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ReferencesResponse implements ModelInterface, ArrayAccess
+class SiretQueryResult implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class ReferencesResponse implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'ReferencesResponse';
+    protected static $swaggerModelName = 'SiretQueryResult';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,15 +56,15 @@ class ReferencesResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'bookKeepingVariables' => '\Evolia\Model\ReferenceItem[]',
-'payrollItems' => '\Evolia\Model\ReferenceItem[]',
-'countries' => '\Evolia\Model\ReferenceItem[]',
-'billingTerms' => '\Evolia\Model\ReferenceItem[]',
-'employeeStatuses' => '\Evolia\Model\ReferenceItem[]',
-'nationalities' => '\Evolia\Model\ReferenceItem[]',
-'jobs' => '\Evolia\Model\ReferenceItem[]',
-'legalReasons' => '\Evolia\Model\ReferenceItem[]',
-'vatRates' => '\Evolia\Model\ReferenceItem[]'    ];
+        'clientId' => 'int',
+'siteRef' => 'int',
+'companyName' => 'string',
+'registrationNumber' => 'string',
+'siteName' => 'string',
+'address' => 'string',
+'zipCode' => 'string',
+'city' => 'string',
+'country' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -72,15 +72,15 @@ class ReferencesResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'bookKeepingVariables' => null,
-'payrollItems' => null,
-'countries' => null,
-'billingTerms' => null,
-'employeeStatuses' => null,
-'nationalities' => null,
-'jobs' => null,
-'legalReasons' => null,
-'vatRates' => null    ];
+        'clientId' => 'int32',
+'siteRef' => 'int32',
+'companyName' => null,
+'registrationNumber' => null,
+'siteName' => null,
+'address' => null,
+'zipCode' => null,
+'city' => null,
+'country' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -109,15 +109,15 @@ class ReferencesResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'bookKeepingVariables' => 'bookKeepingVariables',
-'payrollItems' => 'payrollItems',
-'countries' => 'countries',
-'billingTerms' => 'billingTerms',
-'employeeStatuses' => 'employeeStatuses',
-'nationalities' => 'nationalities',
-'jobs' => 'jobs',
-'legalReasons' => 'legalReasons',
-'vatRates' => 'vatRates'    ];
+        'clientId' => 'clientId',
+'siteRef' => 'siteRef',
+'companyName' => 'companyName',
+'registrationNumber' => 'registrationNumber',
+'siteName' => 'siteName',
+'address' => 'address',
+'zipCode' => 'zipCode',
+'city' => 'city',
+'country' => 'country'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -125,15 +125,15 @@ class ReferencesResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'bookKeepingVariables' => 'setBookKeepingVariables',
-'payrollItems' => 'setPayrollItems',
-'countries' => 'setCountries',
-'billingTerms' => 'setBillingTerms',
-'employeeStatuses' => 'setEmployeeStatuses',
-'nationalities' => 'setNationalities',
-'jobs' => 'setJobs',
-'legalReasons' => 'setLegalReasons',
-'vatRates' => 'setVatRates'    ];
+        'clientId' => 'setClientId',
+'siteRef' => 'setSiteRef',
+'companyName' => 'setCompanyName',
+'registrationNumber' => 'setRegistrationNumber',
+'siteName' => 'setSiteName',
+'address' => 'setAddress',
+'zipCode' => 'setZipCode',
+'city' => 'setCity',
+'country' => 'setCountry'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -141,15 +141,15 @@ class ReferencesResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'bookKeepingVariables' => 'getBookKeepingVariables',
-'payrollItems' => 'getPayrollItems',
-'countries' => 'getCountries',
-'billingTerms' => 'getBillingTerms',
-'employeeStatuses' => 'getEmployeeStatuses',
-'nationalities' => 'getNationalities',
-'jobs' => 'getJobs',
-'legalReasons' => 'getLegalReasons',
-'vatRates' => 'getVatRates'    ];
+        'clientId' => 'getClientId',
+'siteRef' => 'getSiteRef',
+'companyName' => 'getCompanyName',
+'registrationNumber' => 'getRegistrationNumber',
+'siteName' => 'getSiteName',
+'address' => 'getAddress',
+'zipCode' => 'getZipCode',
+'city' => 'getCity',
+'country' => 'getCountry'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -209,15 +209,15 @@ class ReferencesResponse implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['bookKeepingVariables'] = isset($data['bookKeepingVariables']) ? $data['bookKeepingVariables'] : null;
-        $this->container['payrollItems'] = isset($data['payrollItems']) ? $data['payrollItems'] : null;
-        $this->container['countries'] = isset($data['countries']) ? $data['countries'] : null;
-        $this->container['billingTerms'] = isset($data['billingTerms']) ? $data['billingTerms'] : null;
-        $this->container['employeeStatuses'] = isset($data['employeeStatuses']) ? $data['employeeStatuses'] : null;
-        $this->container['nationalities'] = isset($data['nationalities']) ? $data['nationalities'] : null;
-        $this->container['jobs'] = isset($data['jobs']) ? $data['jobs'] : null;
-        $this->container['legalReasons'] = isset($data['legalReasons']) ? $data['legalReasons'] : null;
-        $this->container['vatRates'] = isset($data['vatRates']) ? $data['vatRates'] : null;
+        $this->container['clientId'] = isset($data['clientId']) ? $data['clientId'] : null;
+        $this->container['siteRef'] = isset($data['siteRef']) ? $data['siteRef'] : null;
+        $this->container['companyName'] = isset($data['companyName']) ? $data['companyName'] : null;
+        $this->container['registrationNumber'] = isset($data['registrationNumber']) ? $data['registrationNumber'] : null;
+        $this->container['siteName'] = isset($data['siteName']) ? $data['siteName'] : null;
+        $this->container['address'] = isset($data['address']) ? $data['address'] : null;
+        $this->container['zipCode'] = isset($data['zipCode']) ? $data['zipCode'] : null;
+        $this->container['city'] = isset($data['city']) ? $data['city'] : null;
+        $this->container['country'] = isset($data['country']) ? $data['country'] : null;
     }
 
     /**
@@ -245,217 +245,217 @@ class ReferencesResponse implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets bookKeepingVariables
+     * Gets clientId
      *
-     * @return \Evolia\Model\ReferenceItem[]
+     * @return int
      */
-    public function getBookKeepingVariables()
+    public function getClientId()
     {
-        return $this->container['bookKeepingVariables'];
+        return $this->container['clientId'];
     }
 
     /**
-     * Sets bookKeepingVariables
+     * Sets clientId
      *
-     * @param \Evolia\Model\ReferenceItem[] $bookKeepingVariables bookKeepingVariables
+     * @param int $clientId clientId
      *
      * @return $this
      */
-    public function setBookKeepingVariables($bookKeepingVariables)
+    public function setClientId($clientId)
     {
-        $this->container['bookKeepingVariables'] = $bookKeepingVariables;
+        $this->container['clientId'] = $clientId;
 
         return $this;
     }
 
     /**
-     * Gets payrollItems
+     * Gets siteRef
      *
-     * @return \Evolia\Model\ReferenceItem[]
+     * @return int
      */
-    public function getPayrollItems()
+    public function getSiteRef()
     {
-        return $this->container['payrollItems'];
+        return $this->container['siteRef'];
     }
 
     /**
-     * Sets payrollItems
+     * Sets siteRef
      *
-     * @param \Evolia\Model\ReferenceItem[] $payrollItems payrollItems
+     * @param int $siteRef siteRef
      *
      * @return $this
      */
-    public function setPayrollItems($payrollItems)
+    public function setSiteRef($siteRef)
     {
-        $this->container['payrollItems'] = $payrollItems;
+        $this->container['siteRef'] = $siteRef;
 
         return $this;
     }
 
     /**
-     * Gets countries
+     * Gets companyName
      *
-     * @return \Evolia\Model\ReferenceItem[]
+     * @return string
      */
-    public function getCountries()
+    public function getCompanyName()
     {
-        return $this->container['countries'];
+        return $this->container['companyName'];
     }
 
     /**
-     * Sets countries
+     * Sets companyName
      *
-     * @param \Evolia\Model\ReferenceItem[] $countries countries
+     * @param string $companyName companyName
      *
      * @return $this
      */
-    public function setCountries($countries)
+    public function setCompanyName($companyName)
     {
-        $this->container['countries'] = $countries;
+        $this->container['companyName'] = $companyName;
 
         return $this;
     }
 
     /**
-     * Gets billingTerms
+     * Gets registrationNumber
      *
-     * @return \Evolia\Model\ReferenceItem[]
+     * @return string
      */
-    public function getBillingTerms()
+    public function getRegistrationNumber()
     {
-        return $this->container['billingTerms'];
+        return $this->container['registrationNumber'];
     }
 
     /**
-     * Sets billingTerms
+     * Sets registrationNumber
      *
-     * @param \Evolia\Model\ReferenceItem[] $billingTerms billingTerms
+     * @param string $registrationNumber registrationNumber
      *
      * @return $this
      */
-    public function setBillingTerms($billingTerms)
+    public function setRegistrationNumber($registrationNumber)
     {
-        $this->container['billingTerms'] = $billingTerms;
+        $this->container['registrationNumber'] = $registrationNumber;
 
         return $this;
     }
 
     /**
-     * Gets employeeStatuses
+     * Gets siteName
      *
-     * @return \Evolia\Model\ReferenceItem[]
+     * @return string
      */
-    public function getEmployeeStatuses()
+    public function getSiteName()
     {
-        return $this->container['employeeStatuses'];
+        return $this->container['siteName'];
     }
 
     /**
-     * Sets employeeStatuses
+     * Sets siteName
      *
-     * @param \Evolia\Model\ReferenceItem[] $employeeStatuses employeeStatuses
+     * @param string $siteName siteName
      *
      * @return $this
      */
-    public function setEmployeeStatuses($employeeStatuses)
+    public function setSiteName($siteName)
     {
-        $this->container['employeeStatuses'] = $employeeStatuses;
+        $this->container['siteName'] = $siteName;
 
         return $this;
     }
 
     /**
-     * Gets nationalities
+     * Gets address
      *
-     * @return \Evolia\Model\ReferenceItem[]
+     * @return string
      */
-    public function getNationalities()
+    public function getAddress()
     {
-        return $this->container['nationalities'];
+        return $this->container['address'];
     }
 
     /**
-     * Sets nationalities
+     * Sets address
      *
-     * @param \Evolia\Model\ReferenceItem[] $nationalities nationalities
+     * @param string $address address
      *
      * @return $this
      */
-    public function setNationalities($nationalities)
+    public function setAddress($address)
     {
-        $this->container['nationalities'] = $nationalities;
+        $this->container['address'] = $address;
 
         return $this;
     }
 
     /**
-     * Gets jobs
+     * Gets zipCode
      *
-     * @return \Evolia\Model\ReferenceItem[]
+     * @return string
      */
-    public function getJobs()
+    public function getZipCode()
     {
-        return $this->container['jobs'];
+        return $this->container['zipCode'];
     }
 
     /**
-     * Sets jobs
+     * Sets zipCode
      *
-     * @param \Evolia\Model\ReferenceItem[] $jobs jobs
+     * @param string $zipCode zipCode
      *
      * @return $this
      */
-    public function setJobs($jobs)
+    public function setZipCode($zipCode)
     {
-        $this->container['jobs'] = $jobs;
+        $this->container['zipCode'] = $zipCode;
 
         return $this;
     }
 
     /**
-     * Gets legalReasons
+     * Gets city
      *
-     * @return \Evolia\Model\ReferenceItem[]
+     * @return string
      */
-    public function getLegalReasons()
+    public function getCity()
     {
-        return $this->container['legalReasons'];
+        return $this->container['city'];
     }
 
     /**
-     * Sets legalReasons
+     * Sets city
      *
-     * @param \Evolia\Model\ReferenceItem[] $legalReasons legalReasons
+     * @param string $city city
      *
      * @return $this
      */
-    public function setLegalReasons($legalReasons)
+    public function setCity($city)
     {
-        $this->container['legalReasons'] = $legalReasons;
+        $this->container['city'] = $city;
 
         return $this;
     }
 
     /**
-     * Gets vatRates
+     * Gets country
      *
-     * @return \Evolia\Model\ReferenceItem[]
+     * @return string
      */
-    public function getVatRates()
+    public function getCountry()
     {
-        return $this->container['vatRates'];
+        return $this->container['country'];
     }
 
     /**
-     * Sets vatRates
+     * Sets country
      *
-     * @param \Evolia\Model\ReferenceItem[] $vatRates vatRates
+     * @param string $country country
      *
      * @return $this
      */
-    public function setVatRates($vatRates)
+    public function setCountry($country)
     {
-        $this->container['vatRates'] = $vatRates;
+        $this->container['country'] = $country;
 
         return $this;
     }

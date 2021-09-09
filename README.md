@@ -57,123 +57,19 @@ Please follow the [installation procedure](#installation--usage) and then run th
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Evolia\SDK\ImportApi(
+$apiInstance = new Evolia\SDK\ClientApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \Evolia\Model\Candidate(); // \Evolia\Model\Candidate | 
-$authorization = "authorization_example"; // string | 
+$registrationNumber = "registrationNumber_example"; // string | 
+$agencyId = "agencyId_example"; // string | 
 
 try {
-    $result = $apiInstance->addCandidatApi($body, $authorization);
+    $result = $apiInstance->searchClient($registrationNumber, $agencyId);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ImportApi->addCandidatApi: ', $e->getMessage(), PHP_EOL;
-}
-
-$apiInstance = new Evolia\SDK\ImportApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
-);
-$body = new \Evolia\Model\Customer(); // \Evolia\Model\Customer | 
-$authorization = "authorization_example"; // string | 
-
-try {
-    $result = $apiInstance->addClientApi($body, $authorization);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ImportApi->addClientApi: ', $e->getMessage(), PHP_EOL;
-}
-
-$apiInstance = new Evolia\SDK\ImportApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
-);
-$body = new \Evolia\Model\Contract(); // \Evolia\Model\Contract | 
-$authorization = "authorization_example"; // string | 
-
-try {
-    $result = $apiInstance->addContractApi($body, $authorization);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ImportApi->addContractApi: ', $e->getMessage(), PHP_EOL;
-}
-
-$apiInstance = new Evolia\SDK\ImportApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
-);
-$body = new \Evolia\Model\TimeSheet(); // \Evolia\Model\TimeSheet | 
-$authorization = "authorization_example"; // string | 
-
-try {
-    $result = $apiInstance->addTimeSheetApi($body, $authorization);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ImportApi->addTimeSheetApi: ', $e->getMessage(), PHP_EOL;
-}
-
-$apiInstance = new Evolia\SDK\ImportApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
-);
-$body = new \Evolia\Model\CandidateAddDpae(); // \Evolia\Model\CandidateAddDpae | 
-$authorization = "authorization_example"; // string | 
-
-try {
-    $result = $apiInstance->candidateAddDpaeApi($body, $authorization);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ImportApi->candidateAddDpaeApi: ', $e->getMessage(), PHP_EOL;
-}
-
-$apiInstance = new Evolia\SDK\ImportApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
-);
-$body = new \Evolia\Model\AuthRequest(); // \Evolia\Model\AuthRequest | 
-
-try {
-    $result = $apiInstance->getAccessToken($body);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ImportApi->getAccessToken: ', $e->getMessage(), PHP_EOL;
-}
-
-$apiInstance = new Evolia\SDK\ImportApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
-);
-$body = new \Evolia\Model\ExistsCandidate(); // \Evolia\Model\ExistsCandidate | 
-$authorization = "authorization_example"; // string | 
-
-try {
-    $result = $apiInstance->isCandidateExistsApi($body, $authorization);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ImportApi->isCandidateExistsApi: ', $e->getMessage(), PHP_EOL;
-}
-
-$apiInstance = new Evolia\SDK\ImportApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
-);
-$body = new \Evolia\Model\ReturnSignature(); // \Evolia\Model\ReturnSignature | 
-$authorization = "authorization_example"; // string | 
-
-try {
-    $result = $apiInstance->returnSignatureApi($body, $authorization);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ImportApi->returnSignatureApi: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ClientApi->searchClient: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -184,6 +80,7 @@ All URIs are relative to *https://virtserver.swaggerhub.com/smartgammadev/Evolia
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*ClientApi* | [**searchClient**](docs/Api/ClientApi.md#searchclient) | **GET** /api/v3/client/{registrationNumber}/{agencyId} | This endpoint is used to search the siret in the DB from the NIC and the Siret
 *ImportApi* | [**addCandidatApi**](docs/Api/ImportApi.md#addcandidatapi) | **POST** /api/candidate | 
 *ImportApi* | [**addClientApi**](docs/Api/ImportApi.md#addclientapi) | **POST** /api/customer | 
 *ImportApi* | [**addContractApi**](docs/Api/ImportApi.md#addcontractapi) | **POST** /api/contract | 
@@ -224,6 +121,7 @@ Class | Method | HTTP request | Description
  - [ResponseOfTimeSheetErrors](docs/Model/ResponseOfTimeSheetErrors.md)
  - [ReturnSignature](docs/Model/ReturnSignature.md)
  - [RubricValues](docs/Model/RubricValues.md)
+ - [SiretQueryResult](docs/Model/SiretQueryResult.md)
  - [TimeSheet](docs/Model/TimeSheet.md)
 
 ## Documentation For Authorization

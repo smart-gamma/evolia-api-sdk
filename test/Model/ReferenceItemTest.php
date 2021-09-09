@@ -76,9 +76,9 @@ class ReferenceItemTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "ref"
+     * Test attribute "reference"
      */
-    public function testPropertyRef()
+    public function testPropertyReference()
     {
     }
 
@@ -114,6 +114,13 @@ class ReferenceItemTest extends \PHPUnit_Framework_TestCase
      * Test attribute "iso3"
      */
     public function testPropertyIso3()
+    {
+    }
+
+    /**
+     * Test attribute "category"
+     */
+    public function testPropertyCategory()
     {
     }
 }
