@@ -62,11 +62,12 @@ $apiInstance = new Evolia\SDK\ClientApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
+$authorization = "authorization_example"; // string | 
 $registrationNumber = "registrationNumber_example"; // string | 
 $agencyId = "agencyId_example"; // string | 
 
 try {
-    $result = $apiInstance->searchClient($registrationNumber, $agencyId);
+    $result = $apiInstance->searchClient($authorization, $registrationNumber, $agencyId);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ClientApi->searchClient: ', $e->getMessage(), PHP_EOL;
